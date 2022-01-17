@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Imprima&display=swap');
+
+:root{
+
+    --primary-color:#7CFC00;
+    --secondary-color:#9DE7F8;
+    --accent-color:#10100F;
+    --text-color:#ffff;
+    --gray-color:#625F5A;
+    --black-transparence:rgba(26, 32, 44, 0.5);
+    --green-transparence: rgba(124, 252, 0, 0.64);
+    --tittle-font: font-family: 'Baloo Thambi 2', cursive;
+    --text-font:font-family: 'Imprima', sans-serif; 
+}
+
+/* === HELPERS CLASS ==== */
+
+.hidden{
+    display: none;
+}
+
+
+/* ===== MEDIA QUERYS ===== */
+    /*  MOBILE DEVICES */
+    @media (min-with: 320px) {
+        
+    }
+    /* TABLET DEVICES */
+    @media (min-with: 800px) {
+        
+    }
+
+/* ===== DESKTOP VERSION ===== */
+
+body{
+    background-image: url("https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg");
+    background-color: #000;
+    background-repeat: repeat-y;
+    background-clip: padding-box;
+}
+
+
+/* == HEADER SECTION == */
+.nav_titles-container{
+    display: none;
+}
