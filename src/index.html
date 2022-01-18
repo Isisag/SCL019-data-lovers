@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0" />
     <title>Data Lovers</title>
+    <link rel="shortcut icon" href="./assets/Images/favicon.png">
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/3129de5d3f.js" crossorigin="anonymous"></script>
 </head>
@@ -18,9 +20,7 @@
                     <a href="#" class="nav_titles"> Home </a>
                 </li>
                 <li class="nav_elements">
-                    <a href="#" class="nav_titles">
-              Capitulos
-            </a>
+                    <a href="#" class="nav_titles"> Capítulos</a>
                     <ul class="nav_titles-container">
                         <li class="nav_elements">
                             <a href="" class="nav_subtitles"> Nombre </a>
@@ -42,20 +42,42 @@
             <input type="search" name="" id="searchBar" class="search_bar">
         </div>
         <div class="home_section">
-            <img src="assets/Images/rick-morty-.jpg" alt="" class="home_section_img">
-            <h1 class="home_section_title"> Rick and Morty </h1>
+            <div class="backgound-img">
+                <picture>
+                    <source type="image/webp" src="assets/Images/rick-morty-.jpg" media="(min-width: 768px) and (max-width: 1023px)">
+                    <img src="assets/Images/rick-morty-.jpg" alt="" class="home_section_img" width="100%" height="100%">
+                </picture>
+                <h1 class="home_section_title"> Rick and Morty </h1>
+            </div>
         </div>
     </header>
     <hr>
-    <section class="quotes_section">
+    <section class="quote_section">
 
     </section>
-    <section class="slide_section">
-
+    <section class="carousel_section">
+        <div class="carousel">
+            <div class="carousel-items">
+                <img src="./assets/Images/rymseason1.jpg" alt="" class="img-carousel">
+            </div>
+            <div class="carousel-items">
+                <img src="./assets/Images/rymseason2.jpg" alt="" class="img-carousel">
+            </div>
+            <div class="carousel-items">
+                <img src="./assets/Images/rymseason3.jpg" alt="" class="img-carousel">
+            </div>
+            <div class="carousel-items">
+                <img src="./assets/Images/rymseason4.jpg" alt="" class="img-carousel">
+            </div>
+            <div class="carousel-items">
+                <img src="./assets/Images/rymseason5.jpg" alt="" class="img-carousel">
+            </div>
+        </div>
     </section>
     <section class="video_section">
 
     </section>
+
     <footer>
         <a href="" class="footer_text"> Rick and Morty Fandom </a>
         <ul class="social_media">
@@ -80,7 +102,7 @@
                 </a>
             </li>
         </ul>
-        <img src="./assets/Images/gif/rick-and-morty-rick.gif" alt="">
+        <img src="./assets/Images/gif/rick-and-morty-rick.gif" alt="" class="footer_img">
     </footer>
     <script src="main.js" type="module"></script>
 </body>

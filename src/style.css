@@ -1,44 +1,46 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Imprima&display=swap');
-
-:root{
-
-    --primary-color:#7CFC00;
-    --secondary-color:#9DE7F8;
-    --accent-color:#10100F;
-    --text-color:#ffff;
-    --gray-color:#625F5A;
-    --black-transparence:rgba(26, 32, 44, 0.5);
+ :root {
+    --primary-color: #7CFC00;
+    --secondary-color: #9DE7F8;
+    --accent-color: #10100F;
+    --text-color: #ffff;
+    --gray-color: #625F5A;
+    --black-transparence: rgba(26, 32, 44, 0.5);
     --green-transparence: rgba(124, 252, 0, 0.64);
     --tittle-font: font-family: 'Baloo Thambi 2', cursive;
-    --text-font:font-family: 'Imprima', sans-serif; 
+    --text-font: font-family: 'Imprima', sans-serif;
 }
+
 
 /* === HELPERS CLASS ==== */
 
-.hidden{
+.hidden {
     display: none;
 }
 
 
 /* ===== MEDIA QUERYS ===== */
-    /*  MOBILE DEVICES */
-    @media (min-with: 320px) {
-        
-    }
-    /* TABLET DEVICES */
-    @media (min-with: 800px) {
-        
-    }
+
+
+/*  MOBILE DEVICES */
+
+@media (min-with: 320px) {}
+
+
+/* TABLET DEVICES */
+
+@media (min-with: 800px) {}
+
 
 /* ===== DESKTOP VERSION ===== */
 
-body{
+body {
     background-image: url("https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg");
     background-color: #000;
     background-repeat: repeat-y;
@@ -47,6 +49,79 @@ body{
 
 
 /* == HEADER SECTION == */
-.nav_titles-container{
+
+.nav_bar {
+    display: flex;
+    position: row;
+    align-items: center;
+    justify-content: right;
+    width: 1440px;
+    height: 150px;
+    background: rgba(26, 32, 44, 0.5);
+    z-index: 3;
+}
+
+.nav_container {
+    display: flex;
+    position: row;
+    justify-content: space-between;
+}
+
+.nav_titles-container {
     display: none;
 }
+
+.nav_titles {
+    font-weight: bold;
+    color: #7CFC00;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+
+.nav_elements {
+    text-align: right;
+}
+
+
+/*== HOME SECTION ==*/
+
+
+/*== QUOTE SECTION ==*/
+
+
+/*== CAROUSEL SECTION ==*/
+
+.carousel_section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: auto;
+}
+
+.carrusel-items {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    justify-content: center;
+    height: 50%;
+}
+
+.img-carousel {
+    min-width: 20%;
+    max-width: 20%;
+}
+
+.carrusel-items img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+
+/*== VIDEO SECTION==*/
+
+
+/*== FOOTER ==*/
