@@ -13,7 +13,7 @@
     --gray-color: #625F5A;
     --black-transparence: rgba(26, 32, 44, 0.5);
     --green-transparence: rgba(124, 252, 0, 0.64);
-    --tittle-font: font-family: 'Baloo Thambi 2', cursive;
+    --tittle-font: font-family: 'Baloo Thambi 2', 'get schwifty', cursive;
     --text-font: font-family: 'Imprima', sans-serif;
 }
 
@@ -55,7 +55,7 @@ body {
     position: row;
     align-items: center;
     justify-content: right;
-    width: 1440px;
+    width: auto;
     height: 150px;
     background: rgba(26, 32, 44, 0.5);
     z-index: 3;
@@ -111,16 +111,17 @@ body {
     align-items: center;
     position: relative;
     width: auto;
+    height: 50%;
 }
 
 .carrusel-items {
     width: 100%;
+    height: 50%;
     display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
     padding-bottom: 20px;
     justify-content: center;
-    height: 50%;
 }
 
 .img-carousel {
@@ -139,3 +140,9 @@ body {
 
 
 /*== FOOTER ==*/
+
+.footer_img {
+    width: 200px;
+    height: 200px;
+    align-content: center;
+}
