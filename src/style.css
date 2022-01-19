@@ -74,13 +74,20 @@ body {
 
 .nav_titles {
     font-weight: bold;
-    color: #7CFC00;
+    color: var(--primary-color);
     justify-content: space-between;
     margin-right: 50px;
 }
 
 .nav_elements {
     text-align: right;
+}
+
+.search_bar{
+    outline: rgba(124, 252, 0, 0.64) solid 1px;
+    border-radius: 10px;
+    background-color: transparent;
+    border-color: var(--primary-color);
 }
 
 
@@ -91,7 +98,7 @@ body {
 
 .quote_section {
     text-align: center;
-    color: #7CFC00;
+    color: var(--primary-color);
     background-color: #7efc0050;
     margin-left: 300px;
     margin-bottom: 100px;
@@ -135,7 +142,6 @@ body {
     height: 70%;
     object-fit: cover;
 }
-
 
 /*== VIDEO SECTION==*/
 
