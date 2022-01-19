@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
     <title>Data Lovers</title>
-    <link rel="shortcut icon" href="./assets/Images/favicon.png">
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/3129de5d3f.js" crossorigin="anonymous"></script>
 </head>
@@ -13,7 +11,6 @@
 <body>
     <div id="root"></div>
     <header>
-        <h1 class="home_section_title"> Rick and Morty </h1>
         <nav class="nav_bar">
             <i class="fas fa-bars"></i>
             <ul class="nav_container">
@@ -21,7 +18,7 @@
                     <a href="#" class="nav_titles"> Home </a>
                 </li>
                 <li class="nav_elements">
-                    <a href="#" class="nav_titles"> Capítulos</a>
+                    <a href="#" class="nav_titles">Capitulos </a>
                     <ul class="nav_titles-container">
                         <li class="nav_elements">
                             <a href="" class="nav_subtitles"> Nombre </a>
@@ -41,19 +38,19 @@
         </nav>
         <div class="search_bar_container">
             <input type="search" name="" id="searchBar" class="search_bar">
-            <i class="fas fa-search icon-search"></i>
         </div>
         <div class="home_section">
-            <div class="backgound-img">
-                <picture>
-                    <source type="image/webp" media="(min-width: 768px) and (max-width: 1023px)">
-                    <img src="assets/Images/rick-morty-.jpg" alt="" class="home_section_img" width="100%" height="100%">
-                </picture>
-
-            </div>
+            <img src="assets/Images/rick-morty-.jpg" alt="" class="home_section_img">
+            <h1 class="home_section_title"> Rick and Morty </h1>
         </div>
     </header>
     <hr>
+    <div class="data-test" id="data-test"></div>
+    <img src="" alt="" class="img-test" id="img-test">
+    <ul class="ul-test" id="ul-test">
+
+    </ul>
+
     <section class="quote_section">
         <p class="quote">“Sé que esta situación puede ser intimidante. Miras a tu alrededor y todo da miedo y es diferente, pero ¿sabes qué? ... hay que encarar esas situaciones, avanzar contra ellas como un toro - es así que crecemos como personas..”
             <span class="quote-span">Rick Sanchez</span> </p>
@@ -79,10 +76,9 @@
     </section>
     <section class="video_section">
         <video width="600" height="600" controls>
-          <source src="./assets/videos/rym.mp4" type="video/mp4">
-        </video>
+        <source src="./assets/videos/rym.mp4" type="video/mp4">
+      </video>
     </section>
-
     <footer>
         <a href="" class="footer_text"> Rick and Morty Fandom </a>
         <ul class="social_media">
@@ -107,9 +103,9 @@
                 </a>
             </li>
         </ul>
-        <img src="./assets/Images/gif/rick-and-morty-rick.gif" alt="" class="footer_img">
+        <img src="./assets/Images/gif/rick-and-morty-rick.gif" alt="">
     </footer>
-    <script src="main.js" type="module"></script>
+    <script src="test.js" type="module"></script>
 </body>
 
 </html>
