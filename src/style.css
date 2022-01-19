@@ -108,6 +108,7 @@ body {
 
 .carousel_section {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     align-items: center;
     position: relative;
