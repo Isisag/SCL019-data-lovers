@@ -156,16 +156,7 @@
         background-color: var(--black-transparence);
     }
     
-    <<<<<<< HEAD=======
-    /*.carrusel-items {
-        display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-}*/
-    
-    >>>>>>>1239dc0cc154075daeb450a43aead202037a0cf1 .carousel {
+    .carousel {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
