@@ -1,194 +1,185 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    /*color: blue;*/
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Imprima&display=swap');
- :root {
-    --primary-color: #7CFC00;
-    --secondary-color: #9DE7F8;
-    --accent-color: #10100F;
-    --text-color: #ffff;
-    --gray-color: #625F5A;
-    --black-transparence: rgba(26, 32, 44, 0.5);
-    --green-transparence: rgba(126, 252, 0, 0.507);
-    --tittle-font: font-family: 'Baloo Thambi 2', 'get schwifty', cursive;
-    --text-font: font-family: 'Imprima', sans-serif;
-}
-
-@font-face {
-    font-family: get schwifty;
-    src: url(./get_schwifty.ttf);
-}
-
-
-/* === HELPERS CLASS ==== */
-
-.hidden {
-    display: none;
-}
-
-
-/* ===== MEDIA QUERYS ===== */
-
-
-/*  MOBILE DEVICES */
-
-@media (min-with: 320px) {}
-
-
-/* TABLET DEVICES */
-
-@media (min-with: 800px) {}
-
-
-/* ===== DESKTOP VERSION ===== */
-
-body {
-    background-image: url("https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg");
-    background-color: #000;
-    background-repeat: repeat-y;
-    background-clip: padding-box;
-}
-
-
-/* == HEADER SECTION == */
-
-.nav_bar {
-    display: flex;
-    position: row;
-    align-items: center;
-    justify-content: right;
-    width: auto;
-    height: 150px;
-    background: rgba(26, 32, 44, 0.5);
-    z-index: 3;
-}
-
-.nav_container {
-    display: flex;
-    position: row;
-    justify-content: space-between;
-}
-
-.nav_titles-container {
-    display: none;
-}
-
-.nav_titles {
-    font-weight: bold;
-    color: var(--primary-color);
-    justify-content: space-between;
-    margin-right: 50px;
-    text-decoration: none;
-}
-
-.nav_elements {
-    text-align: right;
-}
-
-.search_bar_container {
-    display: flex;
-    position: row;
-    position: absolute;
-    align-items: center;
-}
-
-.search_bar {
-    outline: rgba(124, 252, 0, 0.64) solid 1px;
-    border-radius: 10px;
-    background-color: transparent;
-    border-color: var(--primary-color);
-    margin-left: 400px;
-    margin-top: -150px;
-}
-
-.icon-search {
-    color: var(--primary-color);
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    margin-left: 580px;
-    margin-top: -150px;
-}
-
-
-/*== HOME SECTION ==*/
-
-.home_section_title {
-    font-family: get schwifty;
-    font-weight: bold;
-    font-size: 50px;
-    color: var(--accent-color);
-    -webkit-text-stroke: 1px var(--primary-color);
-    color: var(--accent-color);
-    align-items: center;
-    position: absolute;
-    margin: auto;
-    padding: 15px;
-}
-
-
-/*== QUOTE SECTION ==*/
-
-.quote_section {
-    text-align: center;
-    background-color: var(--green-transparence);
-    margin-left: 300px;
-    margin-top: 30px;
-    margin-bottom: 100px;
-    padding-bottom: 50px;
-    border-radius: 20px 0px 0px 20px;
-}
-
-.quote {
-    padding-top: 5%;
-    font-weight: bold;
-    font-size: 18px;
-    -webkit-text-stroke: 0.3px #10100F;
-    color: var(--primary-color);
-}
-
-
-/*== CAROUSEL SECTION ==*/
-
-.carousel_section {
-    margin: auto;
-    display: flex;
-    position: absolute;
-    overflow: hidden;
-    width: 1200px;
-    height: 460px;
-}
-
-.carrusel-items {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /*color: blue;*/
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Imprima&display=swap');
+     :root {
+        --primary-color: #7CFC00;
+        --secondary-color: #9DE7F8;
+        --accent-color: #10100F;
+        --text-color: #ffff;
+        --gray-color: #625F5A;
+        --black-transparence: rgba(26, 32, 44, 0.5);
+        --green-transparence: rgba(126, 252, 0, 0.507);
+        --tittle-font: font-family: 'Baloo Thambi 2', 'get schwifty', cursive;
+        --text-font: font-family: 'Imprima', sans-serif;
+    }
+    
+    @font-face {
+        font-family: get schwifty;
+        src: url(./get_schwifty.ttf);
+    }
+    /* === HELPERS CLASS ==== */
+    
+    .hidden {
+        display: none;
+    }
+    /* ===== MEDIA QUERYS ===== */
+    /*  MOBILE DEVICES */
+    
+    @media (min-with: 320px) {}
+    /* TABLET DEVICES */
+    
+    @media (min-with: 800px) {}
+    /* ===== DESKTOP VERSION ===== */
+    
+    body {
+        background-image: url("https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg");
+        background-color: #000;
+        background-repeat: repeat-y;
+        background-clip: padding-box;
+    }
+    /* == HEADER SECTION == */
+    
+    .nav_bar {
+        display: flex;
+        position: row;
+        align-items: center;
+        justify-content: right;
+        width: auto;
+        height: 150px;
+        background: rgba(26, 32, 44, 0.5);
+        z-index: 3;
+    }
+    
+    .nav_container {
+        display: flex;
+        position: row;
+        justify-content: space-between;
+    }
+    
+    .nav_titles-container {
+        display: none;
+    }
+    
+    .nav_titles {
+        font-weight: bold;
+        color: var(--primary-color);
+        justify-content: space-between;
+        margin-right: 50px;
+        text-decoration: none;
+    }
+    
+    .nav_elements {
+        text-align: right;
+    }
+    
+    .search_bar_container {
+        display: flex;
+        position: row;
+        position: absolute;
+        align-items: center;
+    }
+    
+    .search_bar {
+        outline: rgba(124, 252, 0, 0.64) solid 1px;
+        border-radius: 10px;
+        background-color: transparent;
+        border-color: var(--primary-color);
+        margin-left: 400px;
+        margin-top: -150px;
+        z-index: 3;
+    }
+    
+    .icon-search {
+        color: var(--primary-color);
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        margin-left: 580px;
+        margin-top: -150px;
+        z-index: 3;
+    }
+    /*== HOME SECTION ==*/
+    
+    .home_section_title {
+        font-family: get schwifty;
+        font-weight: bold;
+        font-size: 50px;
+        color: var(--accent-color);
+        -webkit-text-stroke: 1px var(--primary-color);
+        color: var(--accent-color);
+        align-items: center;
+        position: absolute;
+        margin: auto;
+        padding: 15px;
+    }
+    /*== QUOTE SECTION ==*/
+    
+    .quote_section {
+        text-align: center;
+        background-color: var(--green-transparence);
+        margin-left: 300px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-radius: 20px 0px 0px 20px;
+    }
+    
+    .quote {
+        padding-top: 5%;
+        font-weight: bold;
+        font-size: 18px;
+        -webkit-text-stroke: 0.3px #10100F;
+        color: var(--primary-color);
+    }
+    /*== CAROUSEL SECTION ==*/
+    
+    .carousel_section {
+        outline: rgba(124, 252, 0, 0.64) solid 2px;
+        margin: auto;
+        display: flex;
+        /*position: absolute;*/
+        /*overflow: hidden;*/
+        width: cover;
+        height: 600px;
+        padding-top: 50px;
+        padding-left: 50px;
+        border: var(--primary-color);
+    }
+    /*.carrusel-items {
+        display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 100%;
     width: 100%;
-}
-
-.carousel {
-    min-width: 20%;
-    max-width: 20%;
-}
-
-.img-carousel {
-    width: 100%;
-    height: 70%;
-    cursor: pointer;
-}
-
-
-/*== VIDEO SECTION==*/
-
-
-/*== FOOTER ==*/
-
-.footer_img {
-    width: 200px;
-    height: 200px;
-    align-content: center;
-}
+}*/
+    
+    .carousel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 20%;
+    }
+    
+    .img-carousel {
+        align-items: center;
+        /*width: 100%;*/
+        width: calc(100%);
+        /*height: 400px;*/
+        cursor: pointer;
+        /*display: block;*/
+        height: 70%;
+        /*max-width: 100%;*/
+    }
+    /*== VIDEO SECTION==*/
+    /*== FOOTER ==*/
+    
+    .footer_img {
+        width: 200px;
+        height: 200px;
+        align-content: center;
+    }
