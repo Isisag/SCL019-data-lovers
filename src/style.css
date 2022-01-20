@@ -22,19 +22,20 @@
         font-family: get schwifty;
         src: url(./get_schwifty.ttf);
     }
+
     /* === HELPERS CLASS ==== */
     
     .hidden {
         display: none;
     }
-    /* ===== MEDIA QUERYS ===== */
-    /*  MOBILE DEVICES */
-    
-    @media (min-with: 320px) {}
-    /* TABLET DEVICES */
-    
-    @media (min-with: 800px) {}
-    /* ===== DESKTOP VERSION ===== */
+
+    a{
+        text-decoration: none;
+    }
+
+    li{
+        list-style: none;
+    }
     
     body {
         background-image: url("https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg");
@@ -103,6 +104,7 @@
         margin-top: -150px;
         z-index: 3;
     }
+
     /*== HOME SECTION ==*/
     
     .home_section_title {
@@ -150,7 +152,7 @@
         padding-left: 50px;
         border: var(--primary-color);
     }
-    
+
     /*.carrusel-items {
         display: flex;
     flex-direction: row;
@@ -176,7 +178,10 @@
         height: 70%;
         /*max-width: 100%;*/
     }
+
+
     /*== VIDEO SECTION==*/
+
     /*== FOOTER ==*/
     
     .footer_img {
@@ -184,3 +189,4 @@
         height: 200px;
         align-content: center;
     }
+
