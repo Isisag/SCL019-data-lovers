@@ -26,14 +26,14 @@
     .hidden {
         display: none;
     }
-    /* ===== MEDIA QUERYS ===== */
-    /*  MOBILE DEVICES */
     
-    @media (min-with: 320px) {}
-    /* TABLET DEVICES */
+    a {
+        text-decoration: none;
+    }
     
-    @media (min-with: 800px) {}
-    /* ===== DESKTOP VERSION ===== */
+    li {
+        list-style: none;
+    }
     
     body {
         background-image: url("https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg");
@@ -156,7 +156,16 @@
         background-color: var(--black-transparence);
     }
     
-    .carousel {
+    <<<<<<< HEAD=======
+    /*.carrusel-items {
+        display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}*/
+    
+    >>>>>>>1239dc0cc154075daeb450a43aead202037a0cf1 .carousel {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

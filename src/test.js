@@ -54,13 +54,13 @@ function getData() {
             let createImg = document.body.appendChild(image)
             let showImage = createImg.src=`${charactersImageMap}`
 
-
-
             return {
                pushText, showImage
             }
 
         });
+
+        
         console.log(elementos)    
         
         
