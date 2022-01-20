@@ -2,7 +2,6 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        /*color: blue;*/
     }
     
     @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Imprima&display=swap');
@@ -73,8 +72,15 @@
         text-decoration: none;
     }
     
+    .nav_titles:hover {
+        text-decoration: underline;
+        color: var(--secondary-color);
+    }
+    
     .nav_elements {
         text-align: right;
+        font-family: 'Baloo Thambi 2';
+        font-size: 20px;
     }
     
     .search_bar_container {
@@ -124,7 +130,7 @@
         background-color: var(--green-transparence);
         margin-left: 300px;
         margin-top: 30px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         padding-bottom: 50px;
         border-radius: 20px 0px 0px 20px;
     }
@@ -134,29 +140,21 @@
         font-weight: bold;
         font-size: 18px;
         -webkit-text-stroke: 0.3px #10100F;
-        color: var(--primary-color);
+        color: var(--accent-color);
+        font-family: var(--text-font);
     }
     /*== CAROUSEL SECTION ==*/
     
     .carousel_section {
-        outline: rgba(124, 252, 0, 0.64) solid 2px;
+        z-index: 3;
+        outline: rgba(124, 252, 0, 0.64) solid 5px;
         margin: auto;
         display: flex;
-        /*position: absolute;*/
-        /*overflow: hidden;*/
         width: cover;
-        height: 600px;
-        padding-top: 50px;
-        padding-left: 50px;
+        height: 400px;
         border: var(--primary-color);
+        background-color: var(--black-transparence);
     }
-    /*.carrusel-items {
-        display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-}*/
     
     .carousel {
         display: flex;
@@ -166,20 +164,50 @@
     }
     
     .img-carousel {
+        padding-top: 5%;
         align-items: center;
-        /*width: 100%;*/
         width: calc(100%);
-        /*height: 400px;*/
         cursor: pointer;
-        /*display: block;*/
-        height: 70%;
-        /*max-width: 100%;*/
+        height: 100%;
     }
     /*== VIDEO SECTION==*/
+    
+    .video_section {
+        background-color: #fc7100;
+        margin: auto;
+        display: flex;
+        width: fit-content;
+    }
+    
+    .video {
+        /*padding-top: 200px;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+        height: 70%;
+        width: 100%;
+    }
+    
+    .video-size {
+        /*box-sizing: content-box;*/
+        width: 100%;
+    }
     /*== FOOTER ==*/
     
     .footer_img {
         width: 200px;
         height: 200px;
         align-content: center;
+    }
+    
+    .social_media {
+        display: flex;
+        justify-content: right;
+        justify-content: space-between;
+        width: auto;
+    }
+    
+    .social_media_icons {
+        color: var(--primary-color);
     }
