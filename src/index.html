@@ -17,35 +17,40 @@
 <body>
     <div id="root"></div>
     <header>
-        <h1 class="home_section_title"> Rick and Morty </h1>
         <nav class="nav_bar">
-            <i class="fas fa-bars"></i>
+            <div class="home_section_title-container">
+                <h1 class="home_section_title"> Rick and Morty </h1>
+            </div>
+            <div class="icon-bars-container">
+                <i class="fas fa-bars icon-bars"></i>
+            </div>
+            <div class="search_bar_container">
+                <input type="search" name="" id="searchBar" class="search_bar" placeholder="Search Someting...">
+                <button class="icon-search-container"> <i class="fas fa-search icon-search"></i> </button>
+                
+            </div>
             <ul class="nav_container">
                 <li class="nav_elements">
-                    <a href="#" class="nav_titles"> Home </a>
+                    <a href="index.html" class="nav_titles"> Home </a>
                 </li>
                 <li class="nav_elements">
-                    <a href="#" class="nav_titles"> Capítulos</a>
+                    <a href="filters.html" class="nav_titles"> Capítulos</a>
                     <ul class="nav_titles-container">
                         <li class="nav_elements">
-                            <a href="" class="nav_subtitles"> Nombre </a>
+                            <a href="filters.html" class="nav_subtitles"> Nombre </a>
                         </li>
                         <li class="nav_elements">
-                            <a href="" class="nav_subtitles"> Locaciones </a>
+                            <a href="filters.html" class="nav_subtitles"> Locaciones </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav_elements">
-                    <a href="#" class="nav_titles"> Temporadas </a>
+                    <a href="filters.html" class="nav_titles"> Temporadas </a>
                 </li>
                 <li class="nav_elements">
-                    <a href="#" class="nav_titles"> Personajes </a>
+                    <a href="filters.html" class="nav_titles"> Personajes </a>
                 </li>
             </ul>
-            <div class="search_bar_container">
-                <input type="search" name="" id="searchBar" class="search_bar">
-                <i class="fas fa-search icon-search"></i>
-            </div>
         </nav>
 
         <div class="home_section">
@@ -61,7 +66,7 @@
     <hr>
     <section class="quote_section">
         <p class="quote">“Sé que esta situación puede ser intimidante. Miras a tu alrededor y todo da miedo y es diferente, pero ¿sabes qué? ... hay que encarar esas situaciones, avanzar contra ellas como un toro - es así que crecemos como personas..”
-            <span class="quote-span">Rick Sanchez</span> </p>
+           <br><br> <cite class="quote-span">Rick Sanchez</cite> </p>
     </section>
     <section class="carousel_section">
         <div class="carousel">
@@ -89,11 +94,12 @@
     </section>
 
     <footer>
-        <a href="" class="footer_text"> Rick and Morty Fandom </a>
+        <a href="" class="footer_text"> ©2021 Rick & Morty FANDOM </a>
+        <img src="./assets/Images/gif/rick-and-morty-rick.gif" alt="" class="footer_img">
         <ul class="social_media">
             <li class="social_media_text">
                 <a href="#" class="social_media_icons">
-                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-facebook icon-footer"></i>
                 </a>
             </li>
             <li class="social_media_text">
@@ -103,17 +109,16 @@
             </li>
             <li class="social_media_text">
                 <a href="#" class="social_media_icons">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-twitter icon-footer "></i>
                 </a>
             </li>
             <li class="social_media_text">
                 <a href="#" class="social_media_icons">
-                    <i class="fab fa-github"></i>
+                    <i class="fab fa-github icon-footer"></i>
                 </a>
             </li>
         </ul>
-        <img src="./assets/Images/gif/rick-and-morty-rick.gif" alt="" class="footer_img">
-    </footer> -->
+    </footer> 
     <script src="main.js" type="module"></script>
 </body>
 

@@ -1,6 +1,6 @@
-import { example } from './data.js';
+import { example } from '../data.js';
 // import data from './data/lol/lol.js';
-import data from './data/rickandmorty/rickandmorty.js';
+import data from '../data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -67,9 +67,9 @@ function getData() {
 
 
         // traer las propiedades
-        var arreglo = results[2]
-        var characterName = arreglo.name
-        var imgResource = arreglo.image
+        // var arreglo = results[2]
+        // var characterName = arreglo.name
+        // var imgResource = arreglo.image
 
 
         const imgTest = document.getElementById("img-test").src=`${imgResource}`
@@ -84,4 +84,4 @@ function getData() {
 }getData();
 
 
-// console.log(example, data);
+console.log(example, data);

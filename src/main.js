@@ -34,7 +34,7 @@ import data from './data/rickandmorty/rickandmorty.js';
         const characterImage = imgAppend.src=`${rickSanchez.image}`
 
 
-    }showCharacters();
+    }
 
 
     // RECORRIENDO LA DATA CON MAP

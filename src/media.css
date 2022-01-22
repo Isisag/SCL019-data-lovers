@@ -3,39 +3,56 @@
 
     /*  MOBILE DEVICES */
     
-@media only screen and (min-width: 320px){
+@media (min-width: 310px) and (max-width: 400px) {
 
-    body{
-        color: salmon;
-        background: url(/src/assets/Images/rymseason4.jpg);
+     /* HOME SECTION  */
+
+    .icon-bars-container{
+        display: flex;
+    }
+
+    .icon-bars{
+        color: tomato;
+    }
+
+    .nav_bar {
+        display: flex;
+        /* flex-wrap: nowrap; */
+        justify-content: start;
+        max-width: 100%;
+        max-height: min-content;
+    }
+
+    .home_section_title-container{
+        padding: 0;
+        width: 100%;
     }
 
     .home_section_title {
-        font-family: get schwifty;
-        font-weight: bold;
-        font-size: 10px;
-        color: yellow;
-        align-items: center;
-        margin: auto;
-        padding: 15px;
+        font-size: 20px;
+        margin: 0;
+        width: 100%;
     }
 
-    .nav_titles {
-        font-weight: bold;
-        color: white;
-        justify-content: space-between;
-        text-decoration: none;
+    .search_bar_container, .icon-search-container,.icon-search{
+        width: 100%;
     }
 
-} /* 1 */
-@media only screen and (min-width: 801px){
+    .nav_container, .nav_elements,.nav_titles {
+        display: none;
+    }
+
+   
+} 
+
+/* @media only screen and (min-width: 801px){
 
     body{
         color: seagreen;
     }
 
 
-}
+} */
 
     
 
