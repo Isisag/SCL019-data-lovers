@@ -73,15 +73,20 @@ function getData() {
     var imgResource = arreglo.image
 
 
-<<<<<<< HEAD:src/test.js
+        <<
+        <<
+        << < HEAD: src / test.js
     const imgTest = document.getElementById("img-test").src = `${imgResource}`
-    const divTest = document.getElementById("data-test").innerHTML = characterName;
-=======
-        // traer las propiedades
-        // var arreglo = results[2]
-        // var characterName = arreglo.name
-        // var imgResource = arreglo.image
->>>>>>> 24a56737225779a208d5e8089e18ff250965d35c:src/tests files/test.js
+    const divTest = document.getElementById("data-test").innerHTML = characterName; ===
+    ===
+    =
+    // traer las propiedades
+    // var arreglo = results[2]
+    // var characterName = arreglo.name
+    // var imgResource = arreglo.image
+    >>>
+    >>>
+    > 24 a56737225779a208d5e8089e18ff250965d35c: src / tests files / test.js
 
 
     console.log(arreglo)
@@ -98,8 +103,15 @@ frutas.push('banana', 'manzana', 'pera')
 
 console.log(frutas.length)
 
-<<<<<<< HEAD:src/test.js
-// console.log(example, data);
-=======
 console.log(example, data);
->>>>>>> 24a56737225779a208d5e8089e18ff250965d35c:src/tests files/test.js
+//ESCONDER ELEMENTOS DEL MENU
+const navToggle = document.querySelector("#toggle");
+const btnNav = document.querySelector("#btnNav");
+const navSubtitle = document.querySelector(".nav_subtitles");
+const navElements = document.querySelector("#navElements");
+const navContainer = document.querySelector(".navContainer");
+
+btnNav.addEventListener("click", () => {
+    navElements.classList.toggle("nav-menu_invisible");
+});
+console.log(navToggle);

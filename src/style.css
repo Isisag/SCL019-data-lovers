@@ -24,10 +24,9 @@
         src: url(./get_schwifty.ttf);
     }
     /* === HELPERS CLASS ==== */
-    
-    .hidden {
+    /*.hidden {
         display: none;
-    }
+    }*/
     
     a {
         text-decoration: none;
@@ -70,8 +69,11 @@
         position: row;
         justify-content: space-between;
     }
+    /*.nav_titles-container {
+        display: none;
+    }*/
     
-    .nav_titles-container {
+    .nav-menu_invisible {
         display: none;
     }
     
@@ -92,6 +94,10 @@
         text-align: right;
         font-family: 'Baloo Thambi 2';
         font-size: 25px;
+    }
+    
+    .nav-menu_visible {
+        display: flex;
     }
     
     .search_bar_container {
@@ -128,6 +134,10 @@
         /*margin-top: -150px;*/
         z-index: 3;
         =======>>>>>>>24a56737225779a208d5e8089e18ff250965d35c
+    }
+    
+    .bx {
+        color: var(--primary-color);
     }
     /*== HOME SECTION ==*/
     
@@ -255,18 +265,10 @@
     .social_media_icons {
         color: var(--primary-color);
     }
-    /*tamaño iconos footer*/
-    
-    .svg-inline--fa {
-        height: 15em;
-    }
-    /*distancia entre iconos*/
-    
-    .svg-inline--fa.fa-w-16 {
-        width: 3em;
-    }
     
     .icon-footer {
-        color: var(--primary-color);
+        background-color: var(--primary-color);
+        margin-top: 4em;
+        border-radius: 30%;
     }
     /* ================== FILTERS HTML ====================== */
