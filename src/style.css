@@ -80,7 +80,7 @@
     .nav_elements {
         text-align: right;
         font-family: 'Baloo Thambi 2';
-        font-size: 20px;
+        font-size: 25px;
     }
     
     .search_bar_container {
@@ -95,18 +95,18 @@
         border-radius: 10px;
         background-color: transparent;
         border-color: var(--primary-color);
-        margin-left: 400px;
-        margin-top: -150px;
+        /*margin-left: 400px;*/
+        /*margin-top: -150px;*/
         z-index: 3;
     }
     
     .icon-search {
         color: var(--primary-color);
-        position: absolute;
+        /*position: absolute;*/
         height: 200px;
         width: 200px;
-        margin-left: 580px;
-        margin-top: -150px;
+        /*margin-left: 600px;*/
+        /*margin-top: -150px;*/
         z-index: 3;
     }
     /*== HOME SECTION ==*/
