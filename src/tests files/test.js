@@ -1,6 +1,6 @@
-import { example } from './data.js';
+import { example } from '../data.js';
 // import data from './data/lol/lol.js';
-import data from './data/rickandmorty/rickandmorty.js';
+import data from '../data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -73,8 +73,15 @@ function getData() {
     var imgResource = arreglo.image
 
 
+<<<<<<< HEAD:src/test.js
     const imgTest = document.getElementById("img-test").src = `${imgResource}`
     const divTest = document.getElementById("data-test").innerHTML = characterName;
+=======
+        // traer las propiedades
+        // var arreglo = results[2]
+        // var characterName = arreglo.name
+        // var imgResource = arreglo.image
+>>>>>>> 24a56737225779a208d5e8089e18ff250965d35c:src/tests files/test.js
 
 
     console.log(arreglo)
@@ -91,4 +98,8 @@ frutas.push('banana', 'manzana', 'pera')
 
 console.log(frutas.length)
 
+<<<<<<< HEAD:src/test.js
 // console.log(example, data);
+=======
+console.log(example, data);
+>>>>>>> 24a56737225779a208d5e8089e18ff250965d35c:src/tests files/test.js
