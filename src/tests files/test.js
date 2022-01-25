@@ -75,7 +75,8 @@ function getData() {
 
         <<
         <<
-        << < HEAD: src / test.js
+        <<
+        < HEAD: src / test.js
     const imgTest = document.getElementById("img-test").src = `${imgResource}`
     const divTest = document.getElementById("data-test").innerHTML = characterName; ===
     ===
@@ -86,7 +87,8 @@ function getData() {
     // var imgResource = arreglo.image
     >>>
     >>>
-    > 24 a56737225779a208d5e8089e18ff250965d35c: src / tests files / test.js
+    >
+    24 a56737225779a208d5e8089e18ff250965d35c: src / tests files / test.js
 
 
     console.log(arreglo)
@@ -115,3 +117,6 @@ btnNav.addEventListener("click", () => {
     navElements.classList.toggle("nav-menu_invisible");
 });
 console.log(navToggle);
+
+var first = 10;
+console.log(first);

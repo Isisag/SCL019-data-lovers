@@ -58,3 +58,6 @@ console.log(elementos)
 
 
 console.log(example, data);
+
+var first = 10;
+console.log(first);
