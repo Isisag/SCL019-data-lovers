@@ -55,6 +55,7 @@ import data from './data/rickandmorty/rickandmorty.js';
     //     }
 
     // }); console.log(elementos)
+
 const allData = data;
 const results = data.results; //array
 
@@ -83,8 +84,6 @@ function showCharacters() {
     const imgC = document.createElement("img")
     const imgAppend = document.body.appendChild(imgC)
     const characterImage = imgAppend.src = `${rickSanchez.image}`
-
-
 }
 
 
