@@ -3,6 +3,7 @@
         margin: 0;
         box-sizing: border-box;
         font-family: var(--text-font);
+        color: white;
     }
     
     @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Imprima&display=swap');
@@ -247,6 +248,83 @@
         color: var(--primary-color);
     }
 
-
     /* ================== FILTERS HTML ====================== */
 
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    max-width: 25vh;
+    height: 38vh ;
+    margin: 0px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.card_image-name{
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+}
+
+.card_image{
+    /* width: 100%;
+    height: 100%; */
+}
+.card_name{
+    position: absolute;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: var(--black-transparence);
+    padding: .3rem .6rem;
+    position: absolute;
+    font-size: .8rem;
+    border-radius: 5px;
+    z-index: 8;
+    /* margin: -1.7rem 2rem 8rem 2rem; */
+    margin-top: -1.7rem;
+    margin-left: 1.3rem;
+}
+
+.card_info{
+    background-color: var(--secondary-color);
+    border-radius: 0px 0px 10px 10px;
+    width: 25vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: .8em;
+}
+
+.card_status{
+    display: inline-block;
+    width: 100%;
+}
+
+.card_status_text{
+    
+}
+.card_status_circle{
+    width: 7px;
+    height: 7px;
+    margin: 0px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.card_location{
+}
+.card_location-label{}
+.card_location-text{}
+
+.card_moreinfo{
+    width: 100%;
+    color: var(--primary-color);
+    font-family: var(--tittle-font);
+    margin: 0px auto;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}

@@ -37,6 +37,11 @@ function getData() {
             console.log(key)
         }
 
+        function addStyle(element){
+            element.style.backgroundColor = "black"
+            element.style.borderRadius = "20px"
+            return element
+        }
         
         
         let elementos = results.map( function( item ){
@@ -46,34 +51,56 @@ function getData() {
             const charactersImageMap = item.image
             const charactersStatusMap = item.status
 
-            let li = document.createElement("li")
-            let create = document.body.appendChild(li)
-            let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
+            const card = document.getElementById('card')
+            const cardImage = document.getElementById('card_image')
+            const cardName = document.getElementById('card_name')
+            const cardDiv = document.getElementById("card_section-container")
+            const cardImageName = document.getElementById("card_image-name");
 
-            let image = document.createElement("img")
-            let createImg = document.body.appendChild(image)
-            let showImage = createImg.src=`${charactersImageMap}`
 
-            return {
-               pushText, showImage
-            }
+            // let create = document.body.appendChild(cardName)
+            let h3 = document.createElement(h3)
+            let intermedio = h3.innerHTML = `<h3 class="card_name" id="card_name"> ${charactersNameMap} </h3>`
+            // let showName = create.innerHTML = `<h3 class="card_name"> ${charactersNameMap} </h3>`
+            let test = cardImageName.appendChild(h3)
+
+            // let li = document.createElement("li")
+            // let create = document.body.appendChild(li)
+            // let pushText = create.innerHTML = `<li class="prueba" > ${charactersNameMap} </li>`
+           
+
+            // let image = document.createElement("img")
+            // let createImg = document.body.appendChild(image)
+            // let showImage = createImg.src=`${charactersImageMap}`
+            
+
+            // let info = document.createElement("li")
+            // let createInfo = document.body.appendChild(info)
+            // let showInfo = createInfo.innerHTML = `
+            // <li class="prueba" > Name: ${`${charactersNameMap} </li> 
+            // <li class="prueba2"> Species: ${charactersSpeciesMap} </li>
+            // <li class="prueba3"> Status:  ${charactersStatusMap}`} </li>`
+            
+           
+
+            // return  showImage, showInfo;
+            
+            return test;
+            
+            
 
         });
 
         
         console.log(elementos)    
         
-        
-
 
         // traer las propiedades
-        // var arreglo = results[2]
-        // var characterName = arreglo.name
-        // var imgResource = arreglo.image
+        var arreglo = results[2]
+        var characterName = arreglo.name
+        var imgResource = arreglo.image
 
 
-        const imgTest = document.getElementById("img-test").src=`${imgResource}`
-        const divTest = document.getElementById("data-test").innerHTML = characterName;
 
 
         console.log(arreglo)
@@ -85,3 +112,35 @@ function getData() {
 
 
 console.log(example, data);
+
+
+// let elementos = results.map( function( item ){
+//     // return results.id
+//     const charactersNameMap = item.name
+//     const charactersSpeciesMap = item.species
+//     const charactersImageMap = item.image
+//     const charactersStatusMap = item.status
+
+//     let li = document.createElement("li")
+//     let create = document.body.appendChild(li)
+//     let pushText = create.innerHTML = `<li class="prueba" > ${charactersNameMap} </li>`
+   
+
+//     let image = document.createElement("img")
+//     let createImg = document.body.appendChild(image)
+//     let showImage = createImg.src=`${charactersImageMap}`
+    
+
+//     let info = document.createElement("li")
+//     let createInfo = document.body.appendChild(info)
+//     let showInfo = createInfo.innerHTML = `
+//     <li class="prueba" > Name: ${`${charactersNameMap} </li> 
+//     <li class="prueba2"> Species: ${charactersSpeciesMap} </li>
+//     <li class="prueba3"> Status:  ${charactersStatusMap}`} </li>`
+    
+
+//     return  showImage, showInfo;
+//     // return divInfo;
+    
+
+// });
