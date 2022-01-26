@@ -73,22 +73,16 @@ function getData() {
     var imgResource = arreglo.image
 
 
-        <<
-        <<
-        <<
-        < HEAD: src / test.js
+    src / test.js
+    src / tests, files / test.js
     const imgTest = document.getElementById("img-test").src = `${imgResource}`
-    const divTest = document.getElementById("data-test").innerHTML = characterName; ===
-    ===
-    =
+    const divTest = document.getElementById("data-test").innerHTML = characterName;
+
     // traer las propiedades
     // var arreglo = results[2]
     // var characterName = arreglo.name
     // var imgResource = arreglo.image
-    >>>
-    >>>
-    >
-    24 a56737225779a208d5e8089e18ff250965d35c: src / tests files / test.js
+
 
 
     console.log(arreglo)
@@ -113,10 +107,71 @@ const navSubtitle = document.querySelector(".nav_subtitles");
 const navElements = document.querySelector("#navElements");
 const navContainer = document.querySelector(".navContainer");
 
-btnNav.addEventListener("click", () => {
+btnNav.addEventListener("mouseover", () => {
     navElements.classList.toggle("nav-menu_invisible");
 });
 console.log(navToggle);
 
-var first = 10;
-console.log(first);
+//menu desplegable
+
+function toggleClass(elem, className) {
+    if (elem.className.indexOf(className) !== -1) {
+        elem.className = elem.className.replace(className, '');
+    } else {
+        elem.className = elem.className.replace(/\s+/g, ' ') + ' ' + className;
+    }
+
+    return elem;
+}
+
+function toggleDisplay(elem) {
+    const curDisplayStyle = elem.style.display;
+
+    if (curDisplayStyle === 'none' || curDisplayStyle === '') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+
+}
+
+function toggleMenuDisplay(e) {
+    const dropdown = e.currentTarget.parentNode;
+    const menu = dropdown.querySelector('.menu');
+    const icon = dropdown.querySelector('.fa-angle-right');
+
+    toggleClass(menu, 'hide');
+    toggleClass(icon, 'rotate-90');
+}
+
+function handleOptionSelected(e) {
+    toggleClass(e.target.parentNode, 'hide');
+
+    const id = e.target.id;
+    const newValue = e.target.textContent + ' ';
+    const titleElem = document.querySelector('.dropdown .title');
+    const icon = document.querySelector('.dropdown .title .fa');
+
+
+    titleElem.textContent = newValue;
+    titleElem.appendChild(icon);
+
+    //probocar  un evento personalizado
+    document.querySelector('.dropdown .title').dispatchEvent(new Event('change'));
+    //setTimeout es usado así la transicion se muestra apropiedamente
+    setTimeout(() => toggleClass(icon, 'rotate-90', 0));
+}
+
+function handleTitleChange(e) {
+    const result = document.getElementById('result');
+
+    result.innerHTML = 'The result is: ' + e.target.textContent;
+}
+//obtiene elementos
+const dropdownTitle = document.querySelector('#navContainer, #navElements');
+const dropdownOptions = document.querySelectorAll('#navContainer, #navElements');
+
+//vincula listeners a estos elementos
+dropdownTitle.addEventListener('click', toggleMenuDisplay);
+dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
+document.querySelector('#navContainer, #navElements').addEventListener('change', handleTitleChange)
