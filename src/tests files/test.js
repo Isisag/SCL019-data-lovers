@@ -73,11 +73,16 @@ function getData() {
     var imgResource = arreglo.image
 
 
+<<<<<<< HEAD
     src / test.js
     src / tests, files / test.js
     const imgTest = document.getElementById("img-test").src = `${imgResource}`
     const divTest = document.getElementById("data-test").innerHTML = characterName;
 
+=======
+    // const imgTest = document.getElementById("img-test").src = `${imgResource}`
+    // const divTest = document.getElementById("data-test").innerHTML = characterName; 
+>>>>>>> 0717c0626255468e8cbeff3bd65ee4fe25db5dc7
     // traer las propiedades
     // var arreglo = results[2]
     // var characterName = arreglo.name
