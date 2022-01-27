@@ -57,8 +57,8 @@
             </ul>
             <button id="btnNav">HOla</button>
         </nav>
-
-<section class="filters_section" id="filters_section">
+    </header>
+    <section class="filters_section" id="filters_section">
     <h2 class="filters_title"> texto dinamico </h2>
     <ul class="filters_nav">
         <li class="filters_nav-labels species_label" id="species_label">
@@ -92,21 +92,23 @@
         <input type="reset" value="Reset" class="filters_nav-btn" onclick="alert('reset button')">
     </ul>
 </section>
-<section class="card_section-container">
-    <div class="card" id="card">
-        <div class="card_image-name">
-            <img class="card_image" id="card_image" src=""  alt="">
-            <h3 class="card_name" id="card_name"></h3>
-        </div>
-        <div class="card_info">
-                <p class="card_status_label"> Status: </p>
-                <div class="card_status_circle"></div>
-                <p class="card_location-label"> Location: </p>
-                <p class="card_location-text"> location </p>
-            <button class="card_moreinfo" onclick="alert('me hiciste click')"> more details </button>
-        </div>
-    </div>
-</section>
+
+    <section class="card_section-container">
+        <div class="card" id="card">
+            <div class="card_image-name">
+                <img class="card_image" id="card_image" src="" width="140px" height="140px" alt="">
+                <h3 class="card_name" id="card_name"> Morty smith </h3>
+            </div>
+            <div class="card_info">
+                    <p class="card_status_text"> Status:
+                        <div class="card_status_circle"> </div>
+                    </p>
+                    <p class="card_location-label"> Location: </p>
+                    <p class="card_location-text"> location </p>
+                <!-- <a class="card_moreinfo" href=""> more details </a> -->
+                <button class="card_moreinfo" onclick="alert('me hiciste click')"> more details </button>
+            </div>
+    </section>
 
 <section class="modal_section-container">
     <div class="modal">
@@ -160,7 +162,7 @@
         </ul>
     </footer>
 
-    
+
     <script src="main.js" type="module"></script>
     <script src="tests files/test.js" type="module"></script>
 </body>

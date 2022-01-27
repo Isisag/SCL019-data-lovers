@@ -72,13 +72,17 @@ function getData() {
     var imgResource = arreglo.image
 
 
+    const imgTest = document.getElementById("img-test").src = `${imgResource}`
+    const divTest = document.getElementById("data-test").innerHTML = characterName;
+
     // const imgTest = document.getElementById("img-test").src = `${imgResource}`
     // const divTest = document.getElementById("data-test").innerHTML = characterName; 
     // traer las propiedades
     // var arreglo = results[2]
     // var characterName = arreglo.name
     // var imgResource = arreglo.image
-   
+
+
 
     console.log(arreglo)
     console.log(characterName)
@@ -97,43 +101,71 @@ const navSubtitle = document.querySelector(".nav_subtitles");
 const navElements = document.querySelector("#navElements");
 const navContainer = document.querySelector(".navContainer");
 
-btnNav.addEventListener("click", () => {
+btnNav.addEventListener("mouseover", () => {
     navElements.classList.toggle("nav-menu_invisible");
 });
 console.log(navToggle);
 
-var first = 10;
-console.log(first);
+//menu desplegable
+
+function toggleClass(elem, className) {
+    if (elem.className.indexOf(className) !== -1) {
+        elem.className = elem.className.replace(className, '');
+    } else {
+        elem.className = elem.className.replace(/\s+/g, ' ') + ' ' + className;
+    }
+
+    return elem;
+}
+
+function toggleDisplay(elem) {
+    const curDisplayStyle = elem.style.display;
+
+    if (curDisplayStyle === 'none' || curDisplayStyle === '') {
+        elem.style.display = 'block';
+    } else {
+        elem.style.display = 'none';
+    }
+
+}
+
+function toggleMenuDisplay(e) {
+    const dropdown = e.currentTarget.parentNode;
+    const menu = dropdown.querySelector('.menu');
+    const icon = dropdown.querySelector('.fa-angle-right');
+
+    toggleClass(menu, 'hide');
+    toggleClass(icon, 'rotate-90');
+}
+
+function handleOptionSelected(e) {
+    toggleClass(e.target.parentNode, 'hide');
+
+    const id = e.target.id;
+    const newValue = e.target.textContent + ' ';
+    const titleElem = document.querySelector('.dropdown .title');
+    const icon = document.querySelector('.dropdown .title .fa');
 
 
-// let elementos = results.map( function( item ){
-//     // return results.id
-//     const charactersNameMap = item.name
-//     const charactersSpeciesMap = item.species
-//     const charactersImageMap = item.image
-//     const charactersStatusMap = item.status
+    titleElem.textContent = newValue;
+    titleElem.appendChild(icon);
 
-//     let li = document.createElement("li")
-//     let create = document.body.appendChild(li)
-//     let pushText = create.innerHTML = `<li class="prueba" > ${charactersNameMap} </li>`
-   
+    //probocar  un evento personalizado
+    document.querySelector('.dropdown .title').dispatchEvent(new Event('change'));
+    //setTimeout es usado así la transicion se muestra apropiedamente
+    setTimeout(() => toggleClass(icon, 'rotate-90', 0));
+}
 
-//     let image = document.createElement("img")
-//     let createImg = document.body.appendChild(image)
-//     let showImage = createImg.src=`${charactersImageMap}`
-    
+function handleTitleChange(e) {
+    const result = document.getElementById('result');
 
-//     let info = document.createElement("li")
-//     let createInfo = document.body.appendChild(info)
-//     let showInfo = createInfo.innerHTML = `
-//     <li class="prueba" > Name: ${`${charactersNameMap} </li> 
-//     <li class="prueba2"> Species: ${charactersSpeciesMap} </li>
-//     <li class="prueba3"> Status:  ${charactersStatusMap}`} </li>`
-    
+    result.innerHTML = 'The result is: ' + e.target.textContent;
+}
+//obtiene elementos
+const dropdownTitle = document.querySelector('#navContainer, #navElements');
+const dropdownOptions = document.querySelectorAll('#navContainer, #navElements');
 
-//     return  showImage, showInfo;
-//     // return divInfo;
-    
-
-// });
-console.log(first);
+//vincula listeners a estos elementos
+dropdownTitle.addEventListener('click', toggleMenuDisplay);
+dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
+document.querySelector('#navContainer, #navElements').addEventListener('change', handleTitleChange)

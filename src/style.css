@@ -25,11 +25,13 @@
         font-family: get schwifty;
         src: url(./get_schwifty.ttf);
     }
+
     /* === HELPERS CLASS ==== */
-    
+
     .hidden{
         display: none;
     }
+
 
     a {
         text-decoration: none;
@@ -84,6 +86,12 @@
         position: row;
         justify-content: space-between;
     }
+
+
+    /*.nav_titles-container {
+        display: none;
+    }*/
+
     
     .nav-menu_invisible {
         display: none;
@@ -95,11 +103,14 @@
         justify-content: space-between;
         margin-right: 50px;
         text-decoration: none;
+        transition: 0.2s;
     }
     
     .nav_titles:hover {
         text-decoration: underline;
         color: var(--secondary-color);
+        background-color: var(--black-transparence);
+        border-radius: 50px;
     }
     
     .nav_elements {
@@ -116,6 +127,12 @@
        display: none;
     }
     
+    .nav_container .nav_elements {
+        transition: max-height;
+        max-height: 20em;
+        overflow: hidden;
+    }
+    
     .search_bar_container {
         display: flex;
         align-items: center;
@@ -126,7 +143,9 @@
         border-radius: 10px;
         background-color: transparent;
         border-color: var(--primary-color);
+
         z-index: 3;
+
         width: 30vh;
     }
     
@@ -137,10 +156,17 @@
         cursor: pointer;
     }
     
+
+    .icon-search {
+        color: var(--primary-color);
+        height: 200px;
+        width: 200px;
+    }
     .icon-search-container > svg {
         fill: var(--primary-color);
         height: 20px;
         width: 20px;
+
         z-index: 3;
     }
     
@@ -275,8 +301,89 @@
     .social_media_icons {
         color: var(--primary-color);
     }
-
+    
     /* ================== FILTERS HTML ====================== */
+
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        max-width: 25vh;
+        height: 38vh;
+        margin: 0px;
+        border-radius: 10px;
+        justify-content: center;
+    }
+    
+    .card_image-name {
+        display: inline-block;
+        position: relative;
+        justify-content: center;
+    }
+    
+    .card_image {
+        /* width: 100%;
+    height: 100%; */
+    }
+    
+    .card_name {
+        position: absolute;
+        text-align: center;
+        color: var(--primary-color);
+        background-color: var(--black-transparence);
+        padding: .3rem .6rem;
+        position: absolute;
+        font-size: .8rem;
+        border-radius: 5px;
+        z-index: 8;
+        /* margin: -1.7rem 2rem 8rem 2rem; */
+        margin-top: -1.7rem;
+        margin-left: 1.3rem;
+    }
+    
+    .card_info {
+        background-color: var(--secondary-color);
+        border-radius: 0px 0px 10px 10px;
+        width: 25vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: .8em;
+    }
+    
+    .card_status {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .card_status_text {}
+    
+    .card_status_circle {
+        width: 7px;
+        height: 7px;
+        margin: 0px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+    }
+    
+    .card_location {}
+    
+    .card_location-label {}
+    
+    .card_location-text {}
+    
+    .card_moreinfo {
+        width: 100%;
+        color: var(--primary-color);
+        font-family: var(--tittle-font);
+        margin: 0px auto;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
 /*  CARD STYLE */
 
 .card_section-container{
@@ -355,6 +462,7 @@
     border: none;
     cursor: pointer;
 }
+
     
     /*  FILTERS NAV STYLE */
 
@@ -370,6 +478,7 @@
         margin: 0rem auto 1rem auto;
         padding: .7rem;
     }
+
 
     .filters_title{
         font-family: var(--tittle-font);
@@ -449,11 +558,6 @@
     .species_options:hover{
         color:var(--primary-color)
     }
-
-    
-
-
-
 
 
     /* FILTERS MODAL  */

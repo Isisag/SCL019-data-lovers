@@ -95,3 +95,4 @@ const locationOption = d.getElementById("location_options1")
 locationOption.addEventListener("click", () => {
     alert("hola")
 })
+console.log(example, data);
