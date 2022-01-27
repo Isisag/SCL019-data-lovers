@@ -527,7 +527,8 @@
     /* CATEGORY */
 
     .location_options-container,
-    .species_options-container {
+    .species_options-container,
+    .status_options-container {
         position: absolute;
         z-index: 20;
         margin-top: .6rem;
@@ -536,7 +537,8 @@
     }
 
     .location_options,
-    .species_options {
+    .species_options,
+    .status_options {
         display: block;
         position: relative;
         padding: .5rem;

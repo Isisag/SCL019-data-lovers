@@ -65,7 +65,7 @@ console.log(first);
 
 
 
-// FILTERS MENU // 
+// FILTERS MENU //
 
 const d = document;
 const filtersSection = d.getElementById("filters_section");
@@ -88,6 +88,12 @@ locationLabel.addEventListener("click", () => {
     const OptionsContainer = d.getElementById("location_options-container")
     OptionsContainer.classList.toggle("hidden")
     OptionsContainer.style = "paddingBottom:4vh;";
+});
+
+statusLabel.addEventListener("mouseover", () => {
+    const OptionsContainer = d.getElementById("status_options-container")
+    OptionsContainer.classList.toggle("hidden")
+
 })
 
 const locationOption = d.getElementById("location_options1")
