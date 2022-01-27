@@ -21,6 +21,8 @@ function getData() {
     console.log(Object.entries(rickSanchez)) // DEVUELVE cada key como un array
 
 
+    let testing = Object.entries(rickSanchez)
+
     //MUESTRA LA INFORMACION de manera desglosada
     for (const [key, value] of Object.entries(rickSanchez)) {
         console.log(value)
@@ -44,18 +46,17 @@ function getData() {
         const charactersImageMap = item.image
         const charactersStatusMap = item.status
 
-        // let li = document.createElement("li")
-        // let create = document.body.appendChild(li)
-        // let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
+        let li = document.createElement("li")
+        let create = document.body.appendChild(li)
+        let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
 
-        // let image = document.createElement("img")
-        // let createImg = document.body.appendChild(image)
-        // let showImage = createImg.src = `${charactersImageMap}`
+        let image = document.createElement("img")
+        let createImg = document.body.appendChild(image)
+        let showImage = createImg.src = `${charactersImageMap}`
 
-        const cardName = document.getElementById("card_name")
-        const cardNameText = cardName.innerText(`${charactersNameMap}`)
         return {
-           cardNameText
+            pushText,
+            showImage
         }
 
     });
@@ -72,11 +73,11 @@ function getData() {
     var imgResource = arreglo.image
 
 
+    src / test.js
+    src / tests, files / test.js
     const imgTest = document.getElementById("img-test").src = `${imgResource}`
     const divTest = document.getElementById("data-test").innerHTML = characterName;
 
-    // const imgTest = document.getElementById("img-test").src = `${imgResource}`
-    // const divTest = document.getElementById("data-test").innerHTML = characterName; 
     // traer las propiedades
     // var arreglo = results[2]
     // var characterName = arreglo.name
@@ -87,11 +88,17 @@ function getData() {
     console.log(arreglo)
     console.log(characterName)
 
-}getData();
 
-const frutas = [];
+
+}
+getData();
+
+
+const frutas = []
 frutas.push('banana', 'manzana', 'pera')
+
 console.log(frutas.length)
+
 console.log(example, data);
 
 //ESCONDER ELEMENTOS DEL MENU
@@ -169,3 +176,17 @@ const dropdownOptions = document.querySelectorAll('#navContainer, #navElements')
 dropdownTitle.addEventListener('click', toggleMenuDisplay);
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
 document.querySelector('#navContainer, #navElements').addEventListener('change', handleTitleChange)
+
+// funcion realizar el filtro de la A-Z
+
+export const sortAZ = (dataMovie) => {
+    //return dataMovie.sort((a, b) => (a.title < b.title ? -1 : 1));
+    return dataMovie.sort((a, b) => {
+
+        if (a.title < b.title) {
+            return -1;
+        } else {
+            return 1;
+        }
+    });
+};

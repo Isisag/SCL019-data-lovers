@@ -528,7 +528,8 @@
 
     .location_options-container,
     .species_options-container,
-    .status_options-container {
+    .status_options-container,
+    .filter_options-container {
         position: absolute;
         z-index: 20;
         margin-top: .6rem;
@@ -538,11 +539,13 @@
 
     .location_options,
     .species_options,
-    .status_options {
+    .status_options,
+    .filter_options {
         display: block;
         position: relative;
         padding: .5rem;
         z-index: 21;
+        transition: 2s;
     }
 
     .location_options:hover {

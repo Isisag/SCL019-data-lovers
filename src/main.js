@@ -84,7 +84,7 @@ speciesLabel.addEventListener("mouseover", () => {
 
 
 
-locationLabel.addEventListener("click", () => {
+locationLabel.addEventListener("mouseover", () => {
     const OptionsContainer = d.getElementById("location_options-container")
     OptionsContainer.classList.toggle("hidden")
     OptionsContainer.style = "paddingBottom:4vh;";
