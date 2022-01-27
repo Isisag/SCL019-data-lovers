@@ -27,7 +27,10 @@
     }
     /* === HELPERS CLASS ==== */
     
-    
+    .hidden{
+        display: none;
+    }
+
     a {
         text-decoration: none;
     }
@@ -48,8 +51,21 @@
     }
     /* == HEADER SECTION == */
     
-    .icon-bars {
-        display: none;
+    .icon-bars-container{
+        margin: 0px .2rem;
+        /* display: none; */
+    }
+
+    .icon-bars-container > button{
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    .icon-bars-container > button > svg{
+        fill: white;
+        width: 2rem;
+        height: 2rem;
     }
     
     .nav_bar {
@@ -61,7 +77,6 @@
         min-width: 100%;
         height: max-content;
         background: var(--black-transparence);
-        /* z-index: 3; */
     }
     
     .nav_container {
@@ -69,10 +84,6 @@
         position: row;
         justify-content: space-between;
     }
-
-    /*.nav_titles-container {
-        display: none;
-    }*/
     
     .nav-menu_invisible {
         display: none;
@@ -100,8 +111,13 @@
     .nav-menu_visible {
         display: flex;
     }
+
+    .nav_subtitles{
+       display: none;
+    }
     
     .search_bar_container {
+        display: flex;
         align-items: center;
     }
     
@@ -110,8 +126,6 @@
         border-radius: 10px;
         background-color: transparent;
         border-color: var(--primary-color);
-        /*margin-left: 400px;*/
-        /*margin-top: -150px;*/
         z-index: 3;
         width: 30vh;
     }
@@ -137,6 +151,10 @@
     
     .home_section_title-container {
         padding: 15px;
+    }
+
+    .home_section_title-container > img{
+        width: 30vh;
     }
     
     .home_section_title {
@@ -405,6 +423,37 @@
         font-weight: bold;
         cursor:pointer;
     }
+    
+    /* CATEGORY */
+
+    .location_options-container,
+    .species_options-container{
+        position: absolute;
+        z-index: 20;
+        margin-top: .6rem;
+        padding: .5rem 1rem .5rem .5rem;
+        background-color: var(--black-transparence);
+    }
+
+    .location_options,
+    .species_options{
+        display: block;
+        position: relative;
+        padding: .5rem;
+        z-index: 21;
+    }  
+    
+    .location_options:hover{
+        color:var(--primary-color)
+    }
+    .species_options:hover{
+        color:var(--primary-color)
+    }
+
+    
+
+
+
 
 
     /* FILTERS MODAL  */

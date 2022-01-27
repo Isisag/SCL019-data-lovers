@@ -21,8 +21,6 @@ function getData() {
     console.log(Object.entries(rickSanchez)) // DEVUELVE cada key como un array
 
 
-    let testing = Object.entries(rickSanchez)
-
     //MUESTRA LA INFORMACION de manera desglosada
     for (const [key, value] of Object.entries(rickSanchez)) {
         console.log(value)
@@ -46,17 +44,18 @@ function getData() {
         const charactersImageMap = item.image
         const charactersStatusMap = item.status
 
-        let li = document.createElement("li")
-        let create = document.body.appendChild(li)
-        let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
+        // let li = document.createElement("li")
+        // let create = document.body.appendChild(li)
+        // let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
 
-        let image = document.createElement("img")
-        let createImg = document.body.appendChild(image)
-        let showImage = createImg.src = `${charactersImageMap}`
+        // let image = document.createElement("img")
+        // let createImg = document.body.appendChild(image)
+        // let showImage = createImg.src = `${charactersImageMap}`
 
+        const cardName = document.getElementById("card_name")
+        const cardNameText = cardName.innerText(`${charactersNameMap}`)
         return {
-            pushText,
-            showImage
+           cardNameText
         }
 
     });
@@ -84,18 +83,13 @@ function getData() {
     console.log(arreglo)
     console.log(characterName)
 
+}getData();
 
-
-}
-getData();
-
-
-const frutas = []
+const frutas = [];
 frutas.push('banana', 'manzana', 'pera')
-
 console.log(frutas.length)
-
 console.log(example, data);
+
 //ESCONDER ELEMENTOS DEL MENU
 const navToggle = document.querySelector("#toggle");
 const btnNav = document.querySelector("#btnNav");

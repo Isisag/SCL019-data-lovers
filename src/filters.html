@@ -17,11 +17,14 @@
 <body>
     <header>
         <nav class="nav_bar">
+            <div class="icon-bars-container">
+                <button>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="3em" height="3em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="white"><path fill-rule="evenodd" clip-rule="evenodd" d="M14 5H2V3h12v2zm0 4H2V7h12v2zM2 13h12v-2H2v2z"/></g></svg>
+                </button>
+            </div>
             <div class="home_section_title-container">
                 <h1 class="home_section_title"> Rick and Morty </h1>
-            </div>
-            <div class="icon-bars-container">
-                <i class="fas fa-bars icon-bars"></i>
+                <!-- <img src="assets/Images//title.png" alt="" class="img_title"> -->
             </div>
             <div class="search_bar_container">
                 <input type="search" name="" id="searchBar" class="search_bar" placeholder="Search Someting...">
@@ -31,7 +34,7 @@
 
             </div>
             <ul class="nav_container" id="navContainer">
-                <li class="nav_elements" id="navElements">
+                <li class="nav_elements" id="ElementsContainer">
                     <a href="index.html" class="nav_titles"> Home </a>
                 </li>
                 <li class="nav_elements" id="navElements">
@@ -55,39 +58,45 @@
             <button id="btnNav">HOla</button>
         </nav>
 
-<section class="filters_section">
+<section class="filters_section" id="filters_section">
     <h2 class="filters_title"> texto dinamico </h2>
-    <form action="" >
     <ul class="filters_nav">
-        <li class="filters_nav-labels alien_label">
+        <li class="filters_nav-labels species_label" id="species_label">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"><path d="M12 3c4.97 0 9 3.58 9 8s-6 10-9 10s-9-5.58-9-10s4.03-8 9-8m-1.69 7.93C9.29 9.29 7.47 8.58 6.25 9.34c-1.22.76-1.38 2.71-.36 4.35c1.03 1.64 2.85 2.35 4.07 1.59c1.22-.78 1.37-2.71.35-4.35m3.38 0c-1.02 1.64-.87 3.57.35 4.35c1.22.76 3.04.05 4.07-1.59c1.02-1.64.86-3.59-.36-4.35c-1.22-.76-3.04-.05-4.06 1.59M12 17.75c-2 0-2.5-.75-2.5-.75c0 .03.5 2 2.5 2s2.5-2 2.5-2s-.5.75-2.5.75z" ></svg>
-            <p class="filters_nav-text"> Species </p>
-            <!-- <select name="Species" id="" style=""> 
-                <option value="Human"> Human </option>
-                <option value="Human"> Alien </option>
-            </select> -->
+            <p class="filters_nav-text "> Species </p>
+               <ul class="species_options-container " id="species_options-container">
+                   <li class="species_options" id="species_options1"> Human </li>
+                   <li class="species_options" id="species_options2"> Alien </li>
+                   <li class="species_options" id="species_options3"> Robot </li>
+                   <li class="species_options" id="species_options4"> Humanoid </li>
+               </ul>
         </li>
-        <li class="filters_nav-labels location_label">
+        <li class="filters_nav-labels location_label" id="location_label">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10s10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2l1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z" /></svg>
             <p class="filters_nav-text"> Location </p>
+            <ul class="location_options-container " id="location_options-container">
+                <li class="location_options" id="location_options1"> Eart </li> <hr>
+                <li class="location_options" id="location_options2"> Ciutadel </li> <hr>
+                <li class="location_options" id="location_options3"> Ejemplo </li> <hr>
+                <li class="location_options" id="location_options4"> Humanoide </li> 
+            </ul>
         </li>
-        <li class="filters_nav-labels status_label">
+        <li class="filters_nav-labels status_label" id="status_label">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path d="M124.1 16.1c-51.6 1.9-93.7 43.6-96 95.3A99.4 99.4 0 0 0 72 198.9V216a16 16 0 0 0 16 16h8a4 4 0 0 0 4-4v-23.7a8.2 8.2 0 0 1 7.5-8.3a8 8 0 0 1 8.5 8v24a4 4 0 0 0 4 4h16a4 4 0 0 0 4-4v-23.7a8.2 8.2 0 0 1 7.5-8.3a8 8 0 0 1 8.5 8v24a4 4 0 0 0 4 4h8a16 16 0 0 0 16-16v-17.1a100 100 0 0 0-59.9-182.8zM92 152a20 20 0 1 1 20-20a20.1 20.1 0 0 1-20 20zm72 0a20 20 0 1 1 20-20a20.1 20.1 0 0 1-20 20z"/></svg>
             <p class="filters_nav-text"> Status </p>
         </li>
-        <li class="filters_nav-labels alphabet_label">
+        <li class="filters_nav-labels alphabet_label" id="alphabet_label">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M10.895 16.553l-4-8c-.339-.678-1.45-.678-1.789 0l-4 8a1 1 0 0 0 1.789.895L3.618 16h4.764l.724 1.447a.998.998 0 0 0 1.341.448c.494-.248.695-.848.448-1.342zM4.618 14L6 11.236L7.382 14H4.618zM22 18h-6a1.001 1.001 0 0 1-.8-1.6L20 10h-4a1 1 0 0 1 0-2h6a1.001 1.001 0 0 1 .8 1.6L18 16h4a1 1 0 0 1 0 2zm-8-4h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2z" /></svg>
             <p class="filters_nav-text"> Alphabet </p>
         </li>
         <input type="reset" value="Reset" class="filters_nav-btn" onclick="alert('reset button')">
     </ul>
-  </form>
 </section>
 <section class="card_section-container">
     <div class="card" id="card">
         <div class="card_image-name">
-            <img class="card_image" id="card_image" src="assets/Images/rymseason4.jpg"  alt="">
-            <h3 class="card_name" id="card_name"> Morty Smith </h3>
+            <img class="card_image" id="card_image" src=""  alt="">
+            <h3 class="card_name" id="card_name"></h3>
         </div>
         <div class="card_info">
                 <p class="card_status_label"> Status: </p>
