@@ -7,6 +7,16 @@ import data from './data/rickandmorty/rickandmorty.js';
 const allData = data;
 const results = data.results; //array
 
+//-- Variable para guardar data traida de rickandmorty.js "base de datos" //
+
+function showDataCards() {
+    for (let i = 0; i < results; i++)
+    //-- Creando elementos extraidos de la data para poner en "front card" --//
+    //-- Creando elemento "IMG" para extraer el Poster de la data --//
+        const screenPoster = document.createElement("IMG");
+    screenPoster.setAttribute("src", results[i].poster);
+}
+
 // vasiables de prueba
 console.log(results)
 const rickSanchez = results[0]
@@ -73,16 +83,14 @@ const filtersNav = d.getElementById("filters_section");
 const speciesLabel = d.getElementById("species_label");
 const locationLabel = d.getElementById("location_label");
 const statusLabel = d.getElementById("status_label");
-const alphabetLabel = d.getElementById("aplabet_label")
+const alphabetLabel = d.getElementById("alphabet_label")
 
-
+//eventro para esconde menu
 speciesLabel.addEventListener("mouseover", () => {
     // optionsContainer.style = "display:block";
     const optionsContainer = d.getElementById("species_options-container")
     optionsContainer.classList.toggle("hidden")
 });
-
-
 
 locationLabel.addEventListener("mouseover", () => {
     const OptionsContainer = d.getElementById("location_options-container")
@@ -93,8 +101,12 @@ locationLabel.addEventListener("mouseover", () => {
 statusLabel.addEventListener("mouseover", () => {
     const OptionsContainer = d.getElementById("status_options-container")
     OptionsContainer.classList.toggle("hidden")
+});
 
-})
+alphabetLabel.addEventListener("mouseover", () => {
+    const OptionsContainer = d.getElementById("filter_options-container")
+    OptionsContainer.classList.toggle("hidden")
+});
 
 const locationOption = d.getElementById("location_options1")
 
@@ -102,3 +114,7 @@ locationOption.addEventListener("click", () => {
     alert("hola")
 })
 console.log(example, data);
+
+//-- Función para organizar la data en orden alfabetico de la A-Z --//
+
+//export const filterAz =

@@ -176,17 +176,3 @@ const dropdownOptions = document.querySelectorAll('#navContainer, #navElements')
 dropdownTitle.addEventListener('click', toggleMenuDisplay);
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
 document.querySelector('#navContainer, #navElements').addEventListener('change', handleTitleChange)
-
-// funcion realizar el filtro de la A-Z
-
-export const sortAZ = (dataMovie) => {
-    //return dataMovie.sort((a, b) => (a.title < b.title ? -1 : 1));
-    return dataMovie.sort((a, b) => {
-
-        if (a.title < b.title) {
-            return -1;
-        } else {
-            return 1;
-        }
-    });
-};

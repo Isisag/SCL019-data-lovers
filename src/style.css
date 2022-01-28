@@ -193,7 +193,7 @@
         max-height: fit-content;
         background-color: var(--green-transparence);
         margin: 5% auto;
-        border-radius: 20px 0px 0px 20px;
+        border-radius: 20px 0px 20px 0px;
     }
 
     .quote {
