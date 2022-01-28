@@ -7,15 +7,27 @@ import data from './data/rickandmorty/rickandmorty.js';
 const allData = data;
 const results = data.results; //array
 
-//-- Variable para guardar data traida de rickandmorty.js "base de datos" //
+//-- Función para organizar la data en orden alfabetico de la A-Z --//
 
-function showDataCards() {
-    for (let i = 0; i < results; i++)
-    //-- Creando elementos extraidos de la data para poner en "front card" --//
-    //-- Creando elemento "IMG" para extraer el Poster de la data --//
-        const screenPoster = document.createElement("IMG");
-    screenPoster.setAttribute("src", results[i].poster);
-}
+export const Sortfilter = (name, species) => {
+    if (name == "a-z") {
+        return name.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    } else {
+        return species.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+    }
+};
 
 // vasiables de prueba
 console.log(results)
@@ -114,7 +126,3 @@ locationOption.addEventListener("click", () => {
     alert("hola")
 })
 console.log(example, data);
-
-//-- Función para organizar la data en orden alfabetico de la A-Z --//
-
-//export const filterAz =
