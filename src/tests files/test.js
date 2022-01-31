@@ -3,6 +3,25 @@ import { example } from '../data.js';
 import data from '../data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
+
+const results = data.results; //array
+
+// vasiables de prueba
+console.log(results)
+const rickSanchez = results[0]
+const mortySmith = results[1]
+
+for (const [key, value] of Object.entries(rickSanchez)) {
+    console.log(value) //valor
+    console.log(key) //llave
+}
+
+for (const [key, value] of Object.entries(mortySmith)) {
+    console.log(value)
+    console.log(key)
+}
+
+console.log(example, data);
 //-- Función para organizar la data en orden alfabetico de la A-Z --//
 
 export const Sortfilter = (name, species) => {
@@ -29,7 +48,7 @@ console.log(Sortfilter);
 function getData() {
 
     const allData = data;
-    const results = data.results; //array
+    const results = allData.results; //array
     const characters = data.results.id
 
     console.log(characters)
@@ -38,7 +57,7 @@ function getData() {
 
     const rickSanchez = results[0]; // posicion del personaje
 
-    console.log(Object.values(rickSanchez)) // DEVUELVE un array con todas las Keys   // NOTAS:: no se puede usar Object.values para iterar un objeto
+    console.log(Object.values(rickSanchez)) // DEVUELVE un array con todas las Keys   // NOTAS: no se puede usar Object.values para iterar un objeto
     console.log(Object.entries(rickSanchez)) // DEVUELVE cada key como un array
 
 
@@ -58,8 +77,16 @@ function getData() {
         console.log(key)
     }
 
+}getData();
 
 
+// RECORRIENDO LA DATA CON MAP
+let elementos = results.map(function(item) {
+    // return results.id
+    const charactersNameMap = item.name
+    const charactersSpeciesMap = item.species
+    const charactersImageMap = item.image
+    const charactersStatusMap = item.status
     let elementos = results.map(function(item) {
         // return results.id
         const charactersNameMap = item.name
@@ -104,10 +131,17 @@ function getData() {
     // var characterName = arreglo.name
     // var imgResource = arreglo.image
 
+    return {
+        charactersNameMap,
+        charactersSpeciesMap,
+        charactersImageMap,
+        charactersStatusMap
+    }
 
+}); console.log(elementos)
 
-    console.log(arreglo)
-    console.log(characterName)
+var first = 10;
+console.log(first);
 
 
 

@@ -2,6 +2,12 @@ import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
+const d = document;
+// EL CODIGO DE AQUI SE MOVIO A TEST.JS PARA DEJAR MáS LIMPIO ESTE ARCHIVO !!! 
+console.log(example, data);
+
+// OPCIONES DEL MENU DE FILTROS => maneja cuando se despliegan // 
+function filterMenuOptions(){
 
 
 const allData = data;
@@ -75,16 +81,25 @@ const filtersNav = d.getElementById("filters_section");
 const speciesLabel = d.getElementById("species_label");
 const locationLabel = d.getElementById("location_label");
 const statusLabel = d.getElementById("status_label");
+<<<<<<< HEAD
+const alphabetLabel = d.getElementById("aplabet_label")
+
+=======
 const alphabetLabel = d.getElementById("alphabet_label")
 
 //eventro para esconde menu
+>>>>>>> 39d92eab4db48f8676740dd45e8e4a7627fb954b
 speciesLabel.addEventListener("mouseover", () => {
     // optionsContainer.style = "display:block";
     const optionsContainer = d.getElementById("species_options-container")
     optionsContainer.classList.toggle("hidden")
 });
 
+<<<<<<< HEAD
+locationLabel.addEventListener("click", () => {
+=======
 locationLabel.addEventListener("mouseover", () => {
+>>>>>>> 39d92eab4db48f8676740dd45e8e4a7627fb954b
     const OptionsContainer = d.getElementById("location_options-container")
     OptionsContainer.classList.toggle("hidden")
     OptionsContainer.style = "paddingBottom:4vh;";
@@ -105,4 +120,32 @@ const locationOption = d.getElementById("location_options1")
 locationOption.addEventListener("click", () => {
     alert("hola")
 })
-console.log(example, data);
+
+}filterMenuOptions()
+
+
+// MANEJO DE TITULO DINAMICO PARA LAS SECCIONES 
+ // !!! AUN NO FUNCIONA DEL TODO BIEN !!! 
+
+function changeFiltersTitle(){
+    
+    const filtersTitle = d.querySelector("#filters_title")
+    const navChapters = d.getElementById("navChapters")
+    const navSeasons = d.getElementById("navSeasons")
+    const navCharacters = d.getElementById("navCharacters")
+
+    navChapters.addEventListener("click", () => { 
+        filtersTitle.innerHTML = "Chapters"  
+    });
+    navSeasons.addEventListener("mouseover", () => {
+        filtersTitle.textContent= "Seasons"    
+   });
+//    navCharacters.addEventListener("mouseover", () => {
+//     filtersTitle.textContent= "Characters"      
+//    });
+   navCharacters.addEventListener("focus", () => {
+    filtersTitle.textContent= "Characters"      
+   });
+
+}changeFiltersTitle()
+
