@@ -28,6 +28,7 @@ export const Sortfilter = (name, species) => {
         });
     }
 };
+console.log(Sortfilter);
 
 // vasiables de prueba
 console.log(results)

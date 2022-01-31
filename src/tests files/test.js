@@ -3,7 +3,28 @@ import { example } from '../data.js';
 import data from '../data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
+//-- Función para organizar la data en orden alfabetico de la A-Z --//
 
+export const Sortfilter = (name, species) => {
+    if (name == "a-z") {
+        return name.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    } else {
+        return species.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+    }
+};
+console.log(Sortfilter);
 
 function getData() {
 
