@@ -2,11 +2,11 @@
 import data from './data/rickandmorty/rickandmorty.js';
 
 export const example = () => {
-  return 'example';
+    return 'example';
 };
 
 export const anotherExample = () => {
-  return 'OMG';
+    return 'OMG';
 };
 
 console.log(data)
