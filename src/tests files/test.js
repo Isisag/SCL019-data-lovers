@@ -4,11 +4,29 @@ import data from '../data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
+const results = data.results; //array
+
+// vasiables de prueba
+console.log(results)
+const rickSanchez = results[0]
+const mortySmith = results[1]
+
+for (const [key, value] of Object.entries(rickSanchez)) {
+    console.log(value) //valor
+    console.log(key) //llave
+}
+
+for (const [key, value] of Object.entries(mortySmith)) {
+    console.log(value)
+    console.log(key)
+}
+
+console.log(example, data);
 
 function getData() {
 
     const allData = data;
-    const results = data.results; //array
+    const results = allData.results; //array
     const characters = data.results.id
 
     console.log(characters)
@@ -17,7 +35,7 @@ function getData() {
 
     const rickSanchez = results[0]; // posicion del personaje
 
-    console.log(Object.values(rickSanchez)) // DEVUELVE un array con todas las Keys   // NOTAS:: no se puede usar Object.values para iterar un objeto
+    console.log(Object.values(rickSanchez)) // DEVUELVE un array con todas las Keys   // NOTAS: no se puede usar Object.values para iterar un objeto
     console.log(Object.entries(rickSanchez)) // DEVUELVE cada key como un array
 
 
@@ -35,59 +53,29 @@ function getData() {
         console.log(key)
     }
 
-
-
-    let elementos = results.map(function(item) {
-        // return results.id
-        const charactersNameMap = item.name
-        const charactersSpeciesMap = item.species
-        const charactersImageMap = item.image
-        const charactersStatusMap = item.status
-
-        // let li = document.createElement("li")
-        // let create = document.body.appendChild(li)
-        // let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
-
-        // let image = document.createElement("img")
-        // let createImg = document.body.appendChild(image)
-        // let showImage = createImg.src = `${charactersImageMap}`
-
-        const cardName = document.getElementById("card_name")
-        const cardNameText = cardName.innerText(`${charactersNameMap}`)
-        return {
-           cardNameText
-        }
-
-    });
-
-
-    console.log(elementos)
-
-
-
-
-    // traer las propiedades
-    var arreglo = results[2]
-    var characterName = arreglo.name
-    var imgResource = arreglo.image
-
-
-    const imgTest = document.getElementById("img-test").src = `${imgResource}`
-    const divTest = document.getElementById("data-test").innerHTML = characterName;
-
-    // const imgTest = document.getElementById("img-test").src = `${imgResource}`
-    // const divTest = document.getElementById("data-test").innerHTML = characterName; 
-    // traer las propiedades
-    // var arreglo = results[2]
-    // var characterName = arreglo.name
-    // var imgResource = arreglo.image
-
-
-
-    console.log(arreglo)
-    console.log(characterName)
-
 }getData();
+
+
+// RECORRIENDO LA DATA CON MAP
+let elementos = results.map(function(item) {
+    // return results.id
+    const charactersNameMap = item.name
+    const charactersSpeciesMap = item.species
+    const charactersImageMap = item.image
+    const charactersStatusMap = item.status
+
+    return {
+        charactersNameMap,
+        charactersSpeciesMap,
+        charactersImageMap,
+        charactersStatusMap
+    }
+
+}); console.log(elementos)
+
+var first = 10;
+console.log(first);
+
 
 const frutas = [];
 frutas.push('banana', 'manzana', 'pera')

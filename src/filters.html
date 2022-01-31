@@ -35,40 +35,40 @@
             </div>
             <ul class="nav_container" id="navContainer">
                 <li class="nav_elements" id="ElementsContainer">
-                    <a href="index.html" class="nav_titles"> Home </a>
+                    <a href="index.html" class="nav_titles" id="navHome"> Home </a>
                 </li>
                 <li class="nav_elements" id="navElements">
-                    <a href="filters.html" class="nav_titles"> Capítulos</a>
+                    <a href="filters.html" class="nav_titles" id="navChapters"> Capítulos</a>
                     <ul class="nav_titles-container">
                         <li class="nav_elements">
-                            <a href="filters.html" class="nav_subtitles"> Nombre </a>
+                            <a href="filters.html" class="nav_subtitles" id="navName"> Nombre </a>
                         </li>
                         <li class="nav_elements">
-                            <a href="filters.html" class="nav_subtitles"> Locaciones </a>
+                            <a href="filters.html" class="nav_subtitles" id="navLocations"> Locaciones </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav_elements">
-                    <a href="filters.html" class="nav_titles"> Temporadas </a>
+                    <a href="filters.html" class="nav_titles" id="navSeasons"> Temporadas </a>
                 </li>
                 <li class="nav_elements">
-                    <a href="filters.html" class="nav_titles"> Personajes </a>
+                    <a href="filters.html" class="nav_titles" id="navCharacters"> Personajes </a>
                 </li>
             </ul>
             <button id="btnNav">HOla</button>
         </nav>
     </header>
     <section class="filters_section" id="filters_section">
-    <h2 class="filters_title"> texto dinamico </h2>
+    <h2 class="filters_title" id="filters_title"> Filters </h2>
     <ul class="filters_nav">
         <li class="filters_nav-labels species_label" id="species_label">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"><path d="M12 3c4.97 0 9 3.58 9 8s-6 10-9 10s-9-5.58-9-10s4.03-8 9-8m-1.69 7.93C9.29 9.29 7.47 8.58 6.25 9.34c-1.22.76-1.38 2.71-.36 4.35c1.03 1.64 2.85 2.35 4.07 1.59c1.22-.78 1.37-2.71.35-4.35m3.38 0c-1.02 1.64-.87 3.57.35 4.35c1.22.76 3.04.05 4.07-1.59c1.02-1.64.86-3.59-.36-4.35c-1.22-.76-3.04-.05-4.06 1.59M12 17.75c-2 0-2.5-.75-2.5-.75c0 .03.5 2 2.5 2s2.5-2 2.5-2s-.5.75-2.5.75z" ></svg>
             <p class="filters_nav-text "> Species </p>
                <ul class="species_options-container " id="species_options-container">
-                   <li class="species_options" id="species_options1"> Human </li>
-                   <li class="species_options" id="species_options2"> Alien </li>
-                   <li class="species_options" id="species_options3"> Robot </li>
-                   <li class="species_options" id="species_options4"> Humanoid </li>
+                   <li class="species_options" id="species_options1"> Human </li> <hr>
+                   <li class="species_options" id="species_options2"> Alien </li> <hr>
+                   <li class="species_options" id="species_options3"> Robot </li> <hr>
+                   <li class="species_options" id="species_options4"> Humanoid </li> 
                </ul>
         </li>
         <li class="filters_nav-labels location_label" id="location_label">
@@ -164,6 +164,7 @@
 
 
     <script src="main.js" type="module"></script>
+    <script src="data.js" type="module"></script>
     <script src="tests files/test.js" type="module"></script>
 </body>
 
