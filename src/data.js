@@ -17,27 +17,55 @@ const results = data.results; //array
 
 // ESTRUCTURAS SUGERIDAS DE FILTER -- AUN NO SE COMUNICAN CON EL DOM NI HACEN NADA MAS
 
-let aliensFilter = results.filter((elements)=>{
-  // console.log(ele)
-    if( elements.species == "Alien" ){
+export function filterSpecies(){
+
+  let aliensFilter = results.filter((elements)=> elements.species == "Alien");
+  console.log(aliensFilter);
+  
+  let humanFilter = results.filter((elements)=>{
+    if( elements.species == "Human" ){
       return elements.species 
     }
-});
-console.log(aliensFilter);
+  });
+  console.log(humanFilter)
+  
+  let aliveFilter = results.filter((elements)=>{
+    if( elements.status == "unknown" ){
+      return elements.status
+    }
+  });
+  console.log(aliveFilter);
 
-let humanFilter = results.filter((elements)=>{
-  if( elements.species == "Human" ){
-    return elements.species 
-  }
-});
-console.log(humanFilter)
+}filterSpecies();
 
-let aliveFilter = results.filter((elements)=>{
-  if( elements.status == "unknown" ){
-    return elements.status
+export const SortfilterAz = (data) => {
+  const sortAz = data.sort((a,b)=> {
+    const name1 = a.name.toLowerCase()
+    const name2 = b.name.toLowerCase()
+    if( name1 > name2 ) return -1;
+    else return 1;
+  //  return a.title.localCompare(b.title);
+  });
+  console.log("ESTE ES AZ")
+  return sortAz;
   }
-});
-console.log(aliveFilter)
+  export const SortfilterZa = (data) => {
+    const sortZa = data.sort((a,b)=> {
+      const name1 = a.name.toLowerCase()
+      const name2 = b.name.toLowerCase()
+      if( name1 < name2 ) return 1;
+      else return -1;
+      
+    //  return b.title.localCompare(a.title);
+    });
+    
+    return sortZa;
+  }
+
+  console.log(SortfilterAz(data.results));
+  console.log(SortfilterZa(data.results))
+
+
 
 
 // FUNCION QUE RECORRE LA DATA Y DEVUELVE SUS VALORES SOLO EN CONSOLE
@@ -61,6 +89,8 @@ function getDataElements(){
     const charactersOriginUrl = charactersOrigin.url 
 
     const charactersEpisodes = item.episode
+
+    // console.log(charactersName)
   
     // return {
     //     charactersName,
@@ -72,4 +102,3 @@ function getDataElements(){
   })
 
 }getDataElements();
-

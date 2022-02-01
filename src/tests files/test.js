@@ -1,6 +1,7 @@
 import { example } from '../data.js';
 // import data from './data/lol/lol.js';
 import data from '../data/rickandmorty/rickandmorty.js';
+import {} 
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -24,7 +25,12 @@ for (const [key, value] of Object.entries(mortySmith)) {
 console.log(example, data);
 //-- Función para organizar la data en orden alfabetico de la A-Z --//
 
+
+
 export const Sortfilter = (name, species) => {
+    const datos = data.results;
+    const nameD = datos.name;
+
     if (name == "a-z") {
         return name.sort(function(a, b) {
             if (a.name >= b.name) {
@@ -43,7 +49,7 @@ export const Sortfilter = (name, species) => {
         });
     }
 };
-console.log(Sortfilter);
+console.log(Sortfilter());
 
 function getData() {
 
@@ -109,43 +115,19 @@ let elementos = results.map(function(item) {
 
     });
 
-
     console.log(elementos)
 
-
-
-
-    // traer las propiedades
-    var arreglo = results[2]
-    var characterName = arreglo.name
-    var imgResource = arreglo.image
-
-
-    src / test.js
-    src / tests, files / test.js
-    const imgTest = document.getElementById("img-test").src = `${imgResource}`
-    const divTest = document.getElementById("data-test").innerHTML = characterName;
-
-    // traer las propiedades
-    // var arreglo = results[2]
-    // var characterName = arreglo.name
-    // var imgResource = arreglo.image
-
-    return {
-        charactersNameMap,
-        charactersSpeciesMap,
-        charactersImageMap,
-        charactersStatusMap
-    }
-
 }); console.log(elementos)
+
+
+
 
 var first = 10;
 console.log(first);
 
 
 
-}
+
 getData();
 
 
