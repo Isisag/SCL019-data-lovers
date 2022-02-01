@@ -2,6 +2,7 @@
 import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
+import { filterSpecies, SortfilterAz, SortfilterZa } from "./data.js"
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -9,6 +10,7 @@ const d = document;
 // EL CODIGO DE AQUI SE MOVIO A TEST.JS PARA DEJAR MáS LIMPIO ESTE ARCHIVO !!!
 console.log(example, data);
 
+<<<<<<< HEAD
 // OPCIONES DEL MENU DE FILTROS => maneja cuando se despliegan //
 function filterMenuOptions() {
 
@@ -32,6 +34,13 @@ function filterMenuOptions() {
         console.log(value)
         console.log(key)
     }
+=======
+// OPCIONES DEL MENU DE FILTROS => maneja cuando se despliegan // 
+
+const allData = data;
+const results = data.results; //array
+
+>>>>>>> e90417dc1cfa60a9b3464aff9589c4270cada564
 
     // esta función ejecuta la muestra de datos de un personaje de manera estatica
     // function showCharacters() {
@@ -45,6 +54,7 @@ function filterMenuOptions() {
     //     const characterImage = imgAppend.src = `${rickSanchez.image}`
     // }
 
+<<<<<<< HEAD
 
     // RECORRIENDO LA DATA CON MAP
     let elementos = results.map(function(item) {
@@ -77,6 +87,13 @@ function filterMenuOptions() {
 
 
     // FILTERS MENU //
+=======
+console.log(example, data);
+
+
+// filterSpecies();
+SortfilterAz
+>>>>>>> e90417dc1cfa60a9b3464aff9589c4270cada564
 
     const d = document;
     const filtersSection = d.getElementById("filters_section");
@@ -86,6 +103,7 @@ function filterMenuOptions() {
     const statusLabel = d.getElementById("status_label");
     const alphabetLabel = d.getElementById("aplabet_label")
 
+function filterMenuOptions(){
 
     //eventro para esconde menu
     speciesLabel.addEventListener("mouseover", () => {
@@ -94,6 +112,7 @@ function filterMenuOptions() {
         optionsContainer.classList.toggle("hidden")
     });
 
+<<<<<<< HEAD
     locationLabel.addEventListener("mouseover", () => {
         const OptionsContainer = d.getElementById("location_options-container")
         OptionsContainer.classList.toggle("hidden")
@@ -118,6 +137,43 @@ function filterMenuOptions() {
 
 }
 filterMenuOptions()
+=======
+const d = document;
+const filtersSection = d.getElementById("filters_section");
+const filtersNav = d.getElementById("filters_section");
+const speciesLabel = d.getElementById("species_label");
+const locationLabel = d.getElementById("location_label");
+const statusLabel = d.getElementById("status_label");
+const alphabetLabel = d.getElementById("aplabet_label")
+
+speciesLabel.addEventListener("mouseover", () => {
+    // optionsContainer.style = "display:block";
+    const optionsContainer = d.getElementById("species_options-container")
+    optionsContainer.classList.toggle("hidden")
+});
+
+locationLabel.addEventListener("mouseover", () => {
+    const OptionsContainer = d.getElementById("location_options-container")
+    OptionsContainer.classList.toggle("hidden")
+    OptionsContainer.style = "paddingBottom:4vh;";
+});
+
+statusLabel.addEventListener("mouseover", () => {
+    const OptionsContainer = d.getElementById("status_options-container")
+    OptionsContainer.classList.toggle("hidden")
+});
+
+alphabetLabel.addEventListener("mouseover", () => {
+    const OptionsContainer = d.getElementById("filter_options-container")
+    OptionsContainer.classList.toggle("hidden")
+});
+
+const locationOption = d.getElementById("location_options1")
+
+locationOption.addEventListener("click", () => {
+    alert("hola")
+})
+>>>>>>> e90417dc1cfa60a9b3464aff9589c4270cada564
 
 
 // MANEJO DE TITULO DINAMICO PARA LAS SECCIONES
@@ -148,6 +204,7 @@ changeFiltersTitle()
 
 // carrusel automático
 
+<<<<<<< HEAD
 let slider = document.querySelector(".carousel_section")
 let sliderSingle = document.querySelectorAll(".carousel-items")
 let counter = 1;
@@ -175,3 +232,6 @@ function slides() {
         }, 1500)
     }
 }
+=======
+}changeFiltersTitle()
+>>>>>>> e90417dc1cfa60a9b3464aff9589c4270cada564

@@ -2,6 +2,7 @@ import { transform } from '@babel/core';
 import { example } from '../data.js';
 // import data from './data/lol/lol.js';
 import data from '../data/rickandmorty/rickandmorty.js';
+import {} 
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -25,12 +26,40 @@ for (const [key, value] of Object.entries(mortySmith)) {
 console.log(example, data);
 //-- Función para organizar la data en orden alfabetico de la A-Z --//
 
+<<<<<<< HEAD
 let aliensFilter = results.filter((elements) => {
     // console.log(ele)
     if (elements.species == "Alien") {
         return elements.species
     }
 });
+=======
+
+
+export const Sortfilter = (name, species) => {
+    const datos = data.results;
+    const nameD = datos.name;
+
+    if (name == "a-z") {
+        return name.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    } else {
+        return species.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+    }
+};
+console.log(Sortfilter());
+>>>>>>> e90417dc1cfa60a9b3464aff9589c4270cada564
 
 function getData() {
 
@@ -97,12 +126,13 @@ let elementos = results.map(function(item) {
 
     });
 
-
     console.log(elementos)
 
+}); console.log(elementos)
 
 
 
+<<<<<<< HEAD
     // traer las propiedades
     var arreglo = results[2]
     var characterName = arreglo.name
@@ -128,13 +158,15 @@ let elementos = results.map(function(item) {
 
 });
 console.log(elementos)
+=======
+>>>>>>> e90417dc1cfa60a9b3464aff9589c4270cada564
 
 var first = 10;
 console.log(first);
 
 
 
-}
+
 getData();
 
 
