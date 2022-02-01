@@ -1,3 +1,4 @@
+import { transform } from '@babel/core';
 import { example } from '../data.js';
 // import data from './data/lol/lol.js';
 import data from '../data/rickandmorty/rickandmorty.js';
@@ -24,26 +25,12 @@ for (const [key, value] of Object.entries(mortySmith)) {
 console.log(example, data);
 //-- Función para organizar la data en orden alfabetico de la A-Z --//
 
-export const Sortfilter = (name, species) => {
-    if (name == "a-z") {
-        return name.sort(function(a, b) {
-            if (a.name >= b.name) {
-                return 1;
-            } else {
-                return -1;
-            }
-        });
-    } else {
-        return species.sort(function(a, b) {
-            if (a.name >= b.name) {
-                return -1;
-            } else {
-                return 1;
-            }
-        });
+let aliensFilter = results.filter((elements) => {
+    // console.log(ele)
+    if (elements.species == "Alien") {
+        return elements.species
     }
-};
-console.log(Sortfilter);
+});
 
 function getData() {
 
@@ -77,7 +64,8 @@ function getData() {
         console.log(key)
     }
 
-}getData();
+}
+getData();
 
 
 // RECORRIENDO LA DATA CON MAP
@@ -138,7 +126,8 @@ let elementos = results.map(function(item) {
         charactersStatusMap
     }
 
-}); console.log(elementos)
+});
+console.log(elementos)
 
 var first = 10;
 console.log(first);
@@ -231,3 +220,71 @@ const dropdownOptions = document.querySelectorAll('#navContainer, #navElements')
 dropdownTitle.addEventListener('click', toggleMenuDisplay);
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
 document.querySelector('#navContainer, #navElements').addEventListener('change', handleTitleChange)
+
+/*export const Sortfilter = (name, species) => {
+    let sortName = name;
+    if (name == "a-z") {
+        return name.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    } else {
+        return species.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+    }
+    console.log(Sortfilter);
+};
+*/
+
+export const SortfilterAz = (data) => {
+    console.log(sortAz);
+    const sortAz = data.sort((a, b) => {
+        return a.name.localCompare(b.name);
+    });
+    return sortAz
+}
+export const SortfilterZa = (data) => {
+    const sortZa = data.sort((a, b) => {
+        return b.name.localCompare(a.name);
+    });
+    return sortZa;
+};
+
+// carrusel automático
+
+let slider = document.querySelector(".slider-elements")
+let sliderSingle = document.querySelectorAll(".carousel-items")
+let counter = 1;
+let width = sliderSingle[0].clientWidth;
+let intervalo = 3000;
+
+window.addEventListener("resize", function() {
+    width = sliderSingle[0].clientWidth;
+})
+
+setInterval(function() {
+    slides();
+}, intervalo);
+console.log(setInterval);
+
+function slides() {
+    slider.style.transform = "traslate(" + (-width * counter) + "px)";
+    slider.style.transition = "transform .7s";
+    counter++;
+
+    if (counter == sliderSingle.length) {
+        setTimeout(function() {
+            slider.style.transform = "traslate(0px)";
+            slider.style.transition = "transform .0s";
+            counter = 1
+        }, 1500)
+    }
+}
