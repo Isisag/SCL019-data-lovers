@@ -19,21 +19,13 @@ const results = data.results; //array
 
 export function filterSpecies(){
 
-  let aliensFilter = results.filter((elements)=> elements.species == "Alien");
+  let aliensFilter = results.filter((elements)=> elements.species == "Alien" );
   console.log(aliensFilter);
   
-  let humanFilter = results.filter((elements)=>{
-    if( elements.species == "Human" ){
-      return elements.species 
-    }
-  });
+  let humanFilter = results.filter((elements)=> elements.species == "Human" );
   console.log(humanFilter)
   
-  let aliveFilter = results.filter((elements)=>{
-    if( elements.status == "unknown" ){
-      return elements.status
-    }
-  });
+  let aliveFilter = results.filter((elements)=> elements.status == "unknown");
   console.log(aliveFilter);
 
 }filterSpecies();
@@ -55,7 +47,6 @@ export const SortfilterAz = (data) => {
       const name2 = b.name.toLowerCase()
       if( name1 < name2 ) return 1;
       else return -1;
-      
     //  return b.title.localCompare(a.title);
     });
     
@@ -102,3 +93,17 @@ function getDataElements(){
   })
 
 }getDataElements();
+
+let setear = new Set([results])
+// let setear2 = new Set.keys([results]) 
+for (let species of setear ) console.log(species);
+for (let item of setear.keys()) console.log(item);
+const myArr = Array.from(setear)
+console.log(myArr)
+
+function unico(arr) {
+  return Array.from( new Set(arr))
+}
+
+console.log(typeof(resultados))
+console.log( unico(resultados))

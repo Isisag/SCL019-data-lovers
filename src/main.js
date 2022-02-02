@@ -1,4 +1,4 @@
-import { example } from './data.js';
+    import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 import { filterSpecies, SortfilterAz, SortfilterZa } from "./data.js"
@@ -53,18 +53,18 @@ speciesLabel.addEventListener("mouseover", () => {
     optionsContainer.classList.toggle("hidden")
 });
 
-locationLabel.addEventListener("mouseover", () => {
+locationLabel.addEventListener("click", () => {
     const OptionsContainer = d.getElementById("location_options-container")
     OptionsContainer.classList.toggle("hidden")
     OptionsContainer.style = "paddingBottom:4vh;";
 });
 
-statusLabel.addEventListener("mouseover", () => {
+statusLabel.addEventListener("click", () => {
     const OptionsContainer = d.getElementById("status_options-container")
     OptionsContainer.classList.toggle("hidden")
 });
 
-alphabetLabel.addEventListener("mouseover", () => {
+alphabetLabel.addEventListener("click", () => {
     const OptionsContainer = d.getElementById("filter_options-container")
     OptionsContainer.classList.toggle("hidden")
 });
