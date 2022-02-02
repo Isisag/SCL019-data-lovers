@@ -2,7 +2,6 @@ import { transform } from '@babel/core';
 import { example } from '../data.js';
 // import data from './data/lol/lol.js';
 import data from '../data/rickandmorty/rickandmorty.js';
-import {} 
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -26,40 +25,12 @@ for (const [key, value] of Object.entries(mortySmith)) {
 console.log(example, data);
 //-- Función para organizar la data en orden alfabetico de la A-Z --//
 
-<<<<<<< HEAD
 let aliensFilter = results.filter((elements) => {
     // console.log(ele)
     if (elements.species == "Alien") {
         return elements.species
     }
 });
-=======
-
-
-export const Sortfilter = (name, species) => {
-    const datos = data.results;
-    const nameD = datos.name;
-
-    if (name == "a-z") {
-        return name.sort(function(a, b) {
-            if (a.name >= b.name) {
-                return 1;
-            } else {
-                return -1;
-            }
-        });
-    } else {
-        return species.sort(function(a, b) {
-            if (a.name >= b.name) {
-                return -1;
-            } else {
-                return 1;
-            }
-        });
-    }
-};
-console.log(Sortfilter());
->>>>>>> e90417dc1cfa60a9b3464aff9589c4270cada564
 
 function getData() {
 
@@ -104,62 +75,53 @@ let elementos = results.map(function(item) {
     const charactersSpeciesMap = item.species
     const charactersImageMap = item.image
     const charactersStatusMap = item.status
-    let elementos = results.map(function(item) {
-        // return results.id
-        const charactersNameMap = item.name
-        const charactersSpeciesMap = item.species
-        const charactersImageMap = item.image
-        const charactersStatusMap = item.status
-
-        let li = document.createElement("li")
-        let create = document.body.appendChild(li)
-        let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
-
-        let image = document.createElement("img")
-        let createImg = document.body.appendChild(image)
-        let showImage = createImg.src = `${charactersImageMap}`
-
-        return {
-            pushText,
-            showImage
-        }
-
-    });
-
-    console.log(elementos)
-
-}); console.log(elementos)
 
 
+    let li = document.createElement("li")
+    let create = document.body.appendChild(li)
+    let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
 
-<<<<<<< HEAD
-    // traer las propiedades
-    var arreglo = results[2]
-    var characterName = arreglo.name
-    var imgResource = arreglo.image
-
-
-    src / test.js
-    src / tests, files / test.js
-    const imgTest = document.getElementById("img-test").src = `${imgResource}`
-    const divTest = document.getElementById("data-test").innerHTML = characterName;
-
-    // traer las propiedades
-    // var arreglo = results[2]
-    // var characterName = arreglo.name
-    // var imgResource = arreglo.image
+    let image = document.createElement("img")
+    let createImg = document.body.appendChild(image)
+    let showImage = createImg.src = `${charactersImageMap}`
 
     return {
-        charactersNameMap,
-        charactersSpeciesMap,
-        charactersImageMap,
-        charactersStatusMap
+        pushText,
+        showImage
     }
 
 });
+
 console.log(elementos)
-=======
->>>>>>> e90417dc1cfa60a9b3464aff9589c4270cada564
+
+
+// traer las propiedades
+var arreglo = results[2]
+var characterName = arreglo.name
+var imgResource = arreglo.image
+
+
+src / test.js
+src / tests, files / test.js
+const imgTest = document.getElementById("img-test").src = `${imgResource}`
+const divTest = document.getElementById("data-test").innerHTML = characterName;
+
+// traer las propiedades
+// var arreglo = results[2]
+// var characterName = arreglo.name
+// var imgResource = arreglo.image
+
+
+// comente el return porque daba error en consola
+/*return {
+    charactersNameMap,
+    charactersSpeciesMap,
+    charactersImageMap,
+    charactersStatusMap
+}
+
+});*/
+console.log(elementos)
 
 var first = 10;
 console.log(first);
