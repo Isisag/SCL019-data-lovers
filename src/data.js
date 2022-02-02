@@ -13,50 +13,68 @@ console.log(data)
 
 // CONSTANTES CON DATA.JS
 
-const results = data.results; //array
+export const results = data.results; //array
 
 // ESTRUCTURAS SUGERIDAS DE FILTER -- AUN NO SE COMUNICAN CON EL DOM NI HACEN NADA MAS
+ 
+//function filterSpecies(data, ordenamiento)   => comprar en click la condicion 
+// export function filterSpecies(){
 
-export function filterSpecies(){
+//   let aliensFilter = results.filter((elements)=> elements.species == "Alien" );
+//   return aliensFilter;
+  
+// }
 
+export function filterAlien(){
   let aliensFilter = results.filter((elements)=> elements.species == "Alien" );
-  console.log(aliensFilter);
-  
+  return aliensFilter;
+}
+
+export function filterHuman(){
   let humanFilter = results.filter((elements)=> elements.species == "Human" );
-  console.log(humanFilter)
-  
-  let aliveFilter = results.filter((elements)=> elements.status == "unknown");
-  console.log(aliveFilter);
+ return humanFilter
+}
 
-}filterSpecies();
+export function filterHumanoid(){
+  let humanoidFilter = results.filter((elements)=> elements.species == "Humanoid" );
+  return humanoidFilter
+}
 
-export const SortfilterAz = (data) => {
-  const sortAz = data.sort((a,b)=> {
-    const name1 = a.name.toLowerCase()
-    const name2 = b.name.toLowerCase()
-    if( name1 > name2 ) return -1;
-    else return 1;
-  //  return a.title.localCompare(b.title);
-  });
-  console.log("ESTE ES AZ")
-  return sortAz;
-  }
-  export const SortfilterZa = (data) => {
-    const sortZa = data.sort((a,b)=> {
-      const name1 = a.name.toLowerCase()
-      const name2 = b.name.toLowerCase()
-      if( name1 < name2 ) return 1;
-      else return -1;
-    //  return b.title.localCompare(a.title);
-    });
+export function filterRobot(){
+  let robotFilter = results.filter((elements)=> elements.species == "Robot" );
+  return robotFilter
+}
+
+  // let aliveFilter = results.filter((elements)=> elements.status == "unknown");
+  // console.log(aliveFilter);
+
+
+
+// export const SortfilterAz = (data) => {
+//   const sortAz = data.sort((a,b)=> {
+//     const name1 = a.name.toLowerCase()
+//     const name2 = b.name.toLowerCase()
+//     if( name1 > name2 ) return -1;
+//     else return 1;
+//   //  return a.title.localCompare(b.title);
+//   });
+//   console.log("ESTE ES AZ")
+//   return sortAz;
+//   }
+//   export const SortfilterZa = (data) => {
+//     const sortZa = data.sort((a,b)=> {
+//       const name1 = a.name.toLowerCase()
+//       const name2 = b.name.toLowerCase()
+//       if( name1 < name2 ) return 1;
+//       else return -1;
+//     //  return b.title.localCompare(a.title);
+//     });
     
-    return sortZa;
-  }
+//     return sortZa;
+//   }
 
-  console.log(SortfilterAz(data.results));
-  console.log(SortfilterZa(data.results))
-
-
+//   console.log(SortfilterAz(data.results));
+//   console.log(SortfilterZa(data.results))
 
 
 // FUNCION QUE RECORRE LA DATA Y DEVUELVE SUS VALORES SOLO EN CONSOLE
@@ -81,6 +99,23 @@ function getDataElements(){
 
     const charactersEpisodes = item.episode
 
+      // 
+
+    const ul = document.getElementById("prueba")
+    const h3 = document.createElement('h3');
+    const textAppend = document.body.appendChild(h3);
+    const characterName = textAppend.innerHTML = `${charactersName}`
+
+    // const ulInner = ul.innerHTML = `${charactersSpecies}`
+
+    const imgC = document.createElement("img")
+    const imgAppend = document.body.appendChild(imgC)
+    const characterImage = imgAppend.src = `${charactersImage}`
+
+    return {  
+      characterName, characterImage
+    }
+    
     // console.log(charactersName)
   
     // return {
@@ -94,6 +129,25 @@ function getDataElements(){
 
 }getDataElements();
 
+
+
+// esta función ejecuta la muestra de datos de un personaje de manera estatica
+function showCharacters() {
+
+    const h3 = document.createElement('h3');
+    const textAppend = document.body.appendChild(h3);
+    const characterName = textAppend.innerHTML = `${rickSanchez.name}`
+
+    const imgC = document.createElement("img")
+    const imgAppend = document.body.appendChild(imgC)
+    const characterImage = imgAppend.src = `${rickSanchez.image}`
+
+
+
+}
+
+
+
 let setear = new Set([results])
 // let setear2 = new Set.keys([results]) 
 for (let species of setear ) console.log(species);
@@ -105,5 +159,3 @@ function unico(arr) {
   return Array.from( new Set(arr))
 }
 
-console.log(typeof(resultados))
-console.log( unico(resultados))
