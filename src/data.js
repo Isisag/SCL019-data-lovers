@@ -15,43 +15,50 @@ console.log(data)
 
 export const results = data.results; //array
 
+// devuelve el valor de origen y genero de los personajes
+//(({ origin }) se extrae el valor del elemento en el array
+const origin = results.map(({ origin }) => origin);
+const gender = results.map(({ gender }) => gender)
+console.log(gender);
+console.log(origin);
+
 // ESTRUCTURAS SUGERIDAS DE FILTER -- AUN NO SE COMUNICAN CON EL DOM NI HACEN NADA MAS
- 
-//function filterSpecies(data, ordenamiento)   => comprar en click la condicion 
+
+//function filterSpecies(data, ordenamiento)   => comprar en click la condicion
 // export function filterSpecies(){
 
 //   let aliensFilter = results.filter((elements)=> elements.species == "Alien" );
 //   return aliensFilter;
-  
+
 // }
 
-export function filterAlien(){
-  let aliensFilter = results.filter((elements)=> elements.species == "Alien" );
-  return aliensFilter;
+export function filterAlien() {
+    let aliensFilter = results.filter((elements) => elements.species == "Alien");
+    return aliensFilter;
 }
 
-export function filterHuman(){
-  let humanFilter = results.filter((elements)=> elements.species == "Human" );
- return humanFilter
+export function filterHuman() {
+    let humanFilter = results.filter((elements) => elements.species == "Human");
+    return humanFilter
 }
 
-export function filterHumanoid(){
-  let humanoidFilter = results.filter((elements)=> elements.species == "Humanoid" );
-  return humanoidFilter
+export function filterHumanoid() {
+    let humanoidFilter = results.filter((elements) => elements.species == "Humanoid");
+    return humanoidFilter
 }
 
-export function filterRobot(){
-  let robotFilter = results.filter((elements)=> elements.species == "Robot" );
-  return robotFilter
+export function filterRobot() {
+    let robotFilter = results.filter((elements) => elements.species == "Robot");
+    return robotFilter
 }
 
-export function filterSpecies(){
-  return "hola"
+export function filterSpecies() {
+    return "hola"
 }
 
 
-  // let aliveFilter = results.filter((elements)=> elements.status == "unknown");
-  // console.log(aliveFilter);
+// let aliveFilter = results.filter((elements)=> elements.status == "unknown");
+// console.log(aliveFilter);
 
 
 
@@ -74,17 +81,50 @@ export function filterSpecies(){
 //       else return -1;
 //     //  return b.title.localCompare(a.title);
 //     });
-    
+
 //     return sortZa;
 //   }
 
 //   console.log(SortfilterAz(data.results));
 //   console.log(SortfilterZa(data.results))
 
+let elementos = results.map.(function(item) {
+
+
+    // resultados planos (es decir adentro de estos no hay otro array)
+    const charactersName = item.name
+    const charactersSpecies = item.species
+    const charactersImage = item.image
+    const charactersStatus = item.status
+
+    // resultados dentro de arrays (hay que llamar a la propiedad externa primero antes de acceder a ellos)
+    const charactersLocation = item.location
+    const charactersLocationName = charactersLocation.name
+    const charactersLocationUrl = charactersLocation.url
+
+    const charactersOrigin = item.origin
+    const charactersOriginName = charactersOrigin.name
+    const charactersOriginUrl = charactersOrigin.url
+
+    const charactersEpisodes = item.episode
+
+    // console.log(charactersName)
+
+    // return {
+    //     charactersName,
+    //     charactersSpecies,
+    //     charactersImage,
+    //     charactersStatus
+    // }
+
+})
+
+
+getDataElements();
 
 // FUNCION QUE RECORRE LA DATA Y DEVUELVE SUS VALORES SOLO EN CONSOLE
 // function getDataElements(){
-  
+
 //   let elementos = results.map(function(item) {
 
 //     // resultados planos (es decir adentro de estos no hay otro array)
@@ -94,17 +134,17 @@ export function filterSpecies(){
 //     const charactersStatus = item.status
 
 //     // resultados dentro de arrays (hay que llamar a la propiedad externa primero antes de acceder a ellos)
-//     const charactersLocation = item.location 
+//     const charactersLocation = item.location
 //     const charactersLocationName = charactersLocation.name
 //     const charactersLocationUrl = charactersLocation.url
 
 //     const charactersOrigin = item.origin
 //     const charactersOriginName = charactersOrigin.name
-//     const charactersOriginUrl = charactersOrigin.url 
+//     const charactersOriginUrl = charactersOrigin.url
 
 //     const charactersEpisodes = item.episode
 
-//       // 
+//       //
 
 //     const ul = document.getElementById("prueba")
 //     const h3 = document.createElement('h3');
@@ -117,19 +157,19 @@ export function filterSpecies(){
 //     const imgAppend = document.body.appendChild(imgC)
 //     const characterImage = imgAppend.src = `${charactersImage}`
 
-//     return {  
+//     return {
 //       characterName, characterImage
 //     }
-    
+
 //     // console.log(charactersName)
-  
+
 //     // return {
 //     //     charactersName,
 //     //     charactersSpecies,
 //     //     charactersImage,
 //     //     charactersStatus
 //     // }
-  
+
 //   })
 
 // }getDataElements();
@@ -154,13 +194,43 @@ function showCharacters() {
 
 
 let setear = new Set([results])
-// let setear2 = new Set.keys([results]) 
-for (let species of setear ) console.log(species);
+    // let setear2 = new Set.keys([results])
+for (let species of setear) console.log(species);
 for (let item of setear.keys()) console.log(item);
 const myArr = Array.from(setear)
 console.log(myArr)
 
 function unico(arr) {
-  return Array.from( new Set(arr))
+    return Array.from(new Set(arr))
+}
+// }getDataElements();
+
+
+
+// esta función ejecuta la muestra de datos de un personaje de manera estatica
+function showCharacters() {
+
+    const h3 = document.createElement('h3');
+    const textAppend = document.body.appendChild(h3);
+    const characterName = textAppend.innerHTML = `${rickSanchez.name}`
+
+    const imgC = document.createElement("img")
+    const imgAppend = document.body.appendChild(imgC)
+    const characterImage = imgAppend.src = `${rickSanchez.image}`
+
+
+
 }
 
+
+
+let setear = new Set([results])
+    // let setear2 = new Set.keys([results])
+for (let species of setear) console.log(species);
+for (let item of setear.keys()) console.log(item);
+const myArr = Array.from(setear)
+console.log(myArr)
+
+function unico(arr) {
+    return Array.from(new Set(arr))
+}
