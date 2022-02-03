@@ -488,7 +488,7 @@
         transition: 2s;
     }
 
-    .filters_nav-labels>svg {
+    .filters_section > svg {
         align-self: center;
         fill: var(--primary-color);
         stroke: var(--primary-color);
