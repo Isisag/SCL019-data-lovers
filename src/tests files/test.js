@@ -1,6 +1,10 @@
 import { example } from '../data.js';
 // import data from './data/lol/lol.js';
 import data from '../data/rickandmorty/rickandmorty.js';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d4818e24f33b2efaae77587072fe09632687551
 // import data from './data/rickandmorty/rickandmorty.js';
 
 

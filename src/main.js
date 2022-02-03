@@ -32,7 +32,7 @@ console.log(example, data);
 
 
 // filterSpecies();
-SortfilterAz
+//SortfilterAz
 
 const d = document;
 const filtersSection = d.getElementById("filters_section");
@@ -43,21 +43,6 @@ const statusLabel = d.getElementById("status_label");
 const alphabetLabel = d.getElementById("aplabet_label")
 
 function filterMenuOptions() {
-
-    //eventro para esconde menu
-    speciesLabel.addEventListener("mouseover", () => {
-        // optionsContainer.style = "display:block";
-        const optionsContainer = d.getElementById("species_options-container")
-        optionsContainer.classList.toggle("hidden")
-    });
-
-    const d = document;
-    const filtersSection = d.getElementById("filters_section");
-    const filtersNav = d.getElementById("filters_section");
-    const speciesLabel = d.getElementById("species_label");
-    const locationLabel = d.getElementById("location_label");
-    const statusLabel = d.getElementById("status_label");
-    const alphabetLabel = d.getElementById("aplabet_label")
 
     speciesLabel.addEventListener("mouseover", () => {
         // optionsContainer.style = "display:block";
