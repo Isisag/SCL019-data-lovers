@@ -12,8 +12,8 @@ console.log(example, data);
 
 // OPCIONES DEL MENU DE FILTROS => maneja cuando se despliegan //
 
-const allData = data;
-const results = data.results; //array
+console.log(filterHuman(data))
+console.log(filterRobot(data))
 
 
 // esta función ejecuta la muestra de datos de un personaje de manera estatica
@@ -33,7 +33,6 @@ console.log(example, data);
 
 // filterSpecies();
 //SortfilterAz
-
 const d = document;
 const filtersSection = d.getElementById("filters_section");
 const filtersNav = d.getElementById("filters_section");
@@ -71,6 +70,38 @@ function filterMenuOptions() {
     locationOption.addEventListener("click", () => {
         alert("hola")
     })
+
+    function menuFilter() {
+
+        const speciesOptions1 = d.getElementById("species_options1") //human
+        const speciesOptions2 = d.getElementById("species_options2") // alien
+        const speciesOptions3 = d.getElementById("species_options3") // robot
+        const speciesOptions4 = d.getElementById("species_options4") // humanoide
+
+        speciesOptions1.addEventListener("click", () => {
+            filterHuman();
+
+            const h3 = document.createElement('h3');
+            const textAppend = document.body.appendChild(h3);
+            const characterName = textAppend.innerHTML = `${filterHuman()}`
+
+            const results = data.results;
+            const species = results
+                // console.log(filterHuman())
+        })
+
+        speciesOptions2.addEventListener("click", () => {
+            console.log(filterAlien())
+        })
+
+        speciesOptions3.addEventListener("click", () => {
+            console.log(filterRobot())
+        })
+
+
+
+    }
+    menuFilter()
 
 
     // MANEJO DE TITULO DINAMICO PARA LAS SECCIONES
