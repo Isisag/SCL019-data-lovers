@@ -1,5 +1,6 @@
-import {results,
-   filterSpecies
+import {
+    results,
+    filterSpecies
 } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const d = document;
@@ -24,35 +25,43 @@ for (const [key, value] of Object.entries(mortySmith)) {
 
 
 
-function showCharacters(results){
+function showCharacters(results) {
     let container = d.getElementById("container")
 
     results.map(function(character) {
         const charactersName = character.name
         const charactersSpecies = character.species
         const charactersImage = character.image
+        const characterStatus = character.status
 
         let div = d.createElement("div")
         let image = d.createElement("img")
         let name = d.createElement("p")
+        let status = d.createElement("p")
 
 
         // const imageCard = image.src = `${charactersImage}`
         image.setAttribute("src", charactersImage)
+        status.setAttribute("id", characterStatus)
         name.innerHTML = charactersName
-        // const nameCard = name.innerHTML = `${charactersName}`
+        status.innerHTML = characterStatus
+            // const nameCard = name.innerHTML = `${charactersName}`
+
+
 
         let prueba = container.appendChild(div);
-        let prueba2= div.appendChild(image)
+        let prueba2 = div.appendChild(image)
         let prueba3 = div.appendChild(name)
+        let prueba4 = div.appendChild(status)
 
-        return{
-            
+        return {
+
         }
 
     })
-}showCharacters(results)
-// filterSpecies();
+}
+showCharacters(results)
+    // filterSpecies();
 
 
 const speciesFilter = d.getElementById("filter-species")
@@ -77,7 +86,7 @@ const alphabetFilter = d.getElementById("filter-alphabet")
 
 // speciesOptions1.addEventListener("click", () => {
 //     filterHuman();
-    
+
 //     const h3 = document.createElement('h3');
 //     const textAppend = document.body.appendChild(h3);
 //     const characterName = textAppend.innerHTML = `${filterHuman()}`
@@ -103,49 +112,49 @@ const alphabetFilter = d.getElementById("filter-alphabet")
 
 // FUNCION QUE RECORRE LA DATA Y DEVUELVE SUS VALORES SOLO EN CONSOLE
 // function getDataElements(){
-  
+
 //     let elementos = results.map(function(item) {
-  
+
 //       // resultados planos (es decir adentro de estos no hay otro array)
 //       const charactersName = item.name
 //       const charactersSpecies = item.species
 //       const charactersImage = item.image
 //       const charactersStatus = item.status
-  
+
 //       // resultados dentro de arrays (hay que llamar a la propiedad externa primero antes de acceder a ellos)
-//       const charactersLocation = item.location 
+//       const charactersLocation = item.location
 //       const charactersLocationName = charactersLocation.name
 //       const charactersLocationUrl = charactersLocation.url
-  
+
 //       const charactersOrigin = item.origin
 //       const charactersOriginName = charactersOrigin.name
-//       const charactersOriginUrl = charactersOrigin.url 
-  
+//       const charactersOriginUrl = charactersOrigin.url
+
 //       const charactersEpisodes = item.episode
-  
-//         // 
-  
+
+//         //
+
 //       const h3 = document.createElement('h3');
 //       const textAppend = document.body.appendChild(h3);
 //       const characterName = textAppend.innerHTML = `${charactersName}`
-  
+
 //       const imgC = document.createElement("img")
 //       const imgAppend = document.body.appendChild(imgC)
 //       const characterImage = imgAppend.src = `${charactersImage}`
-  
-//       return {  
+
+//       return {
 //         characterName, characterImage
 //       }
-      
+
 //       // console.log(charactersName)
-    
+
 //       // return {
 //       //     charactersName,
 //       //     charactersSpecies,
 //       //     charactersImage,
 //       //     charactersStatus
 //       // }
-    
+
 //     })
-  
+
 //   }getDataElements();
