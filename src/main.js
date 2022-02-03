@@ -3,7 +3,7 @@ import {
     filterSpecies
 } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
-import { filterSpecies, SortfilterAz, SortfilterZa } from "./data.js"
+
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
