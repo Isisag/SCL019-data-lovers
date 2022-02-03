@@ -34,18 +34,22 @@ function showCharacters(results) {
         const charactersImage = character.image
         const characterStatus = character.status
 
+
         let div = d.createElement("div")
         let image = d.createElement("img")
         let name = d.createElement("p")
         let status = d.createElement("p")
 
 
-        // const imageCard = image.src = `${charactersImage}`
+        div.setAttribute("class", "cell")
+            // const imageCard = image.src = `${charactersImage}`
         image.setAttribute("src", charactersImage)
         status.setAttribute("id", characterStatus)
+
         name.innerHTML = charactersName
         status.innerHTML = characterStatus
-            // const nameCard = name.innerHTML = `${charactersName}`
+
+        // const nameCard = name.innerHTML = `${charactersName}`
 
 
 
