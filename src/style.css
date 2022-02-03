@@ -299,6 +299,10 @@
     }
     /* ================== FILTERS HTML ====================== */
 
+    .container{
+        display: flex;
+    }
+
     .card {
         display: flex;
         flex-wrap: wrap;

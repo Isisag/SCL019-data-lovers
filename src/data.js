@@ -84,6 +84,11 @@ export function filterRobot(){
 }
 >>>>>>> bb81126844c23e4b7f56528fdb90e427d2d324b1
 
+export function filterSpecies(){
+  return "hola"
+}
+
+
   // let aliveFilter = results.filter((elements)=> elements.status == "unknown");
   // console.log(aliveFilter);
 
@@ -155,56 +160,56 @@ function getDataElements() {
 getDataElements();
 =======
 // FUNCION QUE RECORRE LA DATA Y DEVUELVE SUS VALORES SOLO EN CONSOLE
-function getDataElements(){
+// function getDataElements(){
   
-  let elementos = results.map(function(item) {
+//   let elementos = results.map(function(item) {
 
-    // resultados planos (es decir adentro de estos no hay otro array)
-    const charactersName = item.name
-    const charactersSpecies = item.species
-    const charactersImage = item.image
-    const charactersStatus = item.status
+//     // resultados planos (es decir adentro de estos no hay otro array)
+//     const charactersName = item.name
+//     const charactersSpecies = item.species
+//     const charactersImage = item.image
+//     const charactersStatus = item.status
 
-    // resultados dentro de arrays (hay que llamar a la propiedad externa primero antes de acceder a ellos)
-    const charactersLocation = item.location 
-    const charactersLocationName = charactersLocation.name
-    const charactersLocationUrl = charactersLocation.url
+//     // resultados dentro de arrays (hay que llamar a la propiedad externa primero antes de acceder a ellos)
+//     const charactersLocation = item.location 
+//     const charactersLocationName = charactersLocation.name
+//     const charactersLocationUrl = charactersLocation.url
 
-    const charactersOrigin = item.origin
-    const charactersOriginName = charactersOrigin.name
-    const charactersOriginUrl = charactersOrigin.url 
+//     const charactersOrigin = item.origin
+//     const charactersOriginName = charactersOrigin.name
+//     const charactersOriginUrl = charactersOrigin.url 
 
-    const charactersEpisodes = item.episode
+//     const charactersEpisodes = item.episode
 
-      // 
+//       // 
 
-    const ul = document.getElementById("prueba")
-    const h3 = document.createElement('h3');
-    const textAppend = document.body.appendChild(h3);
-    const characterName = textAppend.innerHTML = `${charactersName}`
+//     const ul = document.getElementById("prueba")
+//     const h3 = document.createElement('h3');
+//     const textAppend = document.body.appendChild(h3);
+//     const characterName = textAppend.innerHTML = `${charactersName}`
 
-    // const ulInner = ul.innerHTML = `${charactersSpecies}`
+//     // const ulInner = ul.innerHTML = `${charactersSpecies}`
 
-    const imgC = document.createElement("img")
-    const imgAppend = document.body.appendChild(imgC)
-    const characterImage = imgAppend.src = `${charactersImage}`
+//     const imgC = document.createElement("img")
+//     const imgAppend = document.body.appendChild(imgC)
+//     const characterImage = imgAppend.src = `${charactersImage}`
 
-    return {  
-      characterName, characterImage
-    }
+//     return {  
+//       characterName, characterImage
+//     }
     
-    // console.log(charactersName)
+//     // console.log(charactersName)
   
-    // return {
-    //     charactersName,
-    //     charactersSpecies,
-    //     charactersImage,
-    //     charactersStatus
-    // }
+//     // return {
+//     //     charactersName,
+//     //     charactersSpecies,
+//     //     charactersImage,
+//     //     charactersStatus
+//     // }
   
-  })
+//   })
 
-}getDataElements();
+// }getDataElements();
 
 
 
