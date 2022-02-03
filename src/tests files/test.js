@@ -1,7 +1,6 @@
 import { example } from '../data.js';
 // import data from './data/lol/lol.js';
 import data from '../data/rickandmorty/rickandmorty.js';
-
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
@@ -25,31 +24,12 @@ for (const [key, value] of Object.entries(mortySmith)) {
 console.log(example, data);
 //-- Función para organizar la data en orden alfabetico de la A-Z --//
 
-
-
-export const Sortfilter = (name, species) => {
-    const datos = data.results;
-    const nameD = datos.name;
-
-    if (name == "a-z") {
-        return name.sort(function(a, b) {
-            if (a.name >= b.name) {
-                return 1;
-            } else {
-                return -1;
-            }
-        });
-    } else {
-        return species.sort(function(a, b) {
-            if (a.name >= b.name) {
-                return -1;
-            } else {
-                return 1;
-            }
-        });
+let aliensFilter = results.filter((elements) => {
+    // console.log(ele)
+    if (elements.species == "Alien") {
+        return elements.species
     }
-};
-console.log(Sortfilter());
+});
 
 function getData() {
 
@@ -83,7 +63,8 @@ function getData() {
         console.log(key)
     }
 
-}getData();
+}
+getData();
 
 
 // RECORRIENDO LA DATA CON MAP
@@ -93,34 +74,53 @@ let elementos = results.map(function(item) {
     const charactersSpeciesMap = item.species
     const charactersImageMap = item.image
     const charactersStatusMap = item.status
-    let elementos = results.map(function(item) {
-        // return results.id
-        const charactersNameMap = item.name
-        const charactersSpeciesMap = item.species
-        const charactersImageMap = item.image
-        const charactersStatusMap = item.status
-
-        let li = document.createElement("li")
-        let create = document.body.appendChild(li)
-        let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
-
-        let image = document.createElement("img")
-        let createImg = document.body.appendChild(image)
-        let showImage = createImg.src = `${charactersImageMap}`
-
-        return {
-            pushText,
-            showImage
-        }
-
-    });
-
-    console.log(elementos)
-
-}); console.log(elementos)
 
 
+    let li = document.createElement("li")
+    let create = document.body.appendChild(li)
+    let pushText = create.innerHTML = `<li> ${charactersNameMap} </li>`
 
+    let image = document.createElement("img")
+    let createImg = document.body.appendChild(image)
+    let showImage = createImg.src = `${charactersImageMap}`
+
+    return {
+        pushText,
+        showImage
+    }
+
+});
+
+console.log(elementos)
+
+
+// traer las propiedades
+var arreglo = results[2]
+var characterName = arreglo.name
+var imgResource = arreglo.image
+
+
+src / test.js
+src / tests, files / test.js
+const imgTest = document.getElementById("img-test").src = `${imgResource}`
+const divTest = document.getElementById("data-test").innerHTML = characterName;
+
+// traer las propiedades
+// var arreglo = results[2]
+// var characterName = arreglo.name
+// var imgResource = arreglo.image
+
+
+// comente el return porque daba error en consola
+/*return {
+    charactersNameMap,
+    charactersSpeciesMap,
+    charactersImageMap,
+    charactersStatusMap
+}
+
+});*/
+console.log(elementos)
 
 var first = 10;
 console.log(first);
@@ -213,3 +213,71 @@ const dropdownOptions = document.querySelectorAll('#navContainer, #navElements')
 dropdownTitle.addEventListener('click', toggleMenuDisplay);
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
 document.querySelector('#navContainer, #navElements').addEventListener('change', handleTitleChange)
+
+/*export const Sortfilter = (name, species) => {
+    let sortName = name;
+    if (name == "a-z") {
+        return name.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    } else {
+        return species.sort(function(a, b) {
+            if (a.name >= b.name) {
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+    }
+    console.log(Sortfilter);
+};
+*/
+
+export const SortfilterAz = (data) => {
+    console.log(sortAz);
+    const sortAz = data.sort((a, b) => {
+        return a.name.localCompare(b.name);
+    });
+    return sortAz
+}
+export const SortfilterZa = (data) => {
+    const sortZa = data.sort((a, b) => {
+        return b.name.localCompare(a.name);
+    });
+    return sortZa;
+};
+
+// carrusel automático
+
+let slider = document.querySelector(".slider-elements")
+let sliderSingle = document.querySelectorAll(".carousel-items")
+let counter = 1;
+let width = sliderSingle[0].clientWidth;
+let intervalo = 3000;
+
+window.addEventListener("resize", function() {
+    width = sliderSingle[0].clientWidth;
+})
+
+setInterval(function() {
+    slides();
+}, intervalo);
+console.log(setInterval);
+
+function slides() {
+    slider.style.transform = "traslate(" + (-width * counter) + "px)";
+    slider.style.transition = "transform .7s";
+    counter++;
+
+    if (counter == sliderSingle.length) {
+        setTimeout(function() {
+            slider.style.transform = "traslate(0px)";
+            slider.style.transition = "transform .0s";
+            counter = 1
+        }, 1500)
+    }
+}
