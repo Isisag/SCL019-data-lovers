@@ -19,8 +19,10 @@ export const results = data.results; //array
 //(({ origin }) se extrae el valor del elemento en el array
 const origin = results.map(({ origin }) => origin);
 const gender = results.map(({ gender }) => gender)
+const location = results.map(({ location }) => location)
 console.log(gender);
 console.log(origin);
+console.log(location);
 
 // ESTRUCTURAS SUGERIDAS DE FILTER -- AUN NO SE COMUNICAN CON EL DOM NI HACEN NADA MAS
 
@@ -56,7 +58,15 @@ export function filterSpecies() {
     return "hola"
 }
 
+const numeros = [1, 2, 2, 3, 4, 4, 5];
 
+Array.prototype.unicos = function() {
+    return this.filter((valor, indice) => {
+        return this.indexOf(valor) === indice;
+    });
+}
+
+console.log(numeros.unicos()); // [1, 2, 3, 4, 5]
 // let aliveFilter = results.filter((elements)=> elements.status == "unknown");
 // console.log(aliveFilter);
 
@@ -173,7 +183,3 @@ export function filterSpecies() {
 //   })
 
 // }getDataElements();
-
-
-
-
