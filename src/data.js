@@ -88,7 +88,7 @@ export function filterSpecies() {
 //   console.log(SortfilterAz(data.results));
 //   console.log(SortfilterZa(data.results))
 
-let elementos = results.map.(function(item) {
+/* let elementos = results.map.(function(item) {
 
 
     // resultados planos (es decir adentro de estos no hay otro array)
@@ -117,10 +117,10 @@ let elementos = results.map.(function(item) {
     //     charactersStatus
     // }
 
-})
+}) */
 
 
-getDataElements();
+// getDataElements();
 
 // FUNCION QUE RECORRE LA DATA Y DEVUELVE SUS VALORES SOLO EN CONSOLE
 // function getDataElements(){
@@ -176,61 +176,4 @@ getDataElements();
 
 
 
-// esta función ejecuta la muestra de datos de un personaje de manera estatica
-function showCharacters() {
 
-    const h3 = document.createElement('h3');
-    const textAppend = document.body.appendChild(h3);
-    const characterName = textAppend.innerHTML = `${rickSanchez.name}`
-
-    const imgC = document.createElement("img")
-    const imgAppend = document.body.appendChild(imgC)
-    const characterImage = imgAppend.src = `${rickSanchez.image}`
-
-
-
-}
-
-
-
-let setear = new Set([results])
-    // let setear2 = new Set.keys([results])
-for (let species of setear) console.log(species);
-for (let item of setear.keys()) console.log(item);
-const myArr = Array.from(setear)
-console.log(myArr)
-
-function unico(arr) {
-    return Array.from(new Set(arr))
-}
-// }getDataElements();
-
-
-
-// esta función ejecuta la muestra de datos de un personaje de manera estatica
-function showCharacters() {
-
-    const h3 = document.createElement('h3');
-    const textAppend = document.body.appendChild(h3);
-    const characterName = textAppend.innerHTML = `${rickSanchez.name}`
-
-    const imgC = document.createElement("img")
-    const imgAppend = document.body.appendChild(imgC)
-    const characterImage = imgAppend.src = `${rickSanchez.image}`
-
-
-
-}
-
-
-
-let setear = new Set([results])
-    // let setear2 = new Set.keys([results])
-for (let species of setear) console.log(species);
-for (let item of setear.keys()) console.log(item);
-const myArr = Array.from(setear)
-console.log(myArr)
-
-function unico(arr) {
-    return Array.from(new Set(arr))
-}

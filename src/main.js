@@ -3,31 +3,15 @@ import {
     filterSpecies
 } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
+const d = document;
 
 // import data from './data/rickandmorty/rickandmorty.js';
 
 
-
-// EL CODIGO DE AQUI SE MOVIO A TEST.JS PARA DEJAR MáS LIMPIO ESTE ARCHIVO !!!
-console.log(example, data);
-
-// OPCIONES DEL MENU DE FILTROS => maneja cuando se despliegan //
-
-
-// esta función ejecuta la muestra de datos de un personaje de manera estatica
-// function showCharacters() {
-
-//     const h3 = document.createElement('h3');
-//     const textAppend = document.body.appendChild(h3);
-//     const characterName = textAppend.innerHTML = `${rickSanchez.name}`
-
-//     const imgC = document.createElement("img")
-//     const imgAppend = document.body.appendChild(imgC)
-//     const characterImage = imgAppend.src = `${rickSanchez.image}`
-// }
-
 // funcion para mostrar en pantalla contenedor con img y name desde la data
 // variable "results" contiene toda la data
+window.addEventListener("load", showCharacters(results));
+
 function showCharacters(results) {
     let container = d.getElementById("container")
 
@@ -39,18 +23,20 @@ function showCharacters(results) {
 
 
         let div = d.createElement("div")
+        let divInfo = d.createElement("div")
         let image = d.createElement("img")
         let name = d.createElement("p")
         let status = d.createElement("p")
 
 
-        div.setAttribute("class", "cell")
-            // const imageCard = image.src = `${charactersImage}`
+        div.setAttribute("class", "card")
         image.setAttribute("src", charactersImage)
+        image.setAttribute("class", "card_image")
         status.setAttribute("id", characterStatus)
-
+        name.setAttribute("class", "card_name")
+        status.setAttribute("class", "card_status")
         name.innerHTML = charactersName
-            // const nameCard = name.innerHTML = `${charactersName}`
+        status.innerHTML = characterStatus
 
         let prueba = container.appendChild(div);
         let prueba2 = div.appendChild(image)
@@ -61,8 +47,6 @@ function showCharacters(results) {
 
     })
 }
-showCharacters(results)
-    // filterSpecies();
 
 const locationOption = d.getElementById("location_options1")
 
@@ -80,7 +64,7 @@ function menuFilter() {
 
 
 
-    /*// function menuFilter(){
+    /* // function menuFilter(){
 
     // const speciesOptions1 = d.getElementById("species_options1") //human
     // const speciesOptions2 = d.getElementById("species_options2") // alien
@@ -237,4 +221,4 @@ function menuFilter() {
     //   }getDataElements();
      }
 
-*/
+    */}
