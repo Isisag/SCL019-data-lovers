@@ -44,8 +44,7 @@ function showCharacters(results) {
         let status = d.createElement("p")
 
 
-        div.setAttribute("class", "cell")
-            // const imageCard = image.src = `${charactersImage}`
+        // const imageCard = image.src = `${charactersImage}`
         image.setAttribute("src", charactersImage)
         status.setAttribute("id", characterStatus)
 
@@ -58,7 +57,6 @@ function showCharacters(results) {
         let prueba4 = div.appendChild(status)
 
         return {}
-
     })
 }
 showCharacters(results)
