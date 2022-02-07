@@ -44,7 +44,6 @@ function showCharacters(results) {
         let prueba4 = div.appendChild(status)
 
         return {}
-
     })
 }
 
