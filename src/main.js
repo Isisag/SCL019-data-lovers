@@ -21,6 +21,7 @@ function showCharacters(results) {
         const charactersSpecies = character.species
         const charactersImage = character.image
         const characterStatus = character.status
+        const characterLocation = character.location.name
 
 
         let div = d.createElement("div")
@@ -28,21 +29,32 @@ function showCharacters(results) {
         let image = d.createElement("img")
         let name = d.createElement("p")
         let status = d.createElement("p")
+        let specie = d.createElement("p")
+        let location = d.createElement("p")
 
 
         div.setAttribute("class", "card")
         image.setAttribute("src", charactersImage)
         image.setAttribute("class", "card_image")
-        status.setAttribute("id", characterStatus)
         name.setAttribute("class", "card_name")
+        status.setAttribute("id", characterStatus)
         status.setAttribute("class", "card_status")
+        specie.setAttribute("class", charactersSpecies)
+        specie.setAttribute("class", "card_specie")
+        location.setAttribute("class", characterLocation)
+        location.setAttribute("class", "card_location")
+
         name.innerHTML = charactersName
         status.innerHTML = characterStatus
+        specie.innerHTML = charactersSpecies
+        location.innerHTML = characterLocation
 
         let prueba = container.appendChild(div);
         let prueba2 = div.appendChild(image)
         let prueba3 = div.appendChild(name)
         let prueba4 = div.appendChild(status)
+        let prueba5 = div.appendChild(specie)
+        let prueba6 = div.appendChild(location)
 
     })
 }
@@ -51,7 +63,7 @@ function showCharacters(results) {
 const locationOption = d.getElementById("location_options1")
 
 const speciesFilter = d.getElementById("filter-species")
-speciesFilter.addEventListener("change", function(){
+speciesFilter.addEventListener("change", function() {
     let filterSpecies = filterAlien(results);
     showCharacters(filterSpecies);
 })
@@ -224,4 +236,5 @@ function menuFilter() {
     //   }getDataElements();
      }
 
-    */}
+    */
+}

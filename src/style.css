@@ -314,8 +314,8 @@
     }
 
     .card_image {
-    width: 100%;
-    height: 100%;
+        width: 100%;
+        height: 100%;
     }
 
     .card_name {
@@ -345,9 +345,36 @@
     }
 
     .card_status {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
         width: 100%;
-        color: black;
+        align-items: center;
+        padding-left: 0.5rem;
+        color: var(--primary-color);
+        background: var(--accent-color);
+        font-weight: 700;
+    }
+
+    .card_specie {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        padding-left: 0.5rem;
+        color: var(--primary-color);
+        background: var(--accent-color);
+        font-weight: 700;
+    }
+
+    .card_location {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        padding-left: 0.5rem;
+        color: var(--primary-color);
+        background: var(--accent-color);
+        font-weight: 700;
     }
     /*.card_status_text {}*/
 
@@ -385,11 +412,11 @@
         justify-content: center;
         margin: 1rem;
         cursor: pointer;
-        transition:ease-in .3s transform;
+        transition: ease-in .3s transform;
     }
 
-    .card:hover{
-        transform:scale(1.02,1.02)
+    .card:hover {
+        transform: scale(1.02, 1.02)
     }
 
     .card_image-name {
@@ -403,8 +430,6 @@
         height: 37vh;
         margin: .4rem 0rem 0rem 0rem;
     }
-
-
     /* ESTO ESTA COMENTADO PORQUE QUEDABA RARO EN VERSION CELULAR */
 
     .card_name {
@@ -460,7 +485,7 @@
     }
     /*  FILTERS NAV STYLE */
 
-    .select-container{
+    .select-container {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -485,8 +510,7 @@
         text-transform: uppercase;
     }
 
-
-    .select-container > svg {
+    .select-container>svg {
         align-self: center;
         fill: var(--primary-color);
         stroke: var(--primary-color);
@@ -496,15 +520,12 @@
         margin-left: .4rem;
     }
 
-    .select-container > svg:hover {
+    .select-container>svg:hover {
         fill: white;
         stroke: white;
         color: white;
     }
-
     /* CATEGORY */
-
-    
     /* FILTERS MODAL  */
     /* .modal_section-container{
         width: 1200px;
