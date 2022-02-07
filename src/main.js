@@ -1,7 +1,8 @@
 import {
     results,
     filterAlien,
-    filterHuman
+    filterSpecies,
+    filterLocation
 } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const d = document;
@@ -21,6 +22,7 @@ function showCharacters(results) {
         const charactersSpecies = character.species
         const charactersImage = character.image
         const characterStatus = character.status
+        const characterLocation = character.location.name
 
 
         let div = d.createElement("div")
@@ -45,16 +47,58 @@ function showCharacters(results) {
         let prueba4 = div.appendChild(status)
 
     })
+
 }
 
 
-const locationOption = d.getElementById("location_options1")
 
+function locationOptions(){
+
+  const location = results.map(({ location }) => location.name)
+  const unicos = location.filter((name, indice) => {
+      return location.indexOf(name) === indice
+  })
+  console.log(unicos)
+  
+  let x;
+
+    results.map((option) => {
+        const characterLocation = option.location.name
+        const selectFilter = d.getElementById("filter-location")
+        let options = d.createElement("option")
+
+        x = options.innerHTML = unicos
+        let prueba = selectFilter.appendChild(options);
+    })
+    x;
+    
+}locationOptions()
+
+
+
+// const speciesFilter = d.getElementById("filter-species").options.namedItem("species_options1")
 const speciesFilter = d.getElementById("filter-species")
+const locationFilter = d.getElementById("filter-location")
+
+// function selectFilter(){
+//     let species = speciesFilter.value
+//     let x = filterSpecies(results,species)
+//     showCharacters(x)
+// }
+
 speciesFilter.addEventListener("change", function(){
-    let filterSpecies = filterAlien(results);
-    showCharacters(filterSpecies);
+    let species = speciesFilter.value
+    let filteredSpecies = filterSpecies(results, species);
+    showCharacters(filteredSpecies);
 })
+
+locationFilter.addEventListener("change", function(){
+    let location = locationFilter.value
+    console.log(location)
+    let filteredSpecies = filterLocation(results, location);
+    showCharacters(filteredSpecies);
+})
+
 
 function menuFilter() {
 
