@@ -1,6 +1,7 @@
 import {
     results,
-    filterSpecies
+    filterAlien,
+    filterHuman
 } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const d = document;
@@ -14,7 +15,7 @@ window.addEventListener("load", showCharacters(results));
 
 function showCharacters(results) {
     let container = d.getElementById("container")
-
+    container.innerHTML = "";
     results.map(function(character) {
         const charactersName = character.name
         const charactersSpecies = character.species
@@ -43,14 +44,17 @@ function showCharacters(results) {
         let prueba3 = div.appendChild(name)
         let prueba4 = div.appendChild(status)
 
-        return {}
     })
 }
+
 
 const locationOption = d.getElementById("location_options1")
 
 const speciesFilter = d.getElementById("filter-species")
-speciesFilter.addEventListener("change", speciesFilter)
+speciesFilter.addEventListener("change", function(){
+    let filterSpecies = filterAlien(results);
+    showCharacters(filterSpecies);
+})
 
 function menuFilter() {
 

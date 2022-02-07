@@ -34,7 +34,7 @@ console.log(location);
 
 // }
 
-export function filterAlien() {
+export function filterAlien(results) {
     let aliensFilter = results.filter((elements) => elements.species == "Alien");
     return aliensFilter;
 }
