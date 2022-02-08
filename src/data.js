@@ -34,31 +34,23 @@ console.log(location);
 
 // }
 
+export function filterSpecies(results, species){
+    let filtered = results.filter((character) => (character.species == species))
+    return filtered;
+}
+
+export function filterLocation(results, location){
+    let filtered = results.filter((character) => (character.location.name == location))
+    console.log(filtered)
+    return filtered;
+}
+
 export function filterAlien(results) {
     let aliensFilter = results.filter((elements) => elements.species == "Alien");
     return aliensFilter;
 }
 
-export function filterHuman() {
-    let humanFilter = results.filter((elements) => elements.species == "Human");
-    return humanFilter
-}
-
-export function filterHumanoid() {
-    let humanoidFilter = results.filter((elements) => elements.species == "Humanoid");
-    return humanoidFilter
-}
-
-export function filterRobot() {
-    let robotFilter = results.filter((elements) => elements.species == "Robot");
-    return robotFilter
-}
-
-export function filterSpecies() {
-    return "hola"
-}
-
-const numeros = [1, 2, 2, 3, 4, 4, 5];
+const numeros = [1, 2, 2, 3, 4, 4, 5,"uno","dos","uno"];
 
 Array.prototype.unicos = function() {
     return this.filter((valor, indice) => {

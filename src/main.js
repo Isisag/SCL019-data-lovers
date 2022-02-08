@@ -1,7 +1,8 @@
 import {
     results,
     filterAlien,
-    filterHuman
+    filterSpecies,
+    filterLocation
 } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const d = document;
@@ -24,25 +25,19 @@ function showCharacters(results) {
         const characterStatus = character.status
         const characterLocation = character.location.name
 
-
         let div = d.createElement("div")
-        let divInfo = d.createElement("div")
         let image = d.createElement("img")
         let name = d.createElement("p")
         let status = d.createElement("p")
         let specie = d.createElement("p")
         let location = d.createElement("p")
 
-
         div.setAttribute("class", "card")
         image.setAttribute("src", charactersImage)
         image.setAttribute("class", "card_image")
         name.setAttribute("class", "card_name")
-        status.setAttribute("id", characterStatus)
         status.setAttribute("class", "card_status")
-        specie.setAttribute("class", charactersSpecies)
         specie.setAttribute("class", "card_specie")
-        location.setAttribute("class", characterLocation)
         location.setAttribute("class", "card_location")
 
         name.innerHTML = charactersName
@@ -50,14 +45,15 @@ function showCharacters(results) {
         specie.innerHTML = charactersSpecies
         location.innerHTML = characterLocation
 
-        let prueba = container.appendChild(div);
-        let prueba2 = div.appendChild(image)
-        let prueba3 = div.appendChild(name)
-        let prueba4 = div.appendChild(status)
-        let prueba5 = div.appendChild(specie)
-        let prueba6 = div.appendChild(location)
+        let containerAppend = container.appendChild(div);
+        let imageAppend = div.appendChild(image)
+        let nameAppend = div.appendChild(name)
+        let statusAppend = div.appendChild(status)
+        let specieAppend = div.appendChild(specie)
+        let locationAppend = div.appendChild(location)
 
     })
+<<<<<<< HEAD
 }
 
 
@@ -196,58 +192,58 @@ function menuFilter() {
 
 
     // }menuFilter()
+=======
+>>>>>>> e3c3f5772c7b3eecb450f408c02fda52f38ea7ac
+
+}
 
 
 
-    // FUNCION QUE RECORRE LA DATA Y DEVUELVE SUS VALORES SOLO EN CONSOLE
-    // function getDataElements(){
+function locationOptions(){
 
-    //     let elementos = results.map(function(item) {
+  const location = results.map(({ location }) => location.name)
+  const unicos = location.filter((name, indice) => {
+      return location.indexOf(name) === indice
+  })
+  console.log(unicos)
+  
 
-    //       // resultados planos (es decir adentro de estos no hay otro array)
-    //       const charactersName = item.name
-    //       const charactersSpecies = item.species
-    //       const charactersImage = item.image
-    //       const charactersStatus = item.status
+    results.map((option) => {
+        const characterLocation = option.location.name
+        const selectFilter = d.getElementById("filter-location")
+        let options = d.createElement("option")
 
-    //       // resultados dentro de arrays (hay que llamar a la propiedad externa primero antes de acceder a ellos)
-    //       const charactersLocation = item.location
-    //       const charactersLocationName = charactersLocation.name
-    //       const charactersLocationUrl = charactersLocation.url
+        options.innerHTML = characterLocation
+        let prueba = selectFilter.appendChild(options);
+    })
+    
+    
+}locationOptions()
 
-    //       const charactersOrigin = item.origin
-    //       const charactersOriginName = charactersOrigin.name
-    //       const charactersOriginUrl = charactersOrigin.url
 
-    //       const charactersEpisodes = item.episode
 
-    //         //
+const speciesFilter = d.getElementById("filter-species")
+const locationFilter = d.getElementById("filter-location")
 
-    //       const h3 = document.createElement('h3');
-    //       const textAppend = document.body.appendChild(h3);
-    //       const characterName = textAppend.innerHTML = `${charactersName}`
 
-    //       const imgC = document.createElement("img")
-    //       const imgAppend = document.body.appendChild(imgC)
-    //       const characterImage = imgAppend.src = `${charactersImage}`
+speciesFilter.addEventListener("change", function(){
+    let species = speciesFilter.value
+    let filteredSpecies = filterSpecies(results, species);
+    showCharacters(filteredSpecies);
+})
 
-    //       return {
-    //         characterName, characterImage
-    //       }
+locationFilter.addEventListener("change", function(){
+    let location = locationFilter.value
+    console.log(location)
+    let filteredSpecies = filterLocation(results, location);
+    showCharacters(filteredSpecies);
+})
 
-    //       // console.log(charactersName)
 
-    //       // return {
-    //       //     charactersName,
-    //       //     charactersSpecies,
-    //       //     charactersImage,
-    //       //     charactersStatus
-    //       // }
+function menuFilter() {
 
-    //     })
+    const locationFilter = d.getElementById("filter-location")
+    const statusFilter = d.getElementById("filter-status")
+    const alphabetFilter = d.getElementById("filter-alphabet")
 
-    //   }getDataElements();
-     }
-
-    */
 }
