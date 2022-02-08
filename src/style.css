@@ -357,11 +357,10 @@
         background: var(--accent-color);
         font-weight: 700;
         border-radius: 0px 0px 8px 8px;
-
     }
     /*.card_status_text {}*/
-   
-   .card_status_circle {
+
+    .card_status_circle {
         width: 7px;
         height: 7px;
         margin: 0px;
