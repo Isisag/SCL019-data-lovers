@@ -13,6 +13,7 @@ const d = document;
 // variable "results" contiene toda la data
 window.addEventListener("load", showCharacters(results));
 
+//funcion para crear card con propiedades de la data
 function showCharacters(results) {
     let container = d.getElementById("container")
     container.innerHTML = "";
@@ -67,6 +68,18 @@ speciesFilter.addEventListener("change", function() {
     let filterSpecies = filterAlien(results);
     showCharacters(filterSpecies);
 })
+
+//filtro por genero
+
+const locationFilter = d.getElementById('#filter-location'); // obtener el selector por genero
+
+locationFilter.addEventListener('change', (event) => { //escucho evento donde cambia la opcion escogida
+
+    const dataOrdenada = genderFilter(infoAthletes, event.target.value) // Utilizaste el metodo que exportaste y le entregaste como parametro la data de los atletas y el valor del selector
+    dataAthletes(dataOrdenada);
+    infoAthletes = dataOrdenada
+});
+
 
 function menuFilter() {
 
