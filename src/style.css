@@ -432,7 +432,7 @@
         height: 37vh;
         margin: .4rem 0rem 0rem 0rem;
         border-radius: 50%;
-        border: #fc7100;
+        border: #fc7100 1px solid;
         filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
     }
     /* ESTO ESTA COMENTADO PORQUE QUEDABA RARO EN VERSION CELULAR */

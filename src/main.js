@@ -51,6 +51,7 @@ function showCharacters(results) {
 function locationOptions() {
   const location = results.map(({ location }) => location.name);
   const unicos = new Set(location);
+  console.log(unicos)
 
   unicos.forEach((option) => {
     const selectFilter = d.getElementById("filter-location");
