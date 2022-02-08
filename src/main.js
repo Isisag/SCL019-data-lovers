@@ -110,14 +110,14 @@ speciesFilter.addEventListener("change", function() {
 
 locationFilter.addEventListener("change", function() {
     let location = locationFilter.value
-    let filterLocation = filterLocation(results, location);
-    showCharacters(filterLocation);
+    let filteredLocation = filterLocation(results, location);
+    showCharacters(filteredLocation);
 })
 statusFilter.addEventListener("change", function() {
     let status = statusFilter.value
     console.log(status)
-    let filterStatus = filterStatus(results, status);
-    showCharacters(filterStatus);
+    let filteredStatus = filterStatus(results, status);
+    showCharacters(filteredStatus);
 })
 
 function menuFilter() {

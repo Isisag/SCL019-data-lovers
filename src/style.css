@@ -376,11 +376,10 @@
         background: var(--accent-color);
         font-weight: 700;
         border-radius: 0px 0px 8px 8px;
-
     }
     /*.card_status_text {}*/
-   
-   .card_status_circle {
+
+    .card_status_circle {
         width: 7px;
         height: 7px;
         margin: 0px;
@@ -432,7 +431,7 @@
         height: 37vh;
         margin: .4rem 0rem 0rem 0rem;
         border-radius: 50%;
-        border: #fc7100;
+        border: var(--primary-color) 1px solid;
         filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
     }
     /* ESTO ESTA COMENTADO PORQUE QUEDABA RARO EN VERSION CELULAR */
