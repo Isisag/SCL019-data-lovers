@@ -350,7 +350,7 @@
         width: 100%;
         align-items: center;
         padding-left: 0.5rem;
-        color: var(--primary-color);
+        color: var(--secondary-color);
         background: var(--accent-color);
         font-weight: 700;
     }
@@ -361,7 +361,7 @@
         align-items: center;
         display: flex;
         padding-left: 0.5rem;
-        color: var(--primary-color);
+        color: var(--secondary-color);
         background: var(--accent-color);
         font-weight: 700;
     }
@@ -372,7 +372,7 @@
         align-items: center;
         display: flex;
         padding-left: 0.5rem;
-        color: var(--primary-color);
+        color: var(--secondary-color);
         background: var(--accent-color);
         font-weight: 700;
         border-radius: 0px 0px 8px 8px;
@@ -407,7 +407,7 @@
     .card {
         display: flex;
         flex-wrap: wrap;
-        background-color: white;
+        background-color: var(--primary-color);
         max-width: 38vh;
         height: 54vh;
         border-radius: 10px;
@@ -431,6 +431,10 @@
         width: 37vh;
         height: 37vh;
         margin: .4rem 0rem 0rem 0rem;
+        border-radius: 50%;
+        border: #fc7100;
+        filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+        ;
     }
     /* ESTO ESTA COMENTADO PORQUE QUEDABA RARO EN VERSION CELULAR */
 
