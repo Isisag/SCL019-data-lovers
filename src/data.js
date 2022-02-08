@@ -34,23 +34,24 @@ console.log(location);
 
 // }
 
-export function filterSpecies(results, species){
+export function filterSpecies(results, species) {
     let filtered = results.filter((character) => (character.species == species))
     return filtered;
 }
 
-export function filterLocation(results, location){
+export function filterLocation(results, location) {
     let filtered = results.filter((character) => (character.location.name == location))
     console.log(filtered)
     return filtered;
 }
 
-export function filterAlien(results) {
-    let aliensFilter = results.filter((elements) => elements.species == "Alien");
-    return aliensFilter;
+export function filterStatus(results, status) {
+    let filtered = results.filter((character) => (character.status == status))
+    console.log(filtered)
+    return filtered;
 }
 
-const numeros = [1, 2, 2, 3, 4, 4, 5,"uno","dos","uno"];
+const numeros = [1, 2, 2, 3, 4, 4, 5, "uno", "dos", "uno"];
 
 Array.prototype.unicos = function() {
     return this.filter((valor, indice) => {
