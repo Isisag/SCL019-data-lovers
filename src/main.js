@@ -2,15 +2,12 @@ import {
     results,
     filterSpecies,
     filterLocation,
-    filterStatus
+    filterStatus,
+    Sortfilter 
 } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const d = document;
 
-// import data from './data/rickandmorty/rickandmorty.js';
-
-
-// funcion para mostrar en pantalla contenedor con img y name desde la data
 // variable "results" contiene toda la data
 window.addEventListener("load", showCharacters(results));
 
@@ -100,6 +97,7 @@ function selectOptions() {
 const speciesFilter = d.getElementById("filter-species")
 const locationFilter = d.getElementById("filter-location")
 const statusFilter = d.getElementById("filter-status")
+const alphabetFilter = d.getElementById("filter-alphabet")
 
 speciesFilter.addEventListener("change", function() {
     let species = speciesFilter.value
@@ -119,20 +117,29 @@ statusFilter.addEventListener("change", function() {
     showCharacters(filteredStatus);
 })
 
+// alphabetFilter.addEventListener("change", function(){
+//     let alphabet = alphabetFilter.value;
+
+//     let alphabetFiltered = sortDataByLetA(x)
+//     showCharacters(alphabetFiltered)
+// } )
+
+alphabetFilter.addEventListener("change", function(){
+    let alphabet = alphabetFilter.value
+    let filteredAlphabet = Sortfilter(results, alphabet)
+    showCharacters(filteredAlphabet)
+});
+
+
+
 function menuFilter() {
 
    const iconBars = d.getElementById("icon-bars");
    const navContainer = d.getElementById("navContainer")
-//    const iconBars1 = d.getElementById("icon-bars1");
-//    const navContainer1 = d.getElementById("navContainer1")
 
    iconBars.addEventListener("click", ()=> {
             navContainer.classList.toggle("active");
             
    })
-   
-//    iconBars1.addEventListener("click", ()=> {
-//             navContainer1.classList.toggle("active");
-//    })
    
 }menuFilter()
