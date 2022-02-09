@@ -41,7 +41,7 @@ function showCharacters(results) {
         location.setAttribute("class", "card_location")
 
         name.innerHTML = charactersName
-        status.innerHTML = characterStatus
+        status.innerHTML = ` Status: ${characterStatus} <div class="card_status_circle" ><div/>`
         specie.innerHTML = charactersSpecies
         location.innerHTML = characterLocation
 

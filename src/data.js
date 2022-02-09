@@ -65,31 +65,31 @@ console.log(numeros.unicos()); // [1, 2, 3, 4, 5]
 
 
 
-// export const SortfilterAz = (data) => {
-//   const sortAz = data.sort((a,b)=> {
-//     const name1 = a.name.toLowerCase()
-//     const name2 = b.name.toLowerCase()
-//     if( name1 > name2 ) return -1;
-//     else return 1;
-//   //  return a.title.localCompare(b.title);
-//   });
-//   console.log("ESTE ES AZ")
-//   return sortAz;
-//   }
-//   export const SortfilterZa = (data) => {
-//     const sortZa = data.sort((a,b)=> {
-//       const name1 = a.name.toLowerCase()
-//       const name2 = b.name.toLowerCase()
-//       if( name1 < name2 ) return 1;
-//       else return -1;
-//     //  return b.title.localCompare(a.title);
-//     });
+export const SortfilterAz = (data) => {
+  const sortAz = data.sort((a,b)=> {
+    const name1 = a.name.toLowerCase()
+    const name2 = b.name.toLowerCase()
+    if( name1 > name2 ) return -1;
+    else return 1;
+  //  return a.title.localCompare(b.title);
+  });
+  console.log("ESTE ES AZ")
+  return sortAz;
+  }
+  export const SortfilterZa = (data) => {
+    const sortZa = data.sort((a,b)=> {
+      const name1 = a.name.toLowerCase()
+      const name2 = b.name.toLowerCase()
+      if( name1 < name2 ) return 1;
+      else return -1;
+    //  return b.title.localCompare(a.title);
+    });
 
-//     return sortZa;
-//   }
+    return sortZa;
+  }
 
-//   console.log(SortfilterAz(data.results));
-//   console.log(SortfilterZa(data.results))
+  console.log(SortfilterAz(data.results));
+  console.log(SortfilterZa(data.results))
 
 /* let elementos = results.map.(function(item) {
 
