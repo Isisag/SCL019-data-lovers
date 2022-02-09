@@ -1,79 +1,60 @@
     /* ===== MEDIA QUERYS ===== */
-
-
     /*  MOBILE DEVICES */
-    
-@media (min-width: 310px) and (max-width: 400px) {
 
-     /* HOME SECTION  */
-
-     .icon-bars-container{
-        margin: 0px .2rem;
-        display: flex;
+    @media (min-width: 310px) and (max-width: 400px) {
+        /* HOME SECTION  */
+        .icon-bars-container {
+            margin: 0px .2rem;
+            display: flex;
+        }
+        .nav_bar {
+            display: block;
+            width: max-content;
+            justify-content: center;
+            /* height: min-content; */
+        }
+        #navContainer {
+            display: block;
+        }
+        .home_section_title-container {
+            padding: 0;
+            width: 100%;
+        }
+        .home_section_title {
+            font-size: 20px;
+            margin: 0;
+            width: 100%;
+        }
+        .search_bar_container,
+        .icon-search-container {
+            width: 100%;
+        }
+        .nav_container,
+        .nav_elements,
+        .nav_titles {
+            display: none;
+        }
+        .home_section_title-container>img {
+            width: 20vh;
+        }
+        /* CARDS  */
+        .card_name {
+            margin: auto;
+        }
+        /*  FILTERS NAV */
+        .select-container {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .filters_nav {
+            max-width: 3vh;
+        }
+        .select-container>svg {
+            width: 1rem;
+            height: 1rem;
+        }
     }
-    
-    .nav_bar {
-        display: block;
-        width: max-content;
-        justify-content: center;
-        /* height: min-content; */
-    }
-
-    #navContainer{
-        display:block;
-    }
-
-    .home_section_title-container{
-        padding: 0;
-        width: 100%;
-    }
-
-    .home_section_title {
-        font-size: 20px;
-        margin: 0;
-        width: 100%;
-    }
-
-    .search_bar_container, .icon-search-container {
-        width: 100%;
-    }
-
-    .nav_container, .nav_elements,.nav_titles {
-        display: none;
-    }
-
-    .home_section_title-container > img{
-        width: 20vh;
-    }
-
-
-    /* CARDS  */
-
-    .card_name{
-        margin: auto;
-    }
-
-    /*  FILTERS NAV */
-
-    .select-container{
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .filters_nav{
-        max-width: 3vh;
-    }
-
-
-    .select-container > svg{
-        width: 1rem;
-        height: 1rem;
-    }
-
-
-} 
-
-/* @media only screen and (min-width: 801px){
+    /* @media only screen and (min-width: 801px){
 
     body{
         color: seagreen;
@@ -82,14 +63,4 @@
 
 } */
 
-@media only screen and (min-width: 900px){
-
-    
-}
-
-
-
-    
-
-
-   
+    @media only screen and (min-width: 900px) {}
