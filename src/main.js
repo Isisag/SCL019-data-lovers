@@ -25,6 +25,7 @@ function showCharacters(results) {
         let div = d.createElement("div")
         let image = d.createElement("img")
         let name = d.createElement("p")
+        let statusDot = d.createElement("input")
         let status = d.createElement("p")
         let specie = d.createElement("p")
         let location = d.createElement("p")
