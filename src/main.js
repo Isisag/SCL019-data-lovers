@@ -59,7 +59,7 @@ function showCharacters(results) {
 
 
 
-function locationOptions() {
+function selectOptions() {
 
     const location = results.map(({ location }) => location.name)
     const unicos = new Set(location);
@@ -94,8 +94,7 @@ function locationOptions() {
         selectFilter.appendChild(options);
     })
 
-}
-locationOptions()
+}selectOptions()
 
 
 
@@ -123,8 +122,18 @@ statusFilter.addEventListener("change", function() {
 
 function menuFilter() {
 
-    const locationFilter = d.getElementById("filter-location")
-    const statusFilter = d.getElementById("filter-status")
-    const alphabetFilter = d.getElementById("filter-alphabet")
+   const iconBars = d.getElementById("icon-bars");
+   const navContainer = d.getElementById("navContainer")
+//    const iconBars1 = d.getElementById("icon-bars1");
+//    const navContainer1 = d.getElementById("navContainer1")
 
-}
+   iconBars.addEventListener("click", ()=> {
+            navContainer.classList.toggle("active");
+            
+   })
+   
+//    iconBars1.addEventListener("click", ()=> {
+//             navContainer1.classList.toggle("active");
+//    })
+   
+}menuFilter()
