@@ -149,7 +149,7 @@
         width: 200px;
     }
 
-    .icon-search-container>svg {
+    .icon-search-container > svg {
         fill: var(--primary-color);
         height: 20px;
         width: 20px;
