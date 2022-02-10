@@ -47,9 +47,9 @@ export const Sortfilter = (results, alphabet) => {
     sortered = results.sort((a,b)=> {
       const name1 = a.name.toLowerCase()
       const name2 = b.name.toLowerCase()
-      if( name1 > name2 ) return -1;
+      if( name1 < name2 ) return -1;
       else return 1;
-    });
+    }); 
   }
   else{
     sortered = results.sort((a,b)=> {
@@ -61,26 +61,4 @@ export const Sortfilter = (results, alphabet) => {
   }
   return sortered;
 }
-
-// export const SortfilterAz = (data) => {
-//   const sortAz = data.sort((a,b)=> {
-//     const name1 = a.name.toLowerCase()
-//     const name2 = b.name.toLowerCase()
-//     if( name1 > name2 ) return -1;
-//     else return 1;
-//   });
-//   console.log(sortAz)
-//   return sortAz;
-//   }
-
-//   export const SortfilterZa = (data) => {
-//     const sortZa = data.sort((a,b)=> {
-//       const name1 = a.name.toLowerCase()
-//       const name2 = b.name.toLowerCase()
-//       if( name1 < name2 ) return 1;
-//       else return -1;
-//     });
-//     console.log(sortZa)
-//     return sortZa;
-//   }
 

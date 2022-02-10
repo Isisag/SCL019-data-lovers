@@ -118,20 +118,11 @@ statusFilter.addEventListener("change", function() {
     showCharacters(filteredStatus);
 })
 
-// alphabetFilter.addEventListener("change", function(){
-//     let alphabet = alphabetFilter.value;
-
-//     let alphabetFiltered = sortDataByLetA(x)
-//     showCharacters(alphabetFiltered)
-// } )
-
 alphabetFilter.addEventListener("change", function(){
     let alphabet = alphabetFilter.value
     let filteredAlphabet = Sortfilter(results, alphabet)
     showCharacters(filteredAlphabet)
 });
-
-
 
 function menuFilter() {
 
@@ -139,6 +130,7 @@ function menuFilter() {
    const navContainer = d.getElementById("navContainer")
 
    iconBars.addEventListener("click", ()=> {
+       console.log("lo q sea")
             navContainer.classList.toggle("active");
             
    })
