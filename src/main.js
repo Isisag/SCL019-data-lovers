@@ -125,14 +125,6 @@ alphabetFilter.addEventListener("change", function() {
     showCharacters(filteredAlphabet)
 });
 
-alphabetFilter.addEventListener("change", function() {
-    let alphabet = alphabetFilter.value
-    let filteredAlphabet = Sortfilter(results, alphabet)
-    showCharacters(filteredAlphabet)
-});
-
-
-
 function menuFilter() {
 
     const iconBars = d.getElementById("icon-bars");
