@@ -1,7 +1,5 @@
     /* ===== MEDIA QUERYS ===== */
     /*  MOBILE DEVICES */
-<<<<<<< HEAD
-=======
     
 @media (min-width: 310px) and (max-width: 400px) {
 
@@ -26,7 +24,7 @@
         top: 0;
         padding: 1rem;
         z-index: 20;
-        height: 50vh;
+        height: 20vh;
     }
 
     .icon-bars{
@@ -40,17 +38,10 @@
         padding: 1rem;
     }
 
-    .active {
-        display: none !important;
-    }
-
     .home_section_title-container{
         padding: 0;
-        width: 100%;
-    }
->>>>>>> 8eea3e0396222628d9ecbe235d3c152537541716
-
-    @media (min-width: 310px) and (max-width: 400px) {
+        width: 100%;}
+    
         /* HOME SECTION  */
         .icon-bars-container {
             margin: 0px .2rem;
@@ -58,13 +49,10 @@
         }
         .nav_bar {
             display: block;
-            width: max-content;
+            width: min-content;
             justify-content: center;
-            /* height: min-content; */
         }
-        #navContainer {
-            display: block;
-        }
+
         .home_section_title-container {
             padding: 0;
             width: 100%;
@@ -74,16 +62,17 @@
             margin: 0;
             width: 100%;
         }
+
+        .active {
+            display: none !important;
+        }
+
         .search_bar_container,
         .icon-search-container {
             width: 100%;
         }
-        .nav_container,
-        .nav_elements,
-        .nav_titles {
-            display: none;
-        }
-        .home_section_title-container>img {
+       
+        .home_section_title-container > img {
             width: 20vh;
         }
         /* CARDS  */
@@ -95,21 +84,6 @@
             flex-wrap: wrap;
             justify-content: space-around;
         }
-        .filters_nav {
-            max-width: 3vh;
-        }
-        .select-container>svg {
-            width: 1rem;
-            height: 1rem;
-        }
-    }
-<<<<<<< HEAD
-    /* @media only screen and (min-width: 801px){
-=======
-
-    .search_bar_container, .icon-search-container {
-        width: 100%;
-    }
 
     .home_section_title{
         font-size: 2vh;
@@ -159,7 +133,6 @@
 } 
 
 /* @media only screen and (min-width: 801px){
->>>>>>> 8eea3e0396222628d9ecbe235d3c152537541716
 
     body{
         color: seagreen;
@@ -168,9 +141,6 @@
 
 } */
 
-<<<<<<< HEAD
-    @media only screen and (min-width: 900px) {}
-=======
 @media only screen and (min-width: 900px){
 
     .icon-bars{
@@ -185,4 +155,3 @@
 
 
    
->>>>>>> 8eea3e0396222628d9ecbe235d3c152537541716
