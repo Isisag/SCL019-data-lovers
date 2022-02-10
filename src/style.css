@@ -155,7 +155,6 @@
         width: 20px;
         z-index: 3;
     }
-
     /*== HOME SECTION ==*/
 
     .home_section_title-container {
@@ -269,15 +268,12 @@
         width: auto;
     }
 
-    .social_media_icons > svg {
+    .social_media_icons>svg {
         fill: var(--primary-color);
         width: 2rem;
         height: 2rem;
         margin: auto .5rem;
     }
-
-
-
     /* ================== FILTERS HTML ====================== */
 
     .container {
@@ -325,47 +321,38 @@
         font-size: .8em;
     }
 
-    .card_status {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-        padding-left: 0.5rem;
-        color: var(--secondary-color);
-        background: var(--accent-color);
-        font-weight: 700;
-    }
-
-    .card_specie {
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-        padding-left: 0.5rem;
-        color: var(--secondary-color);
-        background: var(--accent-color);
-        font-weight: 700;
-    }
-
+    .card_status,
+    .card_specie,
     .card_location {
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
         display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
         padding-left: 0.5rem;
         color: var(--secondary-color);
         background: var(--accent-color);
-        font-weight: 700;
-        border-radius: 0px 0px 8px 8px;
     }
     /*.card_status_text {}*/
 
     .card_status_circle {
-        width: 7px;
-        height: 7px;
-        margin: 0px;
+        width: 10px;
+        height: 10px;
+        margin: auto 10px;
         background-color: var(--primary-color);
         border-radius: 50%;
+    }
+
+    .status_innerHTML,
+    .specie_innerHTML {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .location_innerHTML {
+        flex-wrap: nowrap;
+        text-align: center;
     }
 
     .card_moreinfo {
@@ -415,7 +402,6 @@
         border: var(--primary-color) 1px solid;
         filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
     }
-    /* ESTO ESTA COMENTADO PORQUE QUEDABA RARO EN VERSION CELULAR */
 
     .card_name {
         position: absolute;
@@ -503,15 +489,7 @@
         stroke: white;
         color: white;
     }
-    /* CATEGORY */
-    /* FILTERS MODAL  */
-    /* .modal_section-container{
-        width: 1200px;
-        height: 300vh;
-        z-index: 15;
-        background-color: var(--green-transparence);
-    } */
-
+    
     .modal {
         background-color: var(--accent-color);
         width: 20vh;

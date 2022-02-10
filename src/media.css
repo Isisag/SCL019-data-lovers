@@ -1,7 +1,113 @@
-/* ===== MEDIA QUERYS ===== */
-/*  MOBILE DEVICES */
-
+    /* ===== MEDIA QUERYS ===== */
+    /*  MOBILE DEVICES */
+    
 @media (min-width: 310px) and (max-width: 400px) {
+
+     /* HOME SECTION  */
+
+     .icon-bars-container{
+        margin: 0px .2rem;
+        display: flex;
+    }
+    
+    .nav_bar {
+        display: block;
+        width: min-content;
+        justify-content: center;
+    }
+
+    .nav_container {
+        flex-wrap: wrap;
+        background-color:  rgba(26, 32, 44, 0.9);
+        width: 60%;
+        position: absolute;
+        top: 0;
+        padding: 1rem;
+        z-index: 20;
+        height: 20vh;
+    }
+
+    .icon-bars{
+        display: block;
+        z-index: 21;
+    }
+
+    .nav_titles{
+        width: 100%;
+        margin: auto 1rem;
+        padding: 1rem;
+    }
+
+    .home_section_title-container{
+        padding: 0;
+        width: 100%;}
+    
+        /* HOME SECTION  */
+        .icon-bars-container {
+            margin: 0px .2rem;
+            display: flex;
+        }
+        .nav_bar {
+            display: block;
+            width: min-content;
+            justify-content: center;
+        }
+
+        .home_section_title-container {
+            padding: 0;
+            width: 100%;
+        }
+        .home_section_title {
+            font-size: 20px;
+            margin: 0;
+            width: 100%;
+        }
+
+        .active {
+            display: none !important;
+        }
+
+        .search_bar_container,
+        .icon-search-container {
+            width: 100%;
+        }
+       
+        .home_section_title-container > img {
+            width: 20vh;
+        }
+        /* CARDS  */
+        .card_name {
+            margin: auto;
+        }
+        /*  FILTERS NAV */
+        .select-container {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+    .home_section_title{
+        font-size: 2vh;
+    }
+
+    .footer_text {
+        font-size: .5rem;
+    }
+
+    .footer_img {
+        max-height: 5vh;
+    }
+
+    footer{
+        padding: 1rem;
+    }
+    
+    .social_media_icons > svg {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+    }
+
+    /* CARDS  */
+
   /* HOME SECTION  */
 
   .icon-bars-container {
@@ -129,17 +235,9 @@
   }
 }
 
-/* @media only screen and (min-width: 801px){
-
-    body{
-        color: seagreen;
-    }
-
-
-} */
-
 @media only screen and (min-width: 900px) {
   .icon-bars {
     visibility: hidden;
   }
 }
+
