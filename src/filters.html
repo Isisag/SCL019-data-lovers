@@ -28,7 +28,6 @@
             </div>
             <div class="home_section_title-container">
                 <h1 class="home_section_title"> Rick and Morty </h1>
-                <!-- <img src="assets/Images//title.png" alt="" class="img_title"> -->
             </div>
             <div class="search_bar_container">
                 <input type="search" name="" id="searchBar" class="search_bar" placeholder="Search Something...">
@@ -38,18 +37,11 @@
               d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z" />
           </svg>
         </button>
-
             </div>
             <ul class="nav_container active" id="navContainer">
                 <li class="nav_elements" id="ElementsContainer">
-                <a href="index.html" class="nav_titles" id="navHome" title="HOME"> Home </a>
+                    <a href="index.html" class="nav_titles" id="navHome" title="HOME"> Home </a>
                 </li>
-                <!-- <li class="nav_elements" id="navElements">
-                    <a href="filters.html" class="nav_titles" id="navChapters" title="Capítulos"> Capítulos</a>
-                </li>
-                <li class="nav_elements">
-                    <a href="filters.html" class="nav_titles" id="navSeasons" title="Temporadas"> Temporadas </a>
-                </li> -->
                 <li class="nav_elements">
                     <a href="filters.html" class="nav_titles" id="navCharacters" title="Personajes"> Personajes </a>
                 </li>
@@ -64,39 +56,30 @@
           d="M12 3c4.97 0 9 3.58 9 8s-6 10-9 10s-9-5.58-9-10s4.03-8 9-8m-1.69 7.93C9.29 9.29 7.47 8.58 6.25 9.34c-1.22.76-1.38 2.71-.36 4.35c1.03 1.64 2.85 2.35 4.07 1.59c1.22-.78 1.37-2.71.35-4.35m3.38 0c-1.02 1.64-.87 3.57.35 4.35c1.22.76 3.04.05 4.07-1.59c1.02-1.64.86-3.59-.36-4.35c-1.22-.76-3.04-.05-4.06 1.59M12 17.75c-2 0-2.5-.75-2.5-.75c0 .03.5 2 2.5 2s2.5-2 2.5-2s-.5.75-2.5.75z">
       </svg>
             <select class="filters_nav" name="species" id="filter-species">
-        <li class="filters_nav-labels species_label" id="species_label">
           <option value="select-species" class="species_options">Select Species</option>
-
-        </li>
       </select>
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24">
         <path
           d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10s10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2l1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z" />
       </svg>
             <select name="location" id="filter-location" class="filters_nav">
-        <li class="filters_nav-labels location_label" id="location_label">
           <option value="select-location" class="location_options">Select Location</option>
-
-        </li>
       </select>
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">
         <path
           d="M124.1 16.1c-51.6 1.9-93.7 43.6-96 95.3A99.4 99.4 0 0 0 72 198.9V216a16 16 0 0 0 16 16h8a4 4 0 0 0 4-4v-23.7a8.2 8.2 0 0 1 7.5-8.3a8 8 0 0 1 8.5 8v24a4 4 0 0 0 4 4h16a4 4 0 0 0 4-4v-23.7a8.2 8.2 0 0 1 7.5-8.3a8 8 0 0 1 8.5 8v24a4 4 0 0 0 4 4h8a16 16 0 0 0 16-16v-17.1a100 100 0 0 0-59.9-182.8zM92 152a20 20 0 1 1 20-20a20.1 20.1 0 0 1-20 20zm72 0a20 20 0 1 1 20-20a20.1 20.1 0 0 1-20 20z" />
       </svg>
             <select name="status" id="filter-status" class="filters_nav">
-        <li class="filters_nav-labels status_label filters_nav" id="status_label">
           <option value="select-status" class="status_options">Select Status</option>
-        </li>
+
       </select>
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
         <path
           d="M10.895 16.553l-4-8c-.339-.678-1.45-.678-1.789 0l-4 8a1 1 0 0 0 1.789.895L3.618 16h4.764l.724 1.447a.998.998 0 0 0 1.341.448c.494-.248.695-.848.448-1.342zM4.618 14L6 11.236L7.382 14H4.618zM22 18h-6a1.001 1.001 0 0 1-.8-1.6L20 10h-4a1 1 0 0 1 0-2h6a1.001 1.001 0 0 1 .8 1.6L18 16h4a1 1 0 0 1 0 2zm-8-4h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2z" />
       </svg>
             <select name="alphabet" id="filter-alphabet" class="filters_nav">
-        <li class="filters_nav-labels alphabet_label " id="alphabet_label">
           <option class="alphabet_options" id="alphabet_options1"> A - Z </option>
           <option class="alphabet_options" id="alphabet_options2"> Z - A </option>
-        </li>
       </select>
         </div>
     </section>
@@ -110,7 +93,7 @@
         <ul class="social_media">
             <li class="social_media_text">
                 <a href="#" class="social_media_icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"  viewBox="0 0 24 24"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/></svg>
                 </a>
             </li>
             <li class="social_media_text">
@@ -120,7 +103,7 @@
             </li>
             <li class="social_media_text">
                 <a href="#" class="social_media_icons">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"  viewBox="0 0 24 24"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"/></svg>
                 </a>
             </li>
             <li class="social_media_text">
@@ -131,8 +114,6 @@
         </ul>
     </footer>
 
-
-    <script src="data.js" type="module"></script>
     <script src="main.js" type="module"></script>
 </body>
 

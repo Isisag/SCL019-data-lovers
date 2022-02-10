@@ -2,15 +2,12 @@ import {
     results,
     filterSpecies,
     filterLocation,
-    filterStatus
+    filterStatus,
+    Sortfilter
 } from './data.js';
 import data from './data/rickandmorty/rickandmorty.js';
 const d = document;
 
-// import data from './data/rickandmorty/rickandmorty.js';
-
-
-// funcion para mostrar en pantalla contenedor con img y name desde la data
 // variable "results" contiene toda la data
 window.addEventListener("load", showCharacters(results));
 
@@ -28,7 +25,6 @@ function showCharacters(results) {
         let div = d.createElement("div")
         let image = d.createElement("img")
         let name = d.createElement("p")
-        let statusDot = d.createElement("input")
         let status = d.createElement("p")
         let specie = d.createElement("p")
         let location = d.createElement("p")
@@ -42,9 +38,16 @@ function showCharacters(results) {
         location.setAttribute("class", "card_location")
 
         name.innerHTML = charactersName
-        status.innerHTML = ` Status: ${characterStatus} <div class="card_status_circle" ><div/>`
-        specie.innerHTML = charactersSpecies
-        location.innerHTML = characterLocation
+        status.innerHTML = ` <div class="status_innerHTML">
+        <b class="card_status"> Status: </b>
+         ${characterStatus}</div>
+         <div class="card_status_circle" >
+         <div/>`
+        specie.innerHTML = `<div class="specie_innerHTML">
+                               <b class="card_specie"> Species: </b>
+                                   ${charactersSpecies}</div>`
+        location.innerHTML = `<div class="location_innerHTML">
+        <b class="card_location"> Location: </b>${characterLocation}</div>`
 
         container.appendChild(div);
         div.appendChild(image)
@@ -52,11 +55,9 @@ function showCharacters(results) {
         div.appendChild(status)
         div.appendChild(specie)
         div.appendChild(location)
-
     })
 
 }
-
 
 
 function selectOptions() {
@@ -84,23 +85,23 @@ function selectOptions() {
 
     const status = results.map(({ status }) => status)
     const statusUniq = new Set(status);
-    console.log(statusUniq)
 
     statusUniq.forEach((option) => {
         const selectFilter = d.getElementById("filter-status")
         let options = d.createElement("option")
-
         options.innerHTML = option
         selectFilter.appendChild(options);
     })
 
-}selectOptions()
+}
+selectOptions()
 
 
 
 const speciesFilter = d.getElementById("filter-species")
 const locationFilter = d.getElementById("filter-location")
 const statusFilter = d.getElementById("filter-status")
+const alphabetFilter = d.getElementById("filter-alphabet")
 
 speciesFilter.addEventListener("change", function() {
     let species = speciesFilter.value
@@ -115,25 +116,24 @@ locationFilter.addEventListener("change", function() {
 })
 statusFilter.addEventListener("change", function() {
     let status = statusFilter.value
-    console.log(status)
     let filteredStatus = filterStatus(results, status);
     showCharacters(filteredStatus);
 })
+alphabetFilter.addEventListener("change", function() {
+    let alphabet = alphabetFilter.value
+    let filteredAlphabet = Sortfilter(results, alphabet)
+    showCharacters(filteredAlphabet)
+});
+
+
 
 function menuFilter() {
 
-   const iconBars = d.getElementById("icon-bars");
-   const navContainer = d.getElementById("navContainer")
-//    const iconBars1 = d.getElementById("icon-bars1");
-//    const navContainer1 = d.getElementById("navContainer1")
+    const iconBars = d.getElementById("icon-bars");
+    const navContainer = d.getElementById("navContainer")
 
-   iconBars.addEventListener("click", ()=> {
-            navContainer.classList.toggle("active");
-            
-   })
-   
-//    iconBars1.addEventListener("click", ()=> {
-//             navContainer1.classList.toggle("active");
-//    })
-   
-}menuFilter()
+    iconBars.addEventListener("click", () => {
+        navContainer.classList.toggle("active");
+    })
+}
+menuFilter()
