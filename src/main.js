@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import {
     results,
     filterSpecies,
@@ -5,7 +6,7 @@ import {
     filterStatus,
     Sortfilter
 } from './data.js';
-import data from './data/rickandmorty/rickandmorty.js';
+
 const d = document;
 
 // variable "results" contiene toda la data

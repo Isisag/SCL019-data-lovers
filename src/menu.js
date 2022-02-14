@@ -1,4 +1,4 @@
-import data from './data/rickandmorty/rickandmorty.js';
+const d = document;
 
 function menuFilter() {
 
