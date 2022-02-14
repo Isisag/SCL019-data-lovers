@@ -25,7 +25,7 @@ export const Sortfilter = (results, alphabet) => {
         sortered = results.sort((a, b) => {
             const name1 = a.name.toLowerCase()
             const name2 = b.name.toLowerCase()
-            if (name1 > name2) return -1;
+            if (name1 < name2) return -1;
             else return 1;
         });
     } else {
