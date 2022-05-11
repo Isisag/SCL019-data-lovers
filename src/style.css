@@ -5,7 +5,7 @@
         font-family: var(--text-font);
         color: white;
     }
-
+    
     @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@600&family=Imprima&display=swap');
      :root {
         --primary-color: #7CFC00;
@@ -14,35 +14,36 @@
         --text-color: #ffff;
         --gray-color: #625F5A;
         --black-transparence: rgba(26, 32, 44, 0.5);
-        --green-transparence: rgba(126, 252, 0, 0.507);
+        --green-transparence: rgba(126, 252, 0, 0.404);
         --h1-tittle-font: 'get schwifty';
         --tittle-font: 'Baloo Thambi 2', cursive;
         --text-font: 'Imprima', sans-serif;
         --green-gradient: linear-gradient(180deg, #7CFC00 0%, #37D550 100%);
     }
-
+    
     @font-face {
         font-family: get schwifty;
         src: url(./get_schwifty.ttf);
     }
     /* === HELPERS CLASS ==== */
-
+    
     .hidden {
         display: none;
     }
-
+    
     a {
         text-decoration: none;
     }
-
+    
     a:visited {
         color: var(--primary-color);
     }
-
+    
     li {
         list-style: none;
+        width: auto;
     }
-
+    
     body {
         background-image: url("https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg");
         background-color: #000;
@@ -50,128 +51,153 @@
         background-clip: padding-box;
     }
     /* == HEADER SECTION == */
-
+    
     .icon-bars-container {
         margin: 0px .2rem;
-        /* display: none; */
+        display: none;
     }
-
+    
     .icon-bars-container>button {
         background-color: transparent;
         outline: none;
         border: none;
         cursor: pointer;
     }
-
+    
     .icon-bars-container>button>svg {
         fill: white;
         width: 2rem;
         height: 2rem;
     }
-
+    
     .nav_bar {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         max-width: 100vh;
         min-width: 100%;
         height: max-content;
         background: var(--black-transparence);
+        padding: 3rem 0 4rem 0;
     }
-
+    
     .nav_container {
         display: flex;
         position: row;
         justify-content: space-between;
     }
-
+    
     .nav_titles {
         font-weight: bold;
         color: var(--primary-color);
-        justify-content: space-between;
-        margin-right: 50px;
+        margin-right: 5.125rem;
         text-decoration: none;
         transition: 0.2s;
+        font-size: 2vw;
     }
-
+    
     .nav_titles:hover {
         text-decoration: underline;
         color: var(--secondary-color);
         background-color: var(--black-transparence);
-        border-radius: 50px;
+        border-radius: 3.125rem;
     }
-
+    
     .nav_elements {
         text-align: right;
         font-family: 'Baloo Thambi 2';
         font-size: 25px;
     }
-
+    
     .nav-menu_visible {
         display: flex;
     }
-
+    
     .nav_subtitles {
         display: none;
     }
-
+    
     .nav_container .nav_elements {
         transition: max-height;
         max-height: 20em;
         overflow: hidden;
     }
-
+    
     .search_bar_container {
         display: flex;
         align-items: center;
     }
-
+    
     .search_bar {
         outline: rgba(124, 252, 0, 0.64) solid 1px;
-        border-radius: 10px;
+        border-radius: 1.85rem;
         background-color: transparent;
         border-color: var(--primary-color);
         z-index: 3;
-        width: 30vh;
+        padding: 0.9rem;
+        width: 100%;
     }
-
+    
+    .search_bar::placeholder {
+        font-size: 1.5vw;
+    }
+    
     .icon-search-container {
         background-color: transparent;
         outline: none;
         border: none;
         cursor: pointer;
+        width: 3rem;
+        margin-right: 1rem;
     }
-
+    
     .icon-search {
         color: var(--primary-color);
         height: 200px;
         width: 200px;
     }
-
-    .icon-search-container > svg {
+    
+    .icon-search-container>svg {
         fill: var(--primary-color);
         height: 20px;
         width: 20px;
         z-index: 3;
+        margin: 0.5rem;
     }
     /*== HOME SECTION ==*/
-
+    
+    .home_section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
     .home_section_title-container {
         padding: 15px;
     }
-
+    
     .home_section_title {
         font-weight: bold;
-        font-size: 3vh;
+        font-size: 5vh;
         text-align: center;
         color: var(--accent-color);
         -webkit-text-stroke: 1px var(--primary-color);
-        margin: auto;
         font-family: get schwifty;
+        margin: none;
+    }
+    
+    .home_section_img {
+        width: 100%;
+        height: 100%;
+        border: 0.2rem solid var(--secondary-color);
+        border-radius: 1.25rem 0 1.25rem 0;
     }
     /*== QUOTE SECTION ==*/
-
+    
     .quote_section {
         text-align: center;
         width: fit-content;
@@ -179,19 +205,25 @@
         max-height: fit-content;
         background-color: var(--green-transparence);
         margin: 5% auto;
-        border-radius: 20px 0px 20px 0px;
+        border: 0.2rem solid var(--secondary-color);
+        border-radius: 1.25rem 0 1.25rem 0;
     }
-
+    
     .quote {
         padding: 5%;
         font-weight: bold;
-        font-size: 2.62;
+        font-size: 2.62vh;
         -webkit-text-stroke: 0.3px #10100F;
         color: var(--accent-color);
         font-family: var(--text-font);
     }
+    
+    hr {
+        border-color: #7CFC00;
+        border-width: medium;
+    }
     /*== CAROUSEL SECTION ==*/
-
+    
     .carousel_section {
         z-index: 3;
         outline: rgba(124, 252, 0, 0.64) solid 5px;
@@ -204,7 +236,7 @@
         margin-top: 2%;
         margin-bottom: 2%;
     }
-
+    
     .carousel {
         display: flex;
         flex-direction: row;
@@ -212,7 +244,7 @@
         min-width: 20%;
         flex-shrink: 0;
     }
-
+    
     .img-carousel {
         padding-top: 5%;
         align-items: center;
@@ -221,7 +253,7 @@
         height: 100%;
     }
     /*== VIDEO SECTION==*/
-
+    
     .video_section {
         background-color: var(--primary-color);
         margin: auto;
@@ -229,8 +261,9 @@
         width: fit-content;
         margin-top: 2%;
         margin-bottom: 2%;
+        border: 0.2rem solid var(--primary-color);
     }
-
+    
     .video {
         display: flex;
         flex-direction: row;
@@ -238,44 +271,48 @@
         cursor: pointer;
         height: 70%;
         width: 100%;
+        border: #7CFC00;
     }
-
+    
     .video-size {
         width: 100%;
     }
     /*== FOOTER ==*/
-
+    
     footer {
         background: rgba(26, 32, 44, 0.5);
         display: flex;
         justify-content: space-around;
         align-items: center;
+        padding: 2rem;
     }
-
+    
     .footer_text {
         text-align: start;
+        font-size: 1.4rem;
     }
-
+    
     .footer_img {
         height: 10vh;
         align-self: center;
         border-radius: 80%;
     }
-
+    
     .social_media {
         display: flex;
         justify-content: center;
         width: auto;
     }
-
+    
     .social_media_icons>svg {
         fill: var(--primary-color);
         width: 2rem;
         height: 2rem;
         margin: auto .5rem;
+        font-size: 1.4rem;
     }
     /* ================== FILTERS HTML ====================== */
-
+    
     .container {
         display: flex;
         justify-content: center;
@@ -283,18 +320,18 @@
         flex-wrap: wrap;
         margin: 1rem auto;
     }
-
+    
     .card_image-name {
         display: inline-block;
         position: relative;
         justify-content: center;
     }
-
+    
     .card_image {
         width: 100%;
         height: 100%;
     }
-
+    
     .card_name {
         position: absolute;
         text-align: center;
@@ -309,7 +346,7 @@
         margin-top: -1.7rem;
         margin-left: 1.3rem;
     }
-
+    
     .card_info {
         background-color: var(--secondary-color);
         border-radius: 0px 0px 10px 10px;
@@ -320,7 +357,7 @@
         justify-content: center;
         font-size: .8em;
     }
-
+    
     .card_status,
     .card_specie,
     .card_location {
@@ -333,7 +370,7 @@
         background: var(--accent-color);
     }
     /*.card_status_text {}*/
-
+    
     .card_status_circle {
         width: 10px;
         height: 10px;
@@ -341,7 +378,7 @@
         background-color: var(--primary-color);
         border-radius: 50%;
     }
-
+    
     .status_innerHTML,
     .specie_innerHTML {
         display: flex;
@@ -349,12 +386,12 @@
         justify-content: space-between;
         align-items: center;
     }
-
+    
     .location_innerHTML {
         flex-wrap: nowrap;
         text-align: center;
     }
-
+    
     .card_moreinfo {
         width: 100%;
         color: var(--primary-color);
@@ -366,11 +403,11 @@
         cursor: pointer;
     }
     /*  CARD STYLE */
-
+    
     .card_section-container {
         display: grid;
     }
-
+    
     .card {
         display: flex;
         flex-wrap: wrap;
@@ -383,17 +420,17 @@
         cursor: pointer;
         transition: ease-in .3s transform;
     }
-
+    
     .card:hover {
         transform: scale(1.02, 1.02)
     }
-
+    
     .card_image-name {
         display: flex;
         position: relative;
         justify-content: center;
     }
-
+    
     .card_image {
         width: 37vh;
         height: 37vh;
@@ -403,7 +440,7 @@
         filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
     }
     /* ESTO ESTA COMENTADO PORQUE QUEDABA RARO EN VERSION CELULAR */
-
+    
     .card_name {
         position: absolute;
         text-align: center;
@@ -416,7 +453,7 @@
         z-index: 8;
         margin-top: 33vh;
     }
-
+    
     .card_info {
         background-color: var(--accent-color);
         border-radius: 0px 0px 8px 8px;
@@ -430,14 +467,14 @@
         padding: .9rem auto;
         padding-top: 1rem;
     }
-
+    
     .card_status_circle {
         width: 7px;
         height: 7px;
         background-color: var(--primary-color);
         border-radius: 50%;
     }
-
+    
     .card_moreinfo {
         width: 100%;
         color: var(--primary-color);
@@ -449,7 +486,7 @@
         cursor: pointer;
     }
     /*  FILTERS NAV STYLE */
-
+    
     .select-container {
         display: flex;
         flex-direction: row;
@@ -462,11 +499,11 @@
         margin: 0rem auto 1rem auto;
         padding: .7rem;
     }
-
+    
     .filters_nav {
         background: var(--black-transparence);
     }
-
+    
     .filters_title {
         font-family: var(--tittle-font);
         font-weight: bold;
@@ -474,7 +511,7 @@
         text-align: center;
         text-transform: uppercase;
     }
-
+    
     .select-container>svg {
         align-self: center;
         fill: var(--primary-color);
@@ -484,7 +521,7 @@
         height: 2rem;
         margin: auto .5rem;
     }
-
+    
     .select-container>svg:hover {
         fill: white;
         stroke: white;
@@ -498,21 +535,21 @@
         z-index: 15;
         background-color: var(--green-transparence);
     } */
-
+    
     .modal {
         background-color: var(--accent-color);
         width: 20vh;
         /* display: flex; */
         position: relative;
     }
-
+    
     .modal_header {
         background: var(--green-gradient);
         width: 100%;
         position: absolute;
         height: 10vh;
     }
-
+    
     .modal>img {
         border-radius: 50%;
         width: 10vh;

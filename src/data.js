@@ -3,12 +3,6 @@ import data from './data/rickandmorty/rickandmorty.js';
 
 export const results = data.results; //array
 
-// devuelve el valor de origen y genero de los personajes
-const origin = results.map(({ origin }) => origin);
-const gender = results.map(({ gender }) => gender)
-const location = results.map(({ location }) => location)
-
-
 export function filterSpecies(results, species) {
     let filtered = results.filter((character) => (character.species == species))
     return filtered;
