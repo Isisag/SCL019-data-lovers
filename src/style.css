@@ -439,7 +439,6 @@
         border: var(--primary-color) 1px solid;
         filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
     }
-    /* ESTO ESTA COMENTADO PORQUE QUEDABA RARO EN VERSION CELULAR */
     
     .card_name {
         position: absolute;
@@ -527,14 +526,6 @@
         stroke: white;
         color: white;
     }
-    /* CATEGORY */
-    /* FILTERS MODAL  */
-    /* .modal_section-container{
-        width: 1200px;
-        height: 300vh;
-        z-index: 15;
-        background-color: var(--green-transparence);
-    } */
     
     .modal {
         background-color: var(--accent-color);
