@@ -7,8 +7,8 @@ de la serie en general.
 
 ## Hallazgos
 
-Hicimos una rápida investigación sobre la información que podrían necesitar
-nuestros usuarios y encontramos que los datos de mayor interés para ellos son:
+Hicimos una rápida investigación sobre la información que podrían necesitar 
+nuestros usuarios y encontramos que los datos de mayor interés para ellos son los siguientes:
 
 Información relevante sobre los personajes, como nombre, género, especie, lugar
 de origen, imagen y episodios donde aparece.
